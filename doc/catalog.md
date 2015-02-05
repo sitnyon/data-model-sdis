@@ -4,16 +4,16 @@ Catalogue des objets
 Dangers
 -------
 
-| Type           | Symbole | Description | Exemple |
-| -------------- | ------- | ----------- | ------- |
-| **Feu**        | ...     | ...         | ...     |
-| **Gaz**        | ...     | ...         | ...     |
-| **Electrique** | ...     | ...         | ...     |
-| **Toxique**    | ...     | ...         | ...     |
-| **Radioactif** | ...     | ...         | ...     |
-| **Infectieux** | ...     | ...         | ...     |
-| **Pollution**  | ...     | ...         | ...     |
-| **Autre**      | ...     | ...         | ...     |
+| Type           | Symbole                                                    | Description | Exemple |
+| -------------- | ---------------------------------------------------------- | ----------- | ------- |
+| **Feu**        | ![danger_feu.png](../symbols/danger_feu.png)               | ...         | ...     |
+| **Gaz**        | ![danger_gaz.png](../symbols/danger_gaz.png)               | ...         | ...     |
+| **Electrique** | ![danger_electrique.png](../symbols/danger_electrique.png) | ...         | ...     |
+| **Toxique**    | ![danger_toxique.png](../symbols/danger_toxique.png)       | ...         | ...     |
+| **Radioactif** | ![danger_radioactif.png](../symbols/danger_radioactif.png) | ...         | ...     |
+| **Infectieux** | ![danger_infectieux.png](../symbols/danger_infectieux.png) | ...         | ...     |
+| **Pollution**  | ![danger_pollution.png](../symbols/danger_pollution.png)   | ...         | ...     |
+| **Autre**      | ![danger_autre.png](../symbols/danger_autre.png)           | ...         | ...     |
 
 Risques
 -------
