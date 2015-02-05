@@ -18,16 +18,16 @@ Dangers
 Risques
 -------
 
-| Type                   | Symbole | Description | Exemple |
-| ---------------------- | ------- | ----------- | ------- |
-| **EMS**                | ...     | ...         | ...     |
-| **Hôpital**            | ...     | ...         | ...     |
-| **Ecole**              | ...     | ...         | ...     |
-| **Parking souterrain** | ...     | ...         | ...     |
-| **Bien culturel**      | ...     | ...         | ...     |
-| **Pisciculture**       | ...     | ...         | ...     |
-| **Bâtiment isolé**     | ...     | ...         | ...     |
-| **Autre**              | ...     | ...         | ...     |
+| Type                   | Symbole                                                      | Description | Exemple |
+| ---------------------- | ------------------------------------------------------------ | ----------- | ------- |
+| **EMS**                | ![risque.png](../symbols/risque.png)                         | ...         | ...     |
+| **Hôpital**            | ![risque.png](../symbols/risque.png)                         | ...         | ...     |
+| **Ecole**              | ![risque.png](../symbols/risque.png)                         | ...         | ...     |
+| **Parking souterrain** | ![risque.png](../symbols/risque.png)                         | ...         | ...     |
+| **Bien culturel**      | ![risque.png](../symbols/risque.png)                         | ...         | ...     |
+| **Pisciculture**       | ![risque.png](../symbols/risque.png)                         | ...         | ...     |
+| **Bâtiment isolé**     | ![risque_hydraulique.png](../symbols/risque_hydraulique.png) | ...         | ...     |
+| **Autre**              | ![risque.png](../symbols/risque.png)                         | ...         | ...     |
 
 Accès
 -----
