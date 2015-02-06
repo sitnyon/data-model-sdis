@@ -102,7 +102,7 @@ CREATE TABLE sdis.cles (id serial PRIMARY KEY);
 COMMENT ON TABLE sdis.cles IS 'Clés';
 
 ALTER TABLE sdis.cles ADD COLUMN type         varchar(255); COMMENT ON COLUMN sdis.cles.type IS 'Clé, Tube';
-ALTER TABLE sdis.cles ADD COLUMN numero       int4;
+ALTER TABLE sdis.cles ADD COLUMN numero       varchar(20);
 ALTER TABLE sdis.cles ADD COLUMN localisation varchar(255);
 ALTER TABLE sdis.cles ADD COLUMN remarque     varchar(255);
 
@@ -168,3 +168,21 @@ ALTER TABLE sdis.batiments ADD COLUMN commune varchar(255);
 
 SELECT AddGeometryColumn('sdis', 'batiments', 'geom', 21781, 'MultiPolygon', 2);
 CREATE INDEX batiments_geom_idx ON sdis.batiments USING GIST (geom);
+
+
+
+/* TABLE bornes_hydrantes */
+
+--DROP TABLE IF EXISTS sdis.bornes_hydrantes CASCADE;
+CREATE TABLE sdis.bornes_hydrantes (id serial PRIMARY KEY);
+COMMENT ON TABLE sdis.bornes_hydrantes IS 'Bornes hydrantes';
+
+ALTER TABLE sdis.bornes_hydrantes ADD COLUMN type     varchar(255); COMMENT ON COLUMN sdis.bornes_hydrantes.type IS 'Hors-sol, Souterraine';
+ALTER TABLE sdis.bornes_hydrantes ADD COLUMN numero   varchar(20);
+ALTER TABLE sdis.bornes_hydrantes ADD COLUMN sortie   varchar(255); COMMENT ON COLUMN sdis.bornes_hydrantes.sortie IS '1x75, 2x55, 2x75, 2x55 + 1x75';
+ALTER TABLE sdis.bornes_hydrantes ADD COLUMN pression float8;       COMMENT ON COLUMN sdis.bornes_hydrantes.pression IS '[bar]';
+ALTER TABLE sdis.bornes_hydrantes ADD COLUMN debit    int4;         COMMENT ON COLUMN sdis.bornes_hydrantes.debit IS '[l/min]';
+ALTER TABLE sdis.bornes_hydrantes ADD COLUMN remarque varchar(255);
+
+SELECT AddGeometryColumn('sdis', 'bornes_hydrantes', 'geom', 21781, 'Point', 2);
+CREATE INDEX bornes_hydrantes_geom_idx ON sdis.bornes_hydrantes USING GIST (geom);
