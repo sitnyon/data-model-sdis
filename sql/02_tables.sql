@@ -186,3 +186,19 @@ ALTER TABLE sdis.bornes_hydrantes ADD COLUMN remarque varchar(255);
 
 SELECT AddGeometryColumn('sdis', 'bornes_hydrantes', 'geom', 21781, 'Point', 2);
 CREATE INDEX bornes_hydrantes_geom_idx ON sdis.bornes_hydrantes USING GIST (geom);
+
+
+
+/* TABLE puits_reservoirs */
+
+--DROP TABLE IF EXISTS sdis.puits_reservoirs CASCADE;
+CREATE TABLE sdis.puits_reservoirs (id serial PRIMARY KEY);
+COMMENT ON TABLE sdis.puits_reservoirs IS 'Puits réservoirs';
+
+ALTER TABLE sdis.puits_reservoirs ADD COLUMN type     varchar(255); COMMENT ON COLUMN sdis.puits_reservoirs.type IS 'Puit, Réservoir, Commande réservoir';
+ALTER TABLE sdis.puits_reservoirs ADD COLUMN capacite int4;         COMMENT ON COLUMN sdis.puits_reservoirs.capacite IS '[m3]';
+ALTER TABLE sdis.puits_reservoirs ADD COLUMN reserve  int4;         COMMENT ON COLUMN sdis.puits_reservoirs.reserve IS '[m3]';
+ALTER TABLE sdis.puits_reservoirs ADD COLUMN remarque varchar(255);
+
+SELECT AddGeometryColumn('sdis', 'puits_reservoirs', 'geom', 21781, 'Point', 2);
+CREATE INDEX puits_reservoirs_geom_idx ON sdis.puits_reservoirs USING GIST (geom);
