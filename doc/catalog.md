@@ -126,11 +126,11 @@ Bornes hydrantes
 Puits réservoirs
 ----------------
 
-| Type                   | Symbole | Description | Exemple |
-| ---------------------- | ------- | ----------- | ------- |
-| **Puit**               | ...     | ...         | ...     |
-| **Réservoir**          | ...     | ...         | ...     |
-| **Commande réservoir** | ...     | ...         | ...     |
+| Type                   | Symbole                                                      | Description | Exemple |
+| ---------------------- | ------------------------------------------------------------ | ----------- | ------- |
+| **Puit**               | ...                                                          | ...         | ...     |
+| **Réservoir**          | ...                                                          | ...         | ...     |
+| **Commande réservoir** | ![reservoir_commande.png](../symbols/reservoir_commande.png) | ...         | ...     |
 
 Tuyaux
 ------
