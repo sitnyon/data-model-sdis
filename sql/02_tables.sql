@@ -154,3 +154,17 @@ ALTER TABLE sdis.dossiers_intervention ADD COLUMN remarque     varchar(255);
 
 SELECT AddGeometryColumn('sdis', 'dossiers_intervention', 'geom', 21781, 'Point', 2);
 CREATE INDEX dossiers_intervention_geom_idx ON sdis.dossiers_intervention USING GIST (geom);
+
+
+
+/* TABLE batiments */
+
+--DROP TABLE IF EXISTS sdis.batiments CASCADE;
+CREATE TABLE sdis.batiments (id serial PRIMARY KEY);
+COMMENT ON TABLE sdis.batiments IS 'Bâtiments';
+
+ALTER TABLE sdis.batiments ADD COLUMN no_eca  varchar(20);
+ALTER TABLE sdis.batiments ADD COLUMN commune varchar(255);
+
+SELECT AddGeometryColumn('sdis', 'batiments', 'geom', 21781, 'MultiPolygon', 2);
+CREATE INDEX batiments_geom_idx ON sdis.batiments USING GIST (geom);
