@@ -138,3 +138,19 @@ ALTER TABLE sdis.situation ADD COLUMN remarque     varchar(255);
 
 SELECT AddGeometryColumn('sdis', 'situation', 'geom', 21781, 'Point', 2);
 CREATE INDEX situation_geom_idx ON sdis.situation USING GIST (geom);
+
+
+
+/* TABLE dossiers_intervention */
+
+--DROP TABLE IF EXISTS sdis.dossiers_intervention CASCADE;
+CREATE TABLE sdis.dossiers_intervention (id serial PRIMARY KEY);
+COMMENT ON TABLE sdis.dossiers_intervention IS 'Dossiers intervention';
+
+ALTER TABLE sdis.dossiers_intervention ADD COLUMN document     varchar(255);
+ALTER TABLE sdis.dossiers_intervention ADD COLUMN localisation varchar(255);
+ALTER TABLE sdis.dossiers_intervention ADD COLUMN statut       varchar(255); COMMENT ON COLUMN sdis.dossiers_intervention.statut IS 'En vigueur, Provisoire, A modifier';
+ALTER TABLE sdis.dossiers_intervention ADD COLUMN remarque     varchar(255);
+
+SELECT AddGeometryColumn('sdis', 'dossiers_intervention', 'geom', 21781, 'Point', 2);
+CREATE INDEX dossiers_intervention_geom_idx ON sdis.dossiers_intervention USING GIST (geom);
