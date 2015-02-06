@@ -29,3 +29,19 @@ ALTER TABLE sdis.risques ADD COLUMN remarque     varchar(255);
 
 SELECT AddGeometryColumn('sdis', 'risques', 'geom', 21781, 'Point', 2);
 CREATE INDEX risques_geom_idx ON sdis.risques USING GIST (geom);
+
+
+
+/* TABLE acces */
+
+--DROP TABLE IF EXISTS sdis.acces CASCADE;
+CREATE TABLE sdis.acces (id serial PRIMARY KEY);
+COMMENT ON TABLE sdis.acces IS 'Accès';
+
+ALTER TABLE sdis.acces ADD COLUMN type         varchar(255); COMMENT ON COLUMN sdis.acces.type IS 'Véhicule, Reconnaissance, Echelle, Entrée, Motopompe, Barrage';
+ALTER TABLE sdis.acces ADD COLUMN localisation varchar(255);
+ALTER TABLE sdis.acces ADD COLUMN photo        varchar(255);
+ALTER TABLE sdis.acces ADD COLUMN remarque     varchar(255);
+
+SELECT AddGeometryColumn('sdis', 'acces', 'geom', 21781, 'MultiLineString', 2);
+CREATE INDEX acces_geom_idx ON sdis.acces USING GIST (geom);
