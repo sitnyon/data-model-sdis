@@ -44,17 +44,17 @@ Accès
 Signalisation
 -------------
 
-| Type                     | Symbole | Description | Exemple |
-| ------------------------ | ------- | ----------- | ------- |
-| **Sens interdit**        | ...     | ...         | ...     |
-| **Travaux**              | ...     | ...         | ...     |
-| **Danger**               | ...     | ...         | ...     |
-| **Interdiction camions** | ...     | ...         | ...     |
-| **Hauteur limitée**      | ...     | ...         | ...     |
-| **Largeur limitée**      | ...     | ...         | ...     |
-| **Poids limité**         | ...     | ...         | ...     |
-| **Tout droit**           | ...     | ...         | ...     |
-| **Déviation**            | ...     | ...         | ...     |
+| Type                     | Symbole                                                                                      | Description | Exemple |
+| ------------------------ | -------------------------------------------------------------------------------------------- | ----------- | ------- |
+| **Sens interdit**        | ![signalisation_sens_interdit.png](../symbols/signalisation_sens_interdit.png)               | ...         | ...     |
+| **Travaux**              | ![signalisation_travaux.png](../symbols/signalisation_travaux.png)                           | ...         | ...     |
+| **Danger**               | ![signalisation_danger.png](../symbols/signalisation_danger.png)                             | ...         | ...     |
+| **Interdiction camions** | ![signalisation_interdiction_camions.png](../symbols/signalisation_interdiction_camions.png) | ...         | ...     |
+| **Hauteur limitée**      | ![signalisation_hauteur_limitee.png](../symbols/signalisation_hauteur_limitee.png)           | ...         | ...     |
+| **Largeur limitée**      | ![signalisation_largeur_limitee.png](../symbols/signalisation_largeur_limitee.png)           | ...         | ...     |
+| **Poids limité**         | ![signalisation_poids_limite.png](../symbols/signalisation_poids_limite.png)                 | ...         | ...     |
+| **Tout droit**           | ![signalisation_tout_droit.png](../symbols/signalisation_tout_droit.png)                     | ...         | ...     |
+| **Déviation**            | ![signalisation_deviation.png](../symbols/signalisation_deviation.png)                       | ...         | ...     |
 
 Emplacements
 ------------
