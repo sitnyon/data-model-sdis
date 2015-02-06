@@ -86,9 +86,9 @@ Clés
 Codes
 -----
 
-| Type     | Symbole | Description | Exemple |
-| -------- | ------- | ----------- | ------- |
-| **Code** | ...     | ...         | ...     |
+| Type     | Symbole                          | Description | Exemple |
+| -------- | -------------------------------- | ----------- | ------- |
+| **Code** | ![code.png](../symbols/code.png) | ...         | ...     |
 
 
 Situation
