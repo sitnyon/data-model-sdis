@@ -123,3 +123,18 @@ ALTER TABLE sdis.codes ADD COLUMN remarque     varchar(255);
 
 SELECT AddGeometryColumn('sdis', 'codes', 'geom', 21781, 'Point', 2);
 CREATE INDEX codes_geom_idx ON sdis.codes USING GIST (geom);
+
+
+
+/* TABLE situation */
+
+--DROP TABLE IF EXISTS sdis.situation CASCADE;
+CREATE TABLE sdis.situation (id serial PRIMARY KEY);
+COMMENT ON TABLE sdis.situation IS 'Situation';
+
+ALTER TABLE sdis.situation ADD COLUMN type         varchar(255); COMMENT ON COLUMN sdis.situation.type IS 'Ascenseur';
+ALTER TABLE sdis.situation ADD COLUMN localisation varchar(255);
+ALTER TABLE sdis.situation ADD COLUMN remarque     varchar(255);
+
+SELECT AddGeometryColumn('sdis', 'situation', 'geom', 21781, 'Point', 2);
+CREATE INDEX situation_geom_idx ON sdis.situation USING GIST (geom);
