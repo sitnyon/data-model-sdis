@@ -215,7 +215,7 @@ ALTER TABLE sdis.tuyaux ADD COLUMN diametre varchar(255); COMMENT ON COLUMN sdis
 ALTER TABLE sdis.tuyaux ADD COLUMN longueur int4;         COMMENT ON COLUMN sdis.tuyaux.longueur IS '[m]';
 ALTER TABLE sdis.tuyaux ADD COLUMN remarque varchar(255);
 
-SELECT AddGeometryColumn('sdis', 'tuyaux', 'geom', 21781, 'Point', 2);
+SELECT AddGeometryColumn('sdis', 'tuyaux', 'geom', 21781, 'MultiLineString', 2);
 CREATE INDEX tuyaux_geom_idx ON sdis.tuyaux USING GIST (geom);
 
 
