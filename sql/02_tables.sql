@@ -74,3 +74,21 @@ ALTER TABLE sdis.emplacements ADD COLUMN remarque varchar(255);
 
 SELECT AddGeometryColumn('sdis', 'emplacements', 'geom', 21781, 'Point', 2);
 CREATE INDEX emplacements_geom_idx ON sdis.emplacements USING GIST (geom);
+
+
+
+/* TABLE detections */
+
+--DROP TABLE IF EXISTS sdis.detections CASCADE;
+CREATE TABLE sdis.detections (id serial PRIMARY KEY);
+COMMENT ON TABLE sdis.detections IS 'Détections';
+
+ALTER TABLE sdis.detections ADD COLUMN numero       varchar(20);
+ALTER TABLE sdis.detections ADD COLUMN feu          bool;
+ALTER TABLE sdis.detections ADD COLUMN gaz          bool;
+ALTER TABLE sdis.detections ADD COLUMN sprinkler    bool;
+ALTER TABLE sdis.detections ADD COLUMN localisation varchar(255);
+ALTER TABLE sdis.detections ADD COLUMN remarque     varchar(255);
+
+SELECT AddGeometryColumn('sdis', 'detections', 'geom', 21781, 'Point', 2);
+CREATE INDEX detections_geom_idx ON sdis.detections USING GIST (geom);
