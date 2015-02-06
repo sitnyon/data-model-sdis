@@ -45,3 +45,18 @@ ALTER TABLE sdis.acces ADD COLUMN remarque     varchar(255);
 
 SELECT AddGeometryColumn('sdis', 'acces', 'geom', 21781, 'MultiLineString', 2);
 CREATE INDEX acces_geom_idx ON sdis.acces USING GIST (geom);
+
+
+
+/* TABLE signalisation */
+
+--DROP TABLE IF EXISTS sdis.signalisation CASCADE;
+CREATE TABLE sdis.signalisation (id serial PRIMARY KEY);
+COMMENT ON TABLE sdis.signalisation IS 'Signalisation';
+
+ALTER TABLE sdis.signalisation ADD COLUMN type     varchar(255); COMMENT ON COLUMN sdis.signalisation.type IS 'Sens interdit, Travaux, Danger, Interdiction camions, Hauteur limitée, Largeur limitée, Poids limité, Tout droit, Déviation';
+ALTER TABLE sdis.signalisation ADD COLUMN valeur   varchar(5);   COMMENT ON COLUMN sdis.signalisation.valeur IS 'Hauteur, largeur ou poids maximal';
+ALTER TABLE sdis.signalisation ADD COLUMN remarque varchar(255);
+
+SELECT AddGeometryColumn('sdis', 'signalisation', 'geom', 21781, 'MultiLineString', 2);
+CREATE INDEX signalisation_geom_idx ON sdis.signalisation USING GIST (geom);
