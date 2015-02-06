@@ -233,3 +233,17 @@ ALTER TABLE sdis.barrages ADD COLUMN remarque     varchar(255);
 
 SELECT AddGeometryColumn('sdis', 'barrages', 'geom', 21781, 'MultiLineString', 2);
 CREATE INDEX barrages_geom_idx ON sdis.barrages USING GIST (geom);
+
+
+
+/* TABLE sites */
+
+--DROP TABLE IF EXISTS sdis.sites CASCADE;
+CREATE TABLE sdis.sites (id serial PRIMARY KEY);
+COMMENT ON TABLE sdis.sites IS 'Sites';
+
+ALTER TABLE sdis.sites ADD COLUMN type      varchar(255); COMMENT ON COLUMN sdis.sites.type IS 'Détachement de premiers secours, Détachement d''appui';
+ALTER TABLE sdis.sites ADD COLUMN categorie varchar(5);
+
+SELECT AddGeometryColumn('sdis', 'sites', 'geom', 21781, 'Point', 2);
+CREATE INDEX sites_geom_idx ON sdis.sites USING GIST (geom);

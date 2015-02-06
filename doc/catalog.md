@@ -150,10 +150,10 @@ Barrages
 Sites
 -----
 
-| Type                             | Symbole | Description | Exemple |
-| -------------------------------- | ------- | ----------- | ------- |
-| **Détachement premiers secours** | ...     | ...         | ...     |
-| **Détachement appui**            | ...     | ...         | ...     |
+| Type                                | Symbole | Description | Exemple |
+| ----------------------------------- | ------- | ----------- | ------- |
+| **Détachement de premiers secours** | ...     | ...         | ...     |
+| **Détachement d'appui**             | ...     | ...         | ...     |
 
 Périmètres intervention
 -----------------------
