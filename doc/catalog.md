@@ -164,8 +164,8 @@ Périmètres d'intervention
 | **Désincarcération**             | ...     | ...         | ...     |
 | **Défense contre hydrocarbures** | ...     | ...         | ...     |
 
-Périmètres organisation
------------------------
+Périmètres organisationnels
+---------------------------
 
 | Type     | Symbole | Description | Exemple |
 | -------- | ------- | ----------- | ------- |

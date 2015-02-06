@@ -261,3 +261,17 @@ ALTER TABLE sdis.perimetres_intervention ADD COLUMN sous_type varchar(255); COMM
 
 SELECT AddGeometryColumn('sdis', 'perimetres_intervention', 'geom', 21781, 'MultiPolygon', 2);
 CREATE INDEX perimetres_intervention_geom_idx ON sdis.perimetres_intervention USING GIST (geom);
+
+
+
+/* TABLE perimetres_organisationnels */
+
+--DROP TABLE IF EXISTS sdis.perimetres_organisationnels CASCADE;
+CREATE TABLE sdis.perimetres_organisationnels (id serial PRIMARY KEY);
+COMMENT ON TABLE sdis.perimetres_organisationnels IS 'Périmètres organisationnels';
+
+ALTER TABLE sdis.perimetres_organisationnels ADD COLUMN type varchar(255);
+ALTER TABLE sdis.perimetres_organisationnels ADD COLUMN nom  varchar(255);
+
+SELECT AddGeometryColumn('sdis', 'perimetres_organisationnels', 'geom', 21781, 'MultiPolygon', 2);
+CREATE INDEX perimetres_organisationnels_geom_idx ON sdis.perimetres_organisationnels USING GIST (geom);
