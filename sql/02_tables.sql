@@ -108,3 +108,18 @@ ALTER TABLE sdis.cles ADD COLUMN remarque     varchar(255);
 
 SELECT AddGeometryColumn('sdis', 'cles', 'geom', 21781, 'Point', 2);
 CREATE INDEX cles_geom_idx ON sdis.cles USING GIST (geom);
+
+
+
+/* TABLE codes */
+
+--DROP TABLE IF EXISTS sdis.codes CASCADE;
+CREATE TABLE sdis.codes (id serial PRIMARY KEY);
+COMMENT ON TABLE sdis.codes IS 'Codes';
+
+ALTER TABLE sdis.codes ADD COLUMN code         varchar(255);
+ALTER TABLE sdis.codes ADD COLUMN localisation varchar(255);
+ALTER TABLE sdis.codes ADD COLUMN remarque     varchar(255);
+
+SELECT AddGeometryColumn('sdis', 'codes', 'geom', 21781, 'Point', 2);
+CREATE INDEX codes_geom_idx ON sdis.codes USING GIST (geom);
