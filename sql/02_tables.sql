@@ -60,3 +60,17 @@ ALTER TABLE sdis.signalisation ADD COLUMN remarque varchar(255);
 
 SELECT AddGeometryColumn('sdis', 'signalisation', 'geom', 21781, 'MultiLineString', 2);
 CREATE INDEX signalisation_geom_idx ON sdis.signalisation USING GIST (geom);
+
+
+
+/* TABLE emplacements */
+
+--DROP TABLE IF EXISTS sdis.emplacements CASCADE;
+CREATE TABLE sdis.emplacements (id serial PRIMARY KEY);
+COMMENT ON TABLE sdis.emplacements IS 'Emplacements';
+
+ALTER TABLE sdis.emplacements ADD COLUMN type     varchar(255); COMMENT ON COLUMN sdis.emplacements.type IS 'Motopompe, Tonne pompe, Echelle';
+ALTER TABLE sdis.emplacements ADD COLUMN remarque varchar(255);
+
+SELECT AddGeometryColumn('sdis', 'emplacements', 'geom', 21781, 'Point', 2);
+CREATE INDEX emplacements_geom_idx ON sdis.emplacements USING GIST (geom);
