@@ -217,3 +217,19 @@ ALTER TABLE sdis.tuyaux ADD COLUMN remarque varchar(255);
 
 SELECT AddGeometryColumn('sdis', 'tuyaux', 'geom', 21781, 'Point', 2);
 CREATE INDEX tuyaux_geom_idx ON sdis.tuyaux USING GIST (geom);
+
+
+
+/* TABLE barrages */
+
+--DROP TABLE IF EXISTS sdis.barrages CASCADE;
+CREATE TABLE sdis.barrages (id serial PRIMARY KEY);
+COMMENT ON TABLE sdis.barrages IS 'Barrages';
+
+ALTER TABLE sdis.barrages ADD COLUMN type         varchar(255); COMMENT ON COLUMN sdis.barrages.type IS 'Rivière, Lac';
+ALTER TABLE sdis.barrages ADD COLUMN longueur     int4;         COMMENT ON COLUMN sdis.barrages.longueur IS '[m]';
+ALTER TABLE sdis.barrages ADD COLUMN localisation varchar(255);
+ALTER TABLE sdis.barrages ADD COLUMN remarque     varchar(255);
+
+SELECT AddGeometryColumn('sdis', 'barrages', 'geom', 21781, 'MultiLineString', 2);
+CREATE INDEX barrages_geom_idx ON sdis.barrages USING GIST (geom);
