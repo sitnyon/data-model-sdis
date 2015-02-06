@@ -68,9 +68,9 @@ Emplacements
 Détections
 ----------
 
-| Type          | Symbole | Description | Exemple |
-| ------------- | ------- | ----------- | ------- |
-| **Détection** | ...     | ...         | ...     |
+| Type          | Symbole                                    | Description | Exemple |
+| ------------- | ------------------------------------------ | ----------- | ------- |
+| **Détection** | ![detection.png](../symbols/detection.png) | ...         | ...     |
 
 Clés
 ----
