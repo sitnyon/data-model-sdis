@@ -202,3 +202,18 @@ ALTER TABLE sdis.puits_reservoirs ADD COLUMN remarque varchar(255);
 
 SELECT AddGeometryColumn('sdis', 'puits_reservoirs', 'geom', 21781, 'Point', 2);
 CREATE INDEX puits_reservoirs_geom_idx ON sdis.puits_reservoirs USING GIST (geom);
+
+
+
+/* TABLE tuyaux */
+
+--DROP TABLE IF EXISTS sdis.tuyaux CASCADE;
+CREATE TABLE sdis.tuyaux (id serial PRIMARY KEY);
+COMMENT ON TABLE sdis.tuyaux IS 'Tuyaux';
+
+ALTER TABLE sdis.tuyaux ADD COLUMN diametre varchar(255); COMMENT ON COLUMN sdis.tuyaux.diametre IS '75 mm, 110 mm';
+ALTER TABLE sdis.tuyaux ADD COLUMN longueur int4;         COMMENT ON COLUMN sdis.tuyaux.longueur IS '[m]';
+ALTER TABLE sdis.tuyaux ADD COLUMN remarque varchar(255);
+
+SELECT AddGeometryColumn('sdis', 'tuyaux', 'geom', 21781, 'Point', 2);
+CREATE INDEX tuyaux_geom_idx ON sdis.tuyaux USING GIST (geom);
