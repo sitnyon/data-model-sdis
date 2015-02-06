@@ -155,7 +155,7 @@ Sites
 | **Détachement de premiers secours** | ...     | ...         | ...     |
 | **Détachement d'appui**             | ...     | ...         | ...     |
 
-Périmètres d'intervention
+Secteurs d'intervention
 -------------------------
 
 | Type                             | Symbole | Description | Exemple |
@@ -164,7 +164,7 @@ Périmètres d'intervention
 | **Désincarcération**             | ...     | ...         | ...     |
 | **Défense contre hydrocarbures** | ...     | ...         | ...     |
 
-Périmètres organisationnels
+Secteurs organisationnels
 ---------------------------
 
 | Type     | Symbole | Description | Exemple |

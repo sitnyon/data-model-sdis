@@ -250,28 +250,28 @@ CREATE INDEX sites_geom_idx ON sdis.sites USING GIST (geom);
 
 
 
-/* TABLE perimetres_intervention */
+/* TABLE secteurs_intervention */
 
---DROP TABLE IF EXISTS sdis.perimetres_intervention CASCADE;
-CREATE TABLE sdis.perimetres_intervention (id serial PRIMARY KEY);
-COMMENT ON TABLE sdis.perimetres_intervention IS 'Périmètres d''intervention';
+--DROP TABLE IF EXISTS sdis.secteurs_intervention CASCADE;
+CREATE TABLE sdis.secteurs_intervention (id serial PRIMARY KEY);
+COMMENT ON TABLE sdis.secteurs_intervention IS 'Secteurs d''intervention';
 
-ALTER TABLE sdis.perimetres_intervention ADD COLUMN type      varchar(255); COMMENT ON COLUMN sdis.perimetres_intervention.type IS 'Feu, Désincarcération, Défense contre hydrocarbures';
-ALTER TABLE sdis.perimetres_intervention ADD COLUMN sous_type varchar(255); COMMENT ON COLUMN sdis.perimetres_intervention.sous_type IS 'Feu primaire, Feu secondaire, Feu renfort';
+ALTER TABLE sdis.secteurs_intervention ADD COLUMN type      varchar(255); COMMENT ON COLUMN sdis.secteurs_intervention.type IS 'Feu, Désincarcération, Défense contre hydrocarbures';
+ALTER TABLE sdis.secteurs_intervention ADD COLUMN sous_type varchar(255); COMMENT ON COLUMN sdis.secteurs_intervention.sous_type IS 'Feu primaire, Feu secondaire, Feu renfort';
 
-SELECT AddGeometryColumn('sdis', 'perimetres_intervention', 'geom', 21781, 'MultiPolygon', 2);
-CREATE INDEX perimetres_intervention_geom_idx ON sdis.perimetres_intervention USING GIST (geom);
+SELECT AddGeometryColumn('sdis', 'secteurs_intervention', 'geom', 21781, 'MultiPolygon', 2);
+CREATE INDEX secteurs_intervention_geom_idx ON sdis.secteurs_intervention USING GIST (geom);
 
 
 
-/* TABLE perimetres_organisationnels */
+/* TABLE secteurs_organisationnels */
 
---DROP TABLE IF EXISTS sdis.perimetres_organisationnels CASCADE;
-CREATE TABLE sdis.perimetres_organisationnels (id serial PRIMARY KEY);
-COMMENT ON TABLE sdis.perimetres_organisationnels IS 'Périmètres organisationnels';
+--DROP TABLE IF EXISTS sdis.secteurs_organisationnels CASCADE;
+CREATE TABLE sdis.secteurs_organisationnels (id serial PRIMARY KEY);
+COMMENT ON TABLE sdis.secteurs_organisationnels IS 'Secteurs organisationnels';
 
-ALTER TABLE sdis.perimetres_organisationnels ADD COLUMN type varchar(255);
-ALTER TABLE sdis.perimetres_organisationnels ADD COLUMN nom  varchar(255);
+ALTER TABLE sdis.secteurs_organisationnels ADD COLUMN type varchar(255);
+ALTER TABLE sdis.secteurs_organisationnels ADD COLUMN nom  varchar(255);
 
-SELECT AddGeometryColumn('sdis', 'perimetres_organisationnels', 'geom', 21781, 'MultiPolygon', 2);
-CREATE INDEX perimetres_organisationnels_geom_idx ON sdis.perimetres_organisationnels USING GIST (geom);
+SELECT AddGeometryColumn('sdis', 'secteurs_organisationnels', 'geom', 21781, 'MultiPolygon', 2);
+CREATE INDEX secteurs_organisationnels_geom_idx ON sdis.secteurs_organisationnels USING GIST (geom);
