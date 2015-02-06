@@ -247,3 +247,17 @@ ALTER TABLE sdis.sites ADD COLUMN categorie varchar(5);
 
 SELECT AddGeometryColumn('sdis', 'sites', 'geom', 21781, 'Point', 2);
 CREATE INDEX sites_geom_idx ON sdis.sites USING GIST (geom);
+
+
+
+/* TABLE perimetres_intervention */
+
+--DROP TABLE IF EXISTS sdis.perimetres_intervention CASCADE;
+CREATE TABLE sdis.perimetres_intervention (id serial PRIMARY KEY);
+COMMENT ON TABLE sdis.perimetres_intervention IS 'Périmètres d''intervention';
+
+ALTER TABLE sdis.perimetres_intervention ADD COLUMN type      varchar(255); COMMENT ON COLUMN sdis.perimetres_intervention.type IS 'Feu, Désincarcération, Défense contre hydrocarbures';
+ALTER TABLE sdis.perimetres_intervention ADD COLUMN sous_type varchar(255); COMMENT ON COLUMN sdis.perimetres_intervention.sous_type IS 'Feu primaire, Feu secondaire, Feu renfort';
+
+SELECT AddGeometryColumn('sdis', 'perimetres_intervention', 'geom', 21781, 'MultiPolygon', 2);
+CREATE INDEX perimetres_intervention_geom_idx ON sdis.perimetres_intervention USING GIST (geom);

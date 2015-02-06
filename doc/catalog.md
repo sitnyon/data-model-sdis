@@ -155,8 +155,8 @@ Sites
 | **Détachement de premiers secours** | ...     | ...         | ...     |
 | **Détachement d'appui**             | ...     | ...         | ...     |
 
-Périmètres intervention
------------------------
+Périmètres d'intervention
+-------------------------
 
 | Type                             | Symbole | Description | Exemple |
 | -------------------------------- | ------- | ----------- | ------- |
