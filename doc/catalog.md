@@ -52,17 +52,17 @@ Signalisation
 
 Signalisation pour accès véhicules
 
-| Type                     | Symbole                                                                                      | Description          | Exemple               |
-| ------------------------ | -------------------------------------------------------------------------------------------- | -------------------- | --------------------- |
-| **Sens interdit**        | ![signalisation_sens_interdit.png](../symbols/signalisation_sens_interdit.png)               | Sens interdit        |                       |
-| **Travaux**              | ![signalisation_travaux.png](../symbols/signalisation_travaux.png)                           | Travaux              |                       |
-| **Danger**               | ![signalisation_danger.png](../symbols/signalisation_danger.png)                             | Danger               |                       |
-| **Interdiction camions** | ![signalisation_interdiction_camions.png](../symbols/signalisation_interdiction_camions.png) | Interdiction camions |                       |
-| **Hauteur limitée**      | ![signalisation_hauteur_limitee.png](../symbols/signalisation_hauteur_limitee.png)           | Hauteur limitée      | Accès cour intérieure |
-| **Largeur limitée**      | ![signalisation_largeur_limitee.png](../symbols/signalisation_largeur_limitee.png)           | Largeur limitée      | Pont                  |
-| **Poids limité**         | ![signalisation_poids_limite.png](../symbols/signalisation_poids_limite.png)                 | Poids limité         | Pont                  |
-| **Tout droit**           | ![signalisation_tout_droit.png](../symbols/signalisation_tout_droit.png)                     | Tout droit           |                       |
-| **Déviation**            | ![signalisation_deviation.png](../symbols/signalisation_deviation.png)                       | Déviation            |                       |
+| Type                     | Symbole                                                                                      | Description                          | Exemple               |
+| ------------------------ | -------------------------------------------------------------------------------------------- | ------------------------------------ | --------------------- |
+| **Sens interdit**        | ![signalisation_sens_interdit.png](../symbols/signalisation_sens_interdit.png)               | Sens interdit                        |                       |
+| **Travaux**              | ![signalisation_travaux.png](../symbols/signalisation_travaux.png)                           | Travaux                              |                       |
+| **Danger**               | ![signalisation_danger.png](../symbols/signalisation_danger.png)                             | Danger                               |                       |
+| **Interdiction camions** | ![signalisation_interdiction_camions.png](../symbols/signalisation_interdiction_camions.png) | Interdiction camions                 |                       |
+| **Hauteur limitée**      | ![signalisation_hauteur_limitee.png](../symbols/signalisation_hauteur_limitee.png)           | Hauteur limitée (avec valeur en [m]) | Accès cour intérieure |
+| **Largeur limitée**      | ![signalisation_largeur_limitee.png](../symbols/signalisation_largeur_limitee.png)           | Largeur limitée (avec valeur en [m]) | Pont                  |
+| **Poids limité**         | ![signalisation_poids_limite.png](../symbols/signalisation_poids_limite.png)                 | Poids limité (avec valeur en [t])    | Pont                  |
+| **Tout droit**           | ![signalisation_tout_droit.png](../symbols/signalisation_tout_droit.png)                     | Tout droit                           |                       |
+| **Déviation**            | ![signalisation_deviation.png](../symbols/signalisation_deviation.png)                       | Déviation                            |                       |
 
 Emplacements
 ------------
