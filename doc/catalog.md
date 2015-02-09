@@ -154,8 +154,8 @@ Puits et réservoirs
 
 | Type                   | Symbole                                                      | Description                                                  | Exemple |
 | ---------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------- |
-| **Puit**               | Puit avec réserve d’eau en cas d’incendie                    |                                                              |         |
-| **Réservoir**          | Réservoir                                                    |                                                              |         |
+| **Puit**               | ...                                                          | Puit avec réserve d’eau en cas d’incendie                    |         |
+| **Réservoir**          | ...                                                          | Réservoir                                                    |         |
 | **Commande réservoir** | ![reservoir_commande.png](../symbols/reservoir_commande.png) | Interrupteur de commande à distance pour la réserve incendie |         |
 
 Tuyaux
