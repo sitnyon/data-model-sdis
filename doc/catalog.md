@@ -4,30 +4,30 @@ Catalogue des objets
 Dangers
 -------
 
-| Type           | Symbole | Description | Exemple |
-| -------------- | ------- | ----------- | ------- |
-| **Feu**        | ...     | ...         | ...     |
-| **Gaz**        | ...     | ...         | ...     |
-| **Electrique** | ...     | ...         | ...     |
-| **Toxique**    | ...     | ...         | ...     |
-| **Radioactif** | ...     | ...         | ...     |
-| **Infectieux** | ...     | ...         | ...     |
-| **Pollution**  | ...     | ...         | ...     |
-| **Autre**      | ...     | ...         | ...     |
+| Type           | Symbole                                                    | Description | Exemple |
+| -------------- | ---------------------------------------------------------- | ----------- | ------- |
+| **Feu**        | ![danger_feu.png](../symbols/danger_feu.png)               | ...         | ...     |
+| **Gaz**        | ![danger_gaz.png](../symbols/danger_gaz.png)               | ...         | ...     |
+| **Electrique** | ![danger_electrique.png](../symbols/danger_electrique.png) | ...         | ...     |
+| **Toxique**    | ![danger_toxique.png](../symbols/danger_toxique.png)       | ...         | ...     |
+| **Radioactif** | ![danger_radioactif.png](../symbols/danger_radioactif.png) | ...         | ...     |
+| **Infectieux** | ![danger_infectieux.png](../symbols/danger_infectieux.png) | ...         | ...     |
+| **Pollution**  | ![danger_pollution.png](../symbols/danger_pollution.png)   | ...         | ...     |
+| **Autre**      | ![danger_autre.png](../symbols/danger_autre.png)           | ...         | ...     |
 
 Risques
 -------
 
-| Type                   | Symbole | Description | Exemple |
-| ---------------------- | ------- | ----------- | ------- |
-| **EMS**                | ...     | ...         | ...     |
-| **Hôpital**            | ...     | ...         | ...     |
-| **Ecole**              | ...     | ...         | ...     |
-| **Parking souterrain** | ...     | ...         | ...     |
-| **Bien culturel**      | ...     | ...         | ...     |
-| **Pisciculture**       | ...     | ...         | ...     |
-| **Bâtiment isolé**     | ...     | ...         | ...     |
-| **Autre**              | ...     | ...         | ...     |
+| Type                   | Symbole                                                      | Description | Exemple |
+| ---------------------- | ------------------------------------------------------------ | ----------- | ------- |
+| **EMS**                | ![risque.png](../symbols/risque.png)                         | ...         | ...     |
+| **Hôpital**            | ![risque.png](../symbols/risque.png)                         | ...         | ...     |
+| **Ecole**              | ![risque.png](../symbols/risque.png)                         | ...         | ...     |
+| **Parking souterrain** | ![risque.png](../symbols/risque.png)                         | ...         | ...     |
+| **Bien culturel**      | ![risque.png](../symbols/risque.png)                         | ...         | ...     |
+| **Pisciculture**       | ![risque.png](../symbols/risque.png)                         | ...         | ...     |
+| **Bâtiment isolé**     | ![risque_hydraulique.png](../symbols/risque_hydraulique.png) | ...         | ...     |
+| **Autre**              | ![risque.png](../symbols/risque.png)                         | ...         | ...     |
 
 Accès
 -----
@@ -37,24 +37,24 @@ Accès
 | **Véhicule**       | ...     | ...         | ...     |
 | **Reconnaissance** | ...     | ...         | ...     |
 | **Echelle**        | ...     | ...         | ...     |
-| **Entree**         | ...     | ...         | ...     |
+| **Entrée**         | ...     | ...         | ...     |
 | **Motopompe**      | ...     | ...         | ...     |
 | **Barrage**        | ...     | ...         | ...     |
 
 Signalisation
 -------------
 
-| Type                     | Symbole | Description | Exemple |
-| ------------------------ | ------- | ----------- | ------- |
-| **Sens interdit**        | ...     | ...         | ...     |
-| **Travaux**              | ...     | ...         | ...     |
-| **Danger**               | ...     | ...         | ...     |
-| **Interdiction camions** | ...     | ...         | ...     |
-| **Hauteur limitée**      | ...     | ...         | ...     |
-| **Largeur limitée**      | ...     | ...         | ...     |
-| **Poids limité**         | ...     | ...         | ...     |
-| **Tout droit**           | ...     | ...         | ...     |
-| **Déviation**            | ...     | ...         | ...     |
+| Type                     | Symbole                                                                                      | Description | Exemple |
+| ------------------------ | -------------------------------------------------------------------------------------------- | ----------- | ------- |
+| **Sens interdit**        | ![signalisation_sens_interdit.png](../symbols/signalisation_sens_interdit.png)               | ...         | ...     |
+| **Travaux**              | ![signalisation_travaux.png](../symbols/signalisation_travaux.png)                           | ...         | ...     |
+| **Danger**               | ![signalisation_danger.png](../symbols/signalisation_danger.png)                             | ...         | ...     |
+| **Interdiction camions** | ![signalisation_interdiction_camions.png](../symbols/signalisation_interdiction_camions.png) | ...         | ...     |
+| **Hauteur limitée**      | ![signalisation_hauteur_limitee.png](../symbols/signalisation_hauteur_limitee.png)           | ...         | ...     |
+| **Largeur limitée**      | ![signalisation_largeur_limitee.png](../symbols/signalisation_largeur_limitee.png)           | ...         | ...     |
+| **Poids limité**         | ![signalisation_poids_limite.png](../symbols/signalisation_poids_limite.png)                 | ...         | ...     |
+| **Tout droit**           | ![signalisation_tout_droit.png](../symbols/signalisation_tout_droit.png)                     | ...         | ...     |
+| **Déviation**            | ![signalisation_deviation.png](../symbols/signalisation_deviation.png)                       | ...         | ...     |
 
 Emplacements
 ------------
@@ -68,27 +68,27 @@ Emplacements
 Détections
 ----------
 
-| Type          | Symbole | Description | Exemple |
-| ------------- | ------- | ----------- | ------- |
-| **Détection** | ...     | ...         | ...     |
+| Type          | Symbole                                    | Description | Exemple |
+| ------------- | ------------------------------------------ | ----------- | ------- |
+| **Détection** | ![detection.png](../symbols/detection.png) | ...         | ...     |
 
 Clés
 ----
 
-| Type     | Symbole | Description | Exemple |
-| -------- | ------- | ----------- | ------- |
-| **Clé**  | ...     | ...         | ...     |
-| **Tube** | ...     | ...         | ...     |
-| **???**  | ...     | ...         | ...     |
-| **???**  | ...     | ...         | ...     |
-| **???**  | ...     | ...         | ...     |
+| Type     | Symbole                                  | Description | Exemple |
+| -------- | ---------------------------------------- | ----------- | ------- |
+| **Clé**  | ![cle.png](../symbols/cle.png)           | ...         | ...     |
+| **Tube** | ![cle_tube.png](../symbols/cle_tube.png) | ...         | ...     |
+| ???      | ...                                      | ...         | ...     |
+| ???      | ...                                      | ...         | ...     |
+| ???      | ...                                      | ...         | ...     |
 
 Codes
 -----
 
-| Type     | Symbole | Description | Exemple |
-| -------- | ------- | ----------- | ------- |
-| **Code** | ...     | ...         | ...     |
+| Type     | Symbole                          | Description | Exemple |
+| -------- | -------------------------------- | ----------- | ------- |
+| **Code** | ![code.png](../symbols/code.png) | ...         | ...     |
 
 
 Situation
@@ -97,9 +97,9 @@ Situation
 | Type          | Symbole | Description | Exemple |
 | ------------- | ------- | ----------- | ------- |
 | **Ascenseur** | ...     | ...         | ...     |
-| **???**       | ...     | ...         | ...     |
-| **???**       | ...     | ...         | ...     |
-| **???**       | ...     | ...         | ...     |
+| ???           | ...     | ...         | ...     |
+| ???           | ...     | ...         | ...     |
+| ???           | ...     | ...         | ...     |
 
 Dossiers intervention
 ---------------------
@@ -126,11 +126,11 @@ Bornes hydrantes
 Puits réservoirs
 ----------------
 
-| Type                   | Symbole | Description | Exemple |
-| ---------------------- | ------- | ----------- | ------- |
-| **Puit**               | ...     | ...         | ...     |
-| **Réservoir**          | ...     | ...         | ...     |
-| **Commande réservoir** | ...     | ...         | ...     |
+| Type                   | Symbole                                                      | Description | Exemple |
+| ---------------------- | ------------------------------------------------------------ | ----------- | ------- |
+| **Puit**               | ...                                                          | ...         | ...     |
+| **Réservoir**          | ...                                                          | ...         | ...     |
+| **Commande réservoir** | ![reservoir_commande.png](../symbols/reservoir_commande.png) | ...         | ...     |
 
 Tuyaux
 ------
@@ -169,6 +169,6 @@ Périmètres organisation
 
 | Type     | Symbole | Description | Exemple |
 | -------- | ------- | ----------- | ------- |
-| **???**  | ...     | ...         | ...     |
-| **???**  | ...     | ...         | ...     |
-| **???**  | ...     | ...         | ...     |
+| ???      | ...     | ...         | ...     |
+| ???      | ...     | ...         | ...     |
+| ???      | ...     | ...         | ...     |
