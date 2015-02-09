@@ -4,171 +4,207 @@ Catalogue des objets
 Dangers
 -------
 
-| Type           | Symbole                                                    | Description | Exemple |
-| -------------- | ---------------------------------------------------------- | ----------- | ------- |
-| **Feu**        | ![danger_feu.png](../symbols/danger_feu.png)               | ...         | ...     |
-| **Gaz**        | ![danger_gaz.png](../symbols/danger_gaz.png)               | ...         | ...     |
-| **Electrique** | ![danger_electrique.png](../symbols/danger_electrique.png) | ...         | ...     |
-| **Toxique**    | ![danger_toxique.png](../symbols/danger_toxique.png)       | ...         | ...     |
-| **Radioactif** | ![danger_radioactif.png](../symbols/danger_radioactif.png) | ...         | ...     |
-| **Infectieux** | ![danger_infectieux.png](../symbols/danger_infectieux.png) | ...         | ...     |
-| **Pollution**  | ![danger_pollution.png](../symbols/danger_pollution.png)   | ...         | ...     |
-| **Autre**      | ![danger_autre.png](../symbols/danger_autre.png)           | ...         | ...     |
+Sources de danger
+
+| Type           | Symbole                                                    | Description                            | Exemple                                                                      |
+| -------------- | ---------------------------------------------------------- | -------------------------------------- | ---------------------------------------------------------------------------- |
+| **Feu**        | ![danger_feu.png](../symbols/danger_feu.png)               | Danger particulier d’incendie          | Station-service, scierie                                                     |
+| **Gaz**        | ![danger_gaz.png](../symbols/danger_gaz.png)               | Gaz inflammable, risque d’explosion    | Citerne de gaz                                                               |
+| **Electrique** | ![danger_electrique.png](../symbols/danger_electrique.png) | Source de danger d’origine électrique  | Armoire électrique, panneaux solaires photovoltaïques                        |
+| **Toxique**    | ![danger_toxique.png](../symbols/danger_toxique.png)       | Produits toxiques                      | Stock de produits                                                            |
+| **Radioactif** | ![danger_radioactif.png](../symbols/danger_radioactif.png) | Sources radioactives                   | Laboratoire                                                                  |
+| **Infectieux** | ![danger_infectieux.png](../symbols/danger_infectieux.png) | Substances infectieuses                | Laboratoire                                                                  |
+| **Pollution**  | ![danger_pollution.png](../symbols/danger_pollution.png)   | Produits pouvant causer des pollutions | Stock de produits                                                            |
+| **Autre**      | ![danger_autre.png](../symbols/danger_autre.png)           | Autres sources de danger               | Installation d'enfumage en cas d'effraction, appareil IRM, animaux dangereux |
 
 Risques
 -------
 
-| Type                   | Symbole                                                      | Description | Exemple |
-| ---------------------- | ------------------------------------------------------------ | ----------- | ------- |
-| **EMS**                | ![risque.png](../symbols/risque.png)                         | ...         | ...     |
-| **Hôpital**            | ![risque.png](../symbols/risque.png)                         | ...         | ...     |
-| **Ecole**              | ![risque.png](../symbols/risque.png)                         | ...         | ...     |
-| **Parking souterrain** | ![risque.png](../symbols/risque.png)                         | ...         | ...     |
-| **Bien culturel**      | ![risque.png](../symbols/risque.png)                         | ...         | ...     |
-| **Pisciculture**       | ![risque.png](../symbols/risque.png)                         | ...         | ...     |
-| **Bâtiment isolé**     | ![risque_hydraulique.png](../symbols/risque_hydraulique.png) | ...         | ...     |
-| **Autre**              | ![risque.png](../symbols/risque.png)                         | ...         | ...     |
+Eléments à risque
+
+| Type                   | Symbole                                                      | Description                                                                  | Exemple                    |
+| ---------------------- | ------------------------------------------------------------ | ---------------------------------------------------------------------------- | -------------------------- |
+| **EMS**                | ![risque.png](../symbols/risque.png)                         | Maison de retraite                                                           |                            |
+| **Hôpital**            | ![risque.png](../symbols/risque.png)                         | Hôpital, clinique, centre de convalescence, foyer d’handicapés               |                            |
+| **Ecole**              | ![risque.png](../symbols/risque.png)                         | Ecole, garderie                                                              |                            |
+| **Parking souterrain** | ![risque.png](../symbols/risque.png)                         | Parking souterrain collectif                                                 |                            |
+| **Bien culturel**      | ![risque.png](../symbols/risque.png)                         | Biens mobiliers ou immobiliers à préserver en priorité                       | Archives communales, musée |
+| **Pisciculture**       | ![risque.png](../symbols/risque.png)                         | Site présentant un risque accru en cas de pollution de rivière               |                            |
+| **Bâtiment isolé**     | ![risque_hydraulique.png](../symbols/risque_hydraulique.png) | Bâtiment ne disposant pas d’alimentation en eau suffisante en cas d’incendie | Hameau, ferme isolée       |
+| **Autre**              | ![risque.png](../symbols/risque.png)                         | Autre risque                                                                 |                            |
 
 Accès
 -----
 
-| Type               | Symbole | Description | Exemple |
-| -------------------| ------- | ----------- | ------- |
-| **Véhicule**       | ...     | ...         | ...     |
-| **Reconnaissance** | ...     | ...         | ...     |
-| **Echelle**        | ...     | ...         | ...     |
-| **Entrée**         | ...     | ...         | ...     |
-| **Motopompe**      | ...     | ...         | ...     |
-| **Barrage**        | ...     | ...         | ...     |
+Accès et cheminements
+
+| Type               | Symbole | Description                                     | Exemple               |
+| -------------------| ------- | ----------------------------------------------- | --------------------- |
+| **Véhicule**       | ...     | Accès pour les véhicules d'intervention         |                       |
+| **Reconnaissance** | ...     | Cheminement pour la reconnaissance à pieds      | Accès cour intérieure |
+| **Echelle**        | ...     | Facades accessibles avec une échelle automobile |                       |
+| **Entrée**         | ...     | Entrée de bâtiment                              |                       |
+| **Motopompe**      | ...     | Cheminement pour placer une motopompe           |                       |
+| **Barrage**        | ...     | Cheminement pour mettre un barrage à l'eau      |                       |
 
 Signalisation
 -------------
 
-| Type                     | Symbole                                                                                      | Description | Exemple |
-| ------------------------ | -------------------------------------------------------------------------------------------- | ----------- | ------- |
-| **Sens interdit**        | ![signalisation_sens_interdit.png](../symbols/signalisation_sens_interdit.png)               | ...         | ...     |
-| **Travaux**              | ![signalisation_travaux.png](../symbols/signalisation_travaux.png)                           | ...         | ...     |
-| **Danger**               | ![signalisation_danger.png](../symbols/signalisation_danger.png)                             | ...         | ...     |
-| **Interdiction camions** | ![signalisation_interdiction_camions.png](../symbols/signalisation_interdiction_camions.png) | ...         | ...     |
-| **Hauteur limitée**      | ![signalisation_hauteur_limitee.png](../symbols/signalisation_hauteur_limitee.png)           | ...         | ...     |
-| **Largeur limitée**      | ![signalisation_largeur_limitee.png](../symbols/signalisation_largeur_limitee.png)           | ...         | ...     |
-| **Poids limité**         | ![signalisation_poids_limite.png](../symbols/signalisation_poids_limite.png)                 | ...         | ...     |
-| **Tout droit**           | ![signalisation_tout_droit.png](../symbols/signalisation_tout_droit.png)                     | ...         | ...     |
-| **Déviation**            | ![signalisation_deviation.png](../symbols/signalisation_deviation.png)                       | ...         | ...     |
+Signalisation pour accès véhicules
+
+| Type                     | Symbole                                                                                      | Description          | Exemple               |
+| ------------------------ | -------------------------------------------------------------------------------------------- | -------------------- | --------------------- |
+| **Sens interdit**        | ![signalisation_sens_interdit.png](../symbols/signalisation_sens_interdit.png)               | Sens interdit        |                       |
+| **Travaux**              | ![signalisation_travaux.png](../symbols/signalisation_travaux.png)                           | Travaux              |                       |
+| **Danger**               | ![signalisation_danger.png](../symbols/signalisation_danger.png)                             | Danger               |                       |
+| **Interdiction camions** | ![signalisation_interdiction_camions.png](../symbols/signalisation_interdiction_camions.png) | Interdiction camions |                       |
+| **Hauteur limitée**      | ![signalisation_hauteur_limitee.png](../symbols/signalisation_hauteur_limitee.png)           | Hauteur limitée      | Accès cour intérieure |
+| **Largeur limitée**      | ![signalisation_largeur_limitee.png](../symbols/signalisation_largeur_limitee.png)           | Largeur limitée      | Pont                  |
+| **Poids limité**         | ![signalisation_poids_limite.png](../symbols/signalisation_poids_limite.png)                 | Poids limité         | Pont                  |
+| **Tout droit**           | ![signalisation_tout_droit.png](../symbols/signalisation_tout_droit.png)                     | Tout droit           |                       |
+| **Déviation**            | ![signalisation_deviation.png](../symbols/signalisation_deviation.png)                       | Déviation            |                       |
 
 Emplacements
 ------------
 
-| Type            | Symbole | Description | Exemple |
-| --------------- | ------- | ----------- | ------- |
-| **Motopompe**   | ...     | ...         | ...     |
-| **Tonne pompe** | ...     | ...         | ...     |
-| **Echelle**     | ...     | ...         | ...     |
+Emplacements pour moyens d'intervention
+
+| Type            | Symbole | Description | Exemple                                          |
+| --------------- | ------- | ----------- | ------------------------------------------------ |
+| **Motopompe**   | ...     | Motopompe   | Pour du pompage dans rivière                     |
+| **Tonne pompe** | ...     | Tonne pompe | Pour un véhicule relais                          |
+| **Echelle**     | ...     | Echelle     | En fonction d'arbres, accès à plusieurs façacdes |
 
 Détections
 ----------
 
-| Type          | Symbole                                    | Description | Exemple |
-| ------------- | ------------------------------------------ | ----------- | ------- |
-| **Détection** | ![detection.png](../symbols/detection.png) | ...         | ...     |
+Alarmes avec télétransmission et dispositifs d'extinction
+
+| Type          | Symbole                                    | Description                                  | Exemple |
+| ------------- | ------------------------------------------ | -------------------------------------------- | ------- |
+| **Détection** | ![detection.png](../symbols/detection.png) | Alarme incendie, détection de gaz, sprinkler |         |
 
 Clés
 ----
 
-| Type     | Symbole                                  | Description | Exemple |
-| -------- | ---------------------------------------- | ----------- | ------- |
-| **Clé**  | ![cle.png](../symbols/cle.png)           | ...         | ...     |
-| **Tube** | ![cle_tube.png](../symbols/cle_tube.png) | ...         | ...     |
-| ???      | ...                                      | ...         | ...     |
-| ???      | ...                                      | ...         | ...     |
-| ???      | ...                                      | ...         | ...     |
+Clés d'accès
+
+| Type     | Symbole                                  | Description              | Exemple |
+| -------- | ---------------------------------------- | ------------------------ | ------- |
+| **Clé**  | ![cle.png](../symbols/cle.png)           | Accès verrouillé par clé |         |
+| **Tube** | ![cle_tube.png](../symbols/cle_tube.png) | Tube à clé               |         |
+| ???      |                                          |                          |         |
+| ???      |                                          |                          |         |
+| ???      |                                          |                          |         |
 
 Codes
 -----
 
-| Type     | Symbole                          | Description | Exemple |
-| -------- | -------------------------------- | ----------- | ------- |
-| **Code** | ![code.png](../symbols/code.png) | ...         | ...     |
+Digicodes
+
+| Type     | Symbole                          | Description                   | Exemple |
+| -------- | -------------------------------- | ----------------------------- | ------- |
+| **Code** | ![code.png](../symbols/code.png) | Accès verrouillé par digicode |         |
 
 
 Situation
 ---------
 
+Eléments de situation
+
 | Type          | Symbole | Description | Exemple |
 | ------------- | ------- | ----------- | ------- |
-| **Ascenseur** | ...     | ...         | ...     |
-| ???           | ...     | ...         | ...     |
-| ???           | ...     | ...         | ...     |
-| ???           | ...     | ...         | ...     |
+| **Ascenseur** | ...     | Ascenseur   |         |
+| ???           |         |             |         |
+| ???           |         |             |         |
+| ???           |         |             |         |
 
 Dossiers intervention
 ---------------------
 
-| Type                     | Symbole | Description | Exemple |
-| ------------------------ | ------- | ----------- | ------- |
-| **Dossier intervention** | ...     | ...         | ...     |
+Dossiers d'intervention
+
+| Type                     | Symbole | Description            | Exemple |
+| ------------------------ | ------- | ---------------------- | ------- |
+| **Dossier intervention** | ...     | Dossier d'intervention |         |
 
 Bâtiments
 ---------
 
-| Type         | Symbole | Description | Exemple |
-| ------------ | ------- | ----------- | ------- |
-| **Bâtiment** | ...     | ...         | ...     |
+Bâtiments avec objet SDIS
+
+| Type         | Symbole | Description              | Exemple                                                                                            |
+| ------------ | ------- | ------------------------ | -------------------------------------------------------------------------------------------------- |
+| **Bâtiment** | ...     | Bâtiment avec objet SDIS | Bâtiment accessible avec clé, bâtiment avec source de danger, bâtiment avec dossier d'intervention |
 
 Bornes hydrantes
 ----------------
 
-| Type            | Symbole | Description | Exemple |
-| ----------------| ------- | ----------- | ------- |
-| **Hors-sol**    | ...     | ...         | ...     |
-| **Souterraine** | ...     | ...         | ...     |
+Bornes hydrantes
+
+| Type            | Symbole | Description                | Exemple |
+| ----------------| ------- | -------------------------- | ------- |
+| **Hors-sol**    | ...     | Borne hydrante             |         |
+| **Souterraine** | ...     | Borne hydrante souterraine |         |
 
 Puits réservoirs
 ----------------
 
-| Type                   | Symbole                                                      | Description | Exemple |
-| ---------------------- | ------------------------------------------------------------ | ----------- | ------- |
-| **Puit**               | ...                                                          | ...         | ...     |
-| **Réservoir**          | ...                                                          | ...         | ...     |
-| **Commande réservoir** | ![reservoir_commande.png](../symbols/reservoir_commande.png) | ...         | ...     |
+Puits et réservoirs
+
+| Type                   | Symbole                                                      | Description                                                  | Exemple |
+| ---------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------- |
+| **Puit**               | Puit avec réserve d’eau en cas d’incendie                    |                                                              |         |
+| **Réservoir**          | Réservoir                                                    |                                                              |         |
+| **Commande réservoir** | ![reservoir_commande.png](../symbols/reservoir_commande.png) | Interrupteur de commande à distance pour la réserve incendie |         |
 
 Tuyaux
 ------
 
-| Type      | Symbole | Description | Exemple |
-| --------- | ------- | ----------- | ------- |
-| **Tuyau** | ...     | ...         | ...     |
+Emplacements pour tuyaux
+
+| Type      | Symbole | Description             | Exemple                                  |
+| --------- | ------- | ----------------------- | ---------------------------------------- |
+| **Tuyau** | ...     | Emplacement pour tuyaux | Depuis motopompe, entre véhicules relais |
 
 Barrages
 --------
 
-| Type        | Symbole | Description | Exemple |
-| ----------- | ------- | ----------- | ------- |
-| **Rivière** | ...     | ...         | ...     |
-| **Lac**     | ...     | ...         | ...     |
+Barrages anti pollution
+
+| Type        | Symbole | Description                        | Exemple |
+| ----------- | ------- | ---------------------------------- | ------- |
+| **Rivière** | ...     | Barrage anti pollution sur rivière |         |
+| **Lac**     | ...     | Barrage anti pollution sur lac     |         |
 
 Sites
 -----
 
-| Type                                | Symbole | Description | Exemple |
-| ----------------------------------- | ------- | ----------- | ------- |
-| **Détachement de premiers secours** | ...     | ...         | ...     |
-| **Détachement d'appui**             | ...     | ...         | ...     |
+Casernes et locaux
+
+| Type    | Symbole | Description                     | Exemple |
+| ------- | ------- | ------------------------------- | ------- |
+| **DPS** | ...     | Détachement de premiers secours |         |
+| **DAP** | ...     | Détachement d'appui             |         |
 
 Secteurs d'intervention
--------------------------
+-----------------------
 
-| Type                             | Symbole | Description | Exemple |
-| -------------------------------- | ------- | ----------- | ------- |
-| **Feu**                          | ...     | ...         | ...     |
-| **Désincarcération**             | ...     | ...         | ...     |
-| **Défense contre hydrocarbures** | ...     | ...         | ...     |
+Secteurs d'intervention
+
+| Type                 | Symbole | Description                  | Exemple |
+| ---------------------| ------- | ---------------------------- | ------- |
+| **Feu**              | ...     | Feu                          |         |
+| **Désincarcération** | ...     | Désincarcération (pionnier)  |         |
+| **DCH**              | ...     | Défense contre hydrocarbures |         |
 
 Secteurs organisationnels
----------------------------
+-------------------------
+
+Secteurs organisationnels
 
 | Type     | Symbole | Description | Exemple |
 | -------- | ------- | ----------- | ------- |
-| ???      | ...     | ...         | ...     |
-| ???      | ...     | ...         | ...     |
-| ???      | ...     | ...         | ...     |
+| ???      |         |             |         |
+| ???      |         |             |         |
+| ???      |         |             |         |
