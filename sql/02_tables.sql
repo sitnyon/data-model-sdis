@@ -58,7 +58,7 @@ ALTER TABLE sdis.signalisation ADD COLUMN type     varchar(255) NOT NULL; COMMEN
 ALTER TABLE sdis.signalisation ADD COLUMN valeur   varchar(5);            COMMENT ON COLUMN sdis.signalisation.valeur IS 'Hauteur, largeur ou poids maximal';
 ALTER TABLE sdis.signalisation ADD COLUMN remarque varchar(255);
 
-SELECT AddGeometryColumn('sdis', 'signalisation', 'geom', 21781, 'MultiLineString', 2);
+SELECT AddGeometryColumn('sdis', 'signalisation', 'geom', 21781, 'MultiLineString', 2); COMMENT ON COLUMN sdis.signalisation.geom IS 'Symbole orienté';
 CREATE INDEX signalisation_geom_idx ON sdis.signalisation USING GIST (geom);
 
 
