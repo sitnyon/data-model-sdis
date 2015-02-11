@@ -1,5 +1,7 @@
 Modèle de données SDIS
 ======================
 
-Documentation :
+Documentation
+-------------
+
 * [Catalogue des objets](doc/catalog.md)
