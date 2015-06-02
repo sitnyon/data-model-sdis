@@ -117,9 +117,10 @@ CREATE INDEX cles_geom_idx ON sdis.cles USING GIST (geom);
 CREATE TABLE sdis.codes (id serial PRIMARY KEY);
 COMMENT ON TABLE sdis.codes IS 'Digicodes';
 
-ALTER TABLE sdis.codes ADD COLUMN code         varchar(255) NOT NULL;
-ALTER TABLE sdis.codes ADD COLUMN localisation varchar(255);
-ALTER TABLE sdis.codes ADD COLUMN remarque     varchar(255);
+ALTER TABLE sdis.codes ADD COLUMN code          varchar(255) NOT NULL;
+ALTER TABLE sdis.codes ADD COLUMN localisation  varchar(255);
+ALTER TABLE sdis.codes ADD COLUMN date_controle date;
+ALTER TABLE sdis.codes ADD COLUMN remarque      varchar(255);
 
 SELECT AddGeometryColumn('sdis', 'codes', 'geom', 21781, 'Point', 2);
 CREATE INDEX codes_geom_idx ON sdis.codes USING GIST (geom);
