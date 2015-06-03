@@ -263,3 +263,19 @@ ALTER TABLE sdis.secteurs_organisationnels ADD COLUMN nom  varchar(255);
 
 SELECT AddGeometryColumn('sdis', 'secteurs_organisationnels', 'geom', 21781, 'MultiPolygon', 2);
 CREATE INDEX secteurs_organisationnels_geom_idx ON sdis.secteurs_organisationnels USING GIST (geom);
+
+
+
+/* TABLE personnel_liste */
+
+--DROP TABLE IF EXISTS sdis.personnel_liste CASCADE;
+CREATE TABLE sdis.personnel_liste (id serial PRIMARY KEY);
+COMMENT ON TABLE sdis.personnel_liste IS 'Personnel d''intervention (liste)';
+
+ALTER TABLE sdis.personnel_liste ADD COLUMN grade   varchar(20)   NOT NULL;
+ALTER TABLE sdis.personnel_liste ADD COLUMN nom     varchar(255)  NOT NULL;
+ALTER TABLE sdis.personnel_liste ADD COLUMN prenom  varchar(255)  NOT NULL;
+ALTER TABLE sdis.personnel_liste ADD COLUMN rue     varchar(255)  NOT NULL;
+ALTER TABLE sdis.personnel_liste ADD COLUMN numero  varchar(20)   NOT NULL;
+ALTER TABLE sdis.personnel_liste ADD COLUMN commune varchar(255)  NOT NULL;
+ALTER TABLE sdis.personnel_liste ADD COLUMN groupe  varchar(20);

@@ -24,6 +24,7 @@ Catalogue des objets
     * [Sites](#sites)
     * [Secteurs d'intervention](#secteurs-dintervention)
     * [Secteurs organisationnels](#secteurs-organisationnels)
+    * [Personnel d'intervention](#personnel-dintervention)
 
 Dangers
 -------
@@ -229,3 +230,12 @@ Secteurs organisationnels
 | ???      |         |             |         |
 | ???      |         |             |         |
 | ???      |         |             |         |
+
+### Personnel d'intervention
+
+Personnel d'intervention (*vue*)
+
+| Type     | Symbole | Description | Exemple |
+| -------- | ------- | ------------| ------- |
+| **Jour** | ...     | Groupe Jour |         |
+| **Nuit** | ...     | Groupe Nuit |         |

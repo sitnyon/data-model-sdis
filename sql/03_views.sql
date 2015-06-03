@@ -33,3 +33,16 @@ CREATE VIEW sdis.batiments AS
     ;
 
 COMMENT ON VIEW sdis.batiments IS 'Bâtiments avec objet SDIS';
+
+
+
+/* VIEW personnel */
+
+-- DROP VIEW sdis.personnel;
+CREATE VIEW sdis.personnel AS
+
+    SELECT p.id, p.grade, p.nom, p.prenom, p.rue || ' ' || p.numero AS adresse, p.commune, p.groupe, a.geom
+    FROM sdis.personnel_liste p
+    LEFT JOIN adr2.ad_va_entrees_batiment_all a ON UPPER(p.commune || ', ' || p.rue || ' ' || p.numero) = UPPER(a.cne_rue_no);
+
+COMMENT ON VIEW sdis.personnel IS 'Personnel d''intervention';
