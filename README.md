@@ -11,3 +11,4 @@ Scripts SQL
 
 * [Création du schéma](sql/01_schema.sql)
 * [Création des tables](sql/02_tables.sql)
+* [Création des vues](sql/03_views.sql)
