@@ -153,7 +153,7 @@ Dossiers d'intervention
 
 ### Bâtiments
 
-Bâtiments avec objet SDIS
+Bâtiments avec objet SDIS (*vue*)
 
 | Type         | Symbole | Description              | Exemple                                                                                            |
 | ------------ | ------- | ------------------------ | -------------------------------------------------------------------------------------------------- |
