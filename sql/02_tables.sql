@@ -272,10 +272,10 @@ CREATE INDEX secteurs_organisationnels_geom_idx ON sdis.secteurs_organisationnel
 CREATE TABLE sdis.personnel_liste (id serial PRIMARY KEY);
 COMMENT ON TABLE sdis.personnel_liste IS 'Personnel d''intervention (liste)';
 
-ALTER TABLE sdis.personnel_liste ADD COLUMN grade   varchar(20)   NOT NULL;
-ALTER TABLE sdis.personnel_liste ADD COLUMN nom     varchar(255)  NOT NULL;
-ALTER TABLE sdis.personnel_liste ADD COLUMN prenom  varchar(255)  NOT NULL;
-ALTER TABLE sdis.personnel_liste ADD COLUMN rue     varchar(255)  NOT NULL;
-ALTER TABLE sdis.personnel_liste ADD COLUMN numero  varchar(20)   NOT NULL;
-ALTER TABLE sdis.personnel_liste ADD COLUMN commune varchar(255)  NOT NULL;
+ALTER TABLE sdis.personnel_liste ADD COLUMN grade   varchar(20)  NOT NULL;
+ALTER TABLE sdis.personnel_liste ADD COLUMN nom     varchar(255) NOT NULL;
+ALTER TABLE sdis.personnel_liste ADD COLUMN prenom  varchar(255) NOT NULL;
+ALTER TABLE sdis.personnel_liste ADD COLUMN rue     varchar(255) NOT NULL;
+ALTER TABLE sdis.personnel_liste ADD COLUMN numero  varchar(20)  NOT NULL;
+ALTER TABLE sdis.personnel_liste ADD COLUMN commune varchar(255) NOT NULL;
 ALTER TABLE sdis.personnel_liste ADD COLUMN groupe  varchar(20);
