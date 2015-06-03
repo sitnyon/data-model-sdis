@@ -231,7 +231,7 @@ COMMENT ON TABLE sdis.sites IS 'Casernes et locaux';
 
 ALTER TABLE sdis.sites ADD COLUMN type      varchar(255) NOT NULL; COMMENT ON COLUMN sdis.sites.type IS 'DPS, DAP';
 ALTER TABLE sdis.sites ADD COLUMN categorie varchar(5);
-ALTER TABLE sdis.sites ADD COLUMN nom       varchar(255);
+ALTER TABLE sdis.sites ADD COLUMN nom       varchar(255) NOT NULL;
 
 SELECT AddGeometryColumn('sdis', 'sites', 'geom', 21781, 'Point', 2);
 CREATE INDEX sites_geom_idx ON sdis.sites USING GIST (geom);
