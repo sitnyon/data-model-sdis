@@ -9,6 +9,7 @@ ALTER TABLE sdis.dangers ADD COLUMN localisation varchar(255);
 ALTER TABLE sdis.dangers ADD COLUMN photo        varchar(255);
 ALTER TABLE sdis.dangers ADD COLUMN document     varchar(255);
 ALTER TABLE sdis.dangers ADD COLUMN remarque     varchar(255);
+ALTER TABLE sdis.dangers ADD COLUMN date_import  date;
 
 SELECT AddGeometryColumn('sdis', 'dangers', 'geom', 21781, 'Point', 2);
 CREATE INDEX dangers_geom_idx ON sdis.dangers USING GIST (geom);
@@ -26,6 +27,7 @@ ALTER TABLE sdis.risques ADD COLUMN localisation varchar(255);
 ALTER TABLE sdis.risques ADD COLUMN photo        varchar(255);
 ALTER TABLE sdis.risques ADD COLUMN document     varchar(255);
 ALTER TABLE sdis.risques ADD COLUMN remarque     varchar(255);
+ALTER TABLE sdis.risques ADD COLUMN date_import  date;
 
 SELECT AddGeometryColumn('sdis', 'risques', 'geom', 21781, 'Point', 2);
 CREATE INDEX risques_geom_idx ON sdis.risques USING GIST (geom);
