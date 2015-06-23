@@ -71,9 +71,9 @@ Accès et cheminements
 | **Véhicule**       | ...     | Accès pour les véhicules d'intervention         |                       |
 | **Reconnaissance** | ...     | Cheminement pour la reconnaissance à pieds      | Accès cour intérieure |
 | **Echelle**        | ...     | Facades accessibles avec une échelle automobile |                       |
-| **Entrée**         | ...     | Entrée de bâtiment                              |                       |
-| **Motopompe**      | ...     | Cheminement pour placer une motopompe           |                       |
-| **Barrage**        | ...     | Cheminement pour mettre un barrage à l'eau      |                       |
+| **Entrée**         | ???     | Entrée de bâtiment                              |                       |
+| **Motopompe**      | ???     | Cheminement pour placer une motopompe           |                       |
+| **Barrage**        | ???     | Cheminement pour mettre un barrage à l'eau      |                       |
 
 ### Signalisation
 
@@ -97,9 +97,9 @@ Emplacements pour moyens d'intervention
 
 | Type            | Symbole | Description | Exemple                                          |
 | --------------- | ------- | ----------- | ------------------------------------------------ |
-| **Motopompe**   | ...     | Motopompe   | Pour du pompage dans rivière                     |
-| **Tonne pompe** | ...     | Tonne pompe | Pour un véhicule relais                          |
-| **Echelle**     | ...     | Echelle     | En fonction d'arbres, accès à plusieurs façacdes |
+| **Motopompe**   | ???     | Motopompe   | Pour du pompage dans rivière                     |
+| **Tonne pompe** | ???     | Tonne pompe | Pour un véhicule relais                          |
+| **Echelle**     | ???     | Echelle     | En fonction d'arbres, accès à plusieurs façacdes |
 
 Objectifs
 ---------
@@ -120,9 +120,6 @@ Clés d'accès
 | -------- | -------------------------------------------- | ------------------------ | ------- |
 | **Clé**  | ![cle.png](../symbols/png/cle.png)           | Accès verrouillé par clé |         |
 | **Tube** | ![cle_tube.png](../symbols/png/cle_tube.png) | Tube à clé               |         |
-| ???      |                                              |                          |         |
-| ???      |                                              |                          |         |
-| ???      |                                              |                          |         |
 
 ### Codes
 
@@ -140,9 +137,6 @@ Eléments de situation
 | Type          | Symbole | Description | Exemple |
 | ------------- | ------- | ----------- | ------- |
 | **Ascenseur** | ...     | Ascenseur   |         |
-| ???           |         |             |         |
-| ???           |         |             |         |
-| ???           |         |             |         |
 
 ### Dossiers d'intervention
 
@@ -188,7 +182,7 @@ Emplacements pour tuyaux
 
 | Type      | Symbole | Description             | Exemple                                  |
 | --------- | ------- | ----------------------- | ---------------------------------------- |
-| **Tuyau** | ...     | Emplacement pour tuyaux | Depuis motopompe, entre véhicules relais |
+| **Tuyau** | ???     | Emplacement pour tuyaux | Depuis motopompe, entre véhicules relais |
 
 ### Barrages
 
@@ -196,8 +190,8 @@ Barrages anti pollution
 
 | Type        | Symbole | Description                        | Exemple |
 | ----------- | ------- | ---------------------------------- | ------- |
-| **Rivière** | ...     | Barrage anti pollution sur rivière |         |
-| **Lac**     | ...     | Barrage anti pollution sur lac     |         |
+| **Rivière** | ???     | Barrage anti pollution sur rivière |         |
+| **Lac**     | ???     | Barrage anti pollution sur lac     |         |
 
 Organisation
 ------------
@@ -208,8 +202,8 @@ Casernes et locaux
 
 | Type    | Symbole | Description                     | Exemple |
 | ------- | ------- | ------------------------------- | ------- |
-| **DPS** | ...     | Détachement de premiers secours |         |
-| **DAP** | ...     | Détachement d'appui             |         |
+| **DPS** | ???     | Détachement de premiers secours |         |
+| **DAP** | ???     | Détachement d'appui             |         |
 
 ### Secteurs d'intervention
 
@@ -217,9 +211,9 @@ Secteurs d'intervention
 
 | Type                 | Symbole | Description                  | Exemple |
 | ---------------------| ------- | ---------------------------- | ------- |
-| **Feu**              | ...     | Feu                          |         |
-| **Désincarcération** | ...     | Désincarcération (pionnier)  |         |
-| **DCH**              | ...     | Défense contre hydrocarbures |         |
+| **Feu**              | ???     | Feu                          |         |
+| **Désincarcération** | ???     | Désincarcération (pionnier)  |         |
+| **DCH**              | ???     | Défense contre hydrocarbures |         |
 
 ### Secteurs organisationnels
 
@@ -227,8 +221,6 @@ Secteurs organisationnels
 
 | Type     | Symbole | Description | Exemple |
 | -------- | ------- | ----------- | ------- |
-| ???      |         |             |         |
-| ???      |         |             |         |
 | ???      |         |             |         |
 
 ### Personnel d'intervention
