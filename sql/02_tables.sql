@@ -56,11 +56,12 @@ CREATE INDEX acces_geom_idx ON sdis.acces USING GIST (geom);
 CREATE TABLE sdis.signalisation (id serial PRIMARY KEY);
 COMMENT ON TABLE sdis.signalisation IS 'Signalisation pour accès véhicules';
 
-ALTER TABLE sdis.signalisation ADD COLUMN type     varchar(255) NOT NULL; COMMENT ON COLUMN sdis.signalisation.type IS 'Sens interdit, Travaux, Danger, Interdiction camions, Hauteur limitée, Largeur limitée, Poids limité, Tout droit, Déviation';
-ALTER TABLE sdis.signalisation ADD COLUMN valeur   varchar(5);            COMMENT ON COLUMN sdis.signalisation.valeur IS 'Hauteur, largeur ou poids maximal';
-ALTER TABLE sdis.signalisation ADD COLUMN remarque varchar(255);
+ALTER TABLE sdis.signalisation ADD COLUMN type        varchar(255) NOT NULL; COMMENT ON COLUMN sdis.signalisation.type IS 'Sens interdit, Travaux, Danger, Interdiction camions, Hauteur limitée, Largeur limitée, Poids limité, Tout droit, Déviation';
+ALTER TABLE sdis.signalisation ADD COLUMN valeur      varchar(5);            COMMENT ON COLUMN sdis.signalisation.valeur IS 'Hauteur, largeur ou poids maximal';
+ALTER TABLE sdis.signalisation ADD COLUMN remarque    varchar(255);
+ALTER TABLE sdis.signalisation ADD COLUMN orientation int4;                  COMMENT ON COLUMN sdis.signalisation.orientation IS '[°]';
 
-SELECT AddGeometryColumn('sdis', 'signalisation', 'geom', 21781, 'MultiLineString', 2); COMMENT ON COLUMN sdis.signalisation.geom IS 'Symbole orienté';
+SELECT AddGeometryColumn('sdis', 'signalisation', 'geom', 21781, 'Point', 2);
 CREATE INDEX signalisation_geom_idx ON sdis.signalisation USING GIST (geom);
 
 
