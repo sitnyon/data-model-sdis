@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created by Cary Bass http://commons.wikipedia.com/wiki/User:Bastique on January 20, 2006 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="50"
+   height="44"
+   id="svg3069"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="danger_infectieux.svg">
+  <metadata
+     id="metadata3085">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1836"
+     inkscape:window-height="1058"
+     id="namedview3083"
+     showgrid="false"
+     inkscape:zoom="10.753411"
+     inkscape:cx="21.741355"
+     inkscape:cy="2.8022923"
+     inkscape:window-x="76"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g3396"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <defs
+     id="defs3073">
+    <path
+       d="M 2.8117,-1.046 A 3,3 0 0 1 0.5,2.958 l 0,1.5539 A 10.5,10.5 0 0 1 2,25.3078 l 0,0.5583 A 15,15 0 0 0 14.7975,8.5433 15,15 0 0 0 23.4007,-11.201 l -0.4835,0.2792 A 10.5,10.5 0 0 1 4.1574,-1.8229 Z m 3.4148,8.871 a 10,10 0 0 1 -12.453,0 9.5,9.5 0 0 0 -2.1756,2.7417 13.5,13.5 0 0 0 16.8042,0 A 10,10 0 0 0 6.2265,7.825 Z"
+       id="p"
+       transform="matrix(10,0,0,-10,260,260)"
+       inkscape:connector-curvature="0" />
+  </defs>
+  <g
+     id="g3396"
+     transform="matrix(0.08336807,0,0,0.08403361,-0.0020842,0)">
+    <path
+       d="m 24.788939,523.60002 550.243831,0 0,0 c 19.04268,0 30.90697,-20.54453 21.38563,-36.9206 l 0,0 -275.12192,-474.360115 0,0 c -9.47149,-16.4256895 -33.29977,-16.4256895 -42.82112,0 l 0,0 -275.1219107,474.360115 0,0 c -9.47149,16.37607 2.3928,36.9206 21.4354897,36.9206 z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#ff1721;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path12"
+       inkscape:connector-curvature="0" />
+    <polygon
+       transform="matrix(4.9849958,0,0,-4.9624449,-1178.589,2421.5864)"
+       points="343.19,392.39 296.59,473.1 249.99,392.39 249.99,392.39 "
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:#ff7d00;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="polygon14" />
+    <g
+       transform="matrix(0.56192686,0,0,0.56192686,154.56136,200.5619)"
+       id="biohazard">
+      <use
+         height="1"
+         width="1"
+         y="0"
+         x="0"
+         id="use3341"
+         xlink:href="#p" />
+      <use
+         height="1"
+         width="1"
+         y="0"
+         x="0"
+         id="use3343"
+         transform="matrix(-0.5,0.8660254,-0.8660254,-0.5,615.1666,164.8334)"
+         xlink:href="#p" />
+      <use
+         height="1"
+         width="1"
+         y="0"
+         x="0"
+         id="use3345"
+         transform="matrix(-0.5,-0.8660254,0.8660254,-0.5,164.8334,615.1666)"
+         xlink:href="#p" />
+    </g>
+  </g>
+</svg>
