@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="detection.svg"
-   inkscape:export-filename="Q:\800_SDIS\804_MODELE_DONNEES_SDIS\GitHub\data-model-sdis\symbols\detection.png"
+   inkscape:export-filename="Q:\800_SDIS\804_MODELE_DONNEES_SDIS\GitHub\data-model-sdis\symbols\png\detection.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -29,7 +29,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="5.6"
-     inkscape:cx="-4.7921016"
+     inkscape:cx="-37.381387"
      inkscape:cy="24.87213"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -51,7 +51,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -70,10 +70,10 @@
     <rect
        style="fill:#ff0000;fill-opacity:1;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:1.875;stroke-dasharray:none"
        id="rect5420"
-       width="45.999996"
-       height="45.999996"
-       x="1.9999999"
-       y="1004.3622" />
+       width="43.999996"
+       height="43.999996"
+       x="2.9999998"
+       y="1005.3622" />
     <path
        style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:3.99999969;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 18.237625,1044.2446 13.666365,-11.1683 -13.812357,-11.2107 13.807569,-11.3857"
