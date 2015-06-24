@@ -134,17 +134,17 @@ Digicodes
 
 Eléments de situation
 
-| Type          | Symbole | Description | Exemple |
-| ------------- | ------- | ----------- | ------- |
-| **Ascenseur** | ...     | Ascenseur   |         |
+| Type          | Symbole                                        | Description | Exemple |
+| ------------- | ---------------------------------------------- | ----------- | ------- |
+| **Ascenseur** | ![ascenseur.png](../symbols/png/ascenseur.png) | Ascenseur   |         |
 
 ### Dossiers d'intervention
 
 Dossiers d'intervention
 
-| Type                     | Symbole | Description            | Exemple |
-| ------------------------ | ------- | ---------------------- | ------- |
-| **Dossier intervention** | ...     | Dossier d'intervention |         |
+| Type                     | Symbole                                                              | Description            | Exemple |
+| ------------------------ | -------------------------------------------------------------------- | ---------------------- | ------- |
+| **Dossier intervention** | ![dossier_intervention.png](../symbols/png/dossier_intervention.png) | Dossier d'intervention |         |
 
 ### Bâtiments
 
@@ -161,10 +161,10 @@ Moyens
 
 Bornes hydrantes
 
-| Type            | Symbole | Description                | Exemple |
-| ----------------| ------- | -------------------------- | ------- |
-| **Hors-sol**    | ...     | Borne hydrante             |         |
-| **Souterraine** | ...     | Borne hydrante souterraine |         |
+| Type            | Symbole                                                                          | Description                | Exemple |
+| ----------------| -------------------------------------------------------------------------------- | -------------------------- | ------- |
+| **Hors-sol**    | ![borne_hydrante.png](../symbols/png/borne_hydrante.png)                         | Borne hydrante             |         |
+| **Souterraine** | ![borne_hydrante_souterraine.png](../symbols/png/borne_hydrante_souterraine.png) | Borne hydrante souterraine |         |
 
 ### Puits réservoirs
 
@@ -172,8 +172,8 @@ Puits et réservoirs
 
 | Type                   | Symbole                                                          | Description                                                  | Exemple |
 | ---------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------ | ------- |
-| **Puit**               | ...                                                              | Puit avec réserve d’eau en cas d’incendie                    |         |
-| **Réservoir**          | ...                                                              | Réservoir                                                    |         |
+| **Puit**               | ![puit.png](../symbols/png/puit.png)                             | Puit avec réserve d’eau en cas d’incendie                    |         |
+| **Réservoir**          | ![reservoir.png](../symbols/png/reservoir.png)                   | Réservoir                                                    |         |
 | **Commande réservoir** | ![reservoir_commande.png](../symbols/png/reservoir_commande.png) | Interrupteur de commande à distance pour la réserve incendie |         |
 
 ### Tuyaux
@@ -227,7 +227,7 @@ Secteurs organisationnels
 
 Personnel d'intervention (*vue*)
 
-| Type     | Symbole | Description | Exemple |
-| -------- | ------- | ------------| ------- |
-| **Jour** | ...     | Groupe Jour |         |
-| **Nuit** | ...     | Groupe Nuit |         |
+| Type     | Symbole                                                  | Description | Exemple |
+| -------- | -------------------------------------------------------- | ------------| ------- |
+| **Jour** | ![personnel_jour.png](../symbols/png/personnel_jour.png) | Groupe Jour |         |
+| **Nuit** | ![personnel_nuit.png](../symbols/png/personnel_nuit.png) | Groupe Nuit |         |
