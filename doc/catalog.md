@@ -66,14 +66,14 @@ Accès
 
 Accès et cheminements
 
-| Type               | Symbole | Description                                     | Exemple               |
-| -------------------| ------- | ----------------------------------------------- | --------------------- |
-| **Véhicule**       | ...     | Accès pour les véhicules d'intervention         |                       |
-| **Reconnaissance** | ...     | Cheminement pour la reconnaissance à pieds      | Accès cour intérieure |
-| **Echelle**        | ...     | Facades accessibles avec une échelle automobile |                       |
-| **Entrée**         | ???     | Entrée de bâtiment                              |                       |
-| **Motopompe**      | ???     | Cheminement pour placer une motopompe           |                       |
-| **Barrage**        | ???     | Cheminement pour mettre un barrage à l'eau      |                       |
+| Type               | Symbole                                                          | Description                                     | Exemple               |
+| -------------------| ---------------------------------------------------------------- | ----------------------------------------------- | --------------------- |
+| **Véhicule**       | ![acces_vehicule.png](../doc/png/acces_vehicule.png)             | Accès pour les véhicules d'intervention         |                       |
+| **Reconnaissance** | ![acces_reconnaissance.png](../doc/png/acces_reconnaissance.png) | Cheminement pour la reconnaissance à pieds      | Accès cour intérieure |
+| **Echelle**        | ![acces_echelle.png](../doc/png/acces_echelle.png)               | Facades accessibles avec une échelle automobile |                       |
+| **Entrée**         | ???                                                              | Entrée de bâtiment                              |                       |
+| **Motopompe**      | ???                                                              | Cheminement pour placer une motopompe           |                       |
+| **Barrage**        | ???                                                              | Cheminement pour mettre un barrage à l'eau      |                       |
 
 ### Signalisation
 
@@ -150,9 +150,9 @@ Dossiers d'intervention
 
 Bâtiments avec objet SDIS (*vue*)
 
-| Type         | Symbole | Description              | Exemple                                                                                            |
-| ------------ | ------- | ------------------------ | -------------------------------------------------------------------------------------------------- |
-| **Bâtiment** | ...     | Bâtiment avec objet SDIS | Bâtiment accessible avec clé, bâtiment avec source de danger, bâtiment avec dossier d'intervention |
+| Type         | Symbole                                  | Description              | Exemple                                                                                            |
+| ------------ | ---------------------------------------- | ------------------------ | -------------------------------------------------------------------------------------------------- |
+| **Bâtiment** | ![batiment.png](../doc/png/batiment.png) | Bâtiment avec objet SDIS | Bâtiment accessible avec clé, bâtiment avec source de danger, bâtiment avec dossier d'intervention |
 
 Moyens
 ------
@@ -200,20 +200,22 @@ Organisation
 
 Casernes et locaux
 
-| Type    | Symbole | Description                     | Exemple |
-| ------- | ------- | ------------------------------- | ------- |
-| **DPS** | ???     | Détachement de premiers secours |         |
-| **DAP** | ???     | Détachement d'appui             |         |
+| Type    | Symbole                                      | Description                     | Exemple |
+| ------- | -------------------------------------------- | ------------------------------- | ------- |
+| **DPS** | ![site_dps.png](../symbols/png/site_dps.png) | Détachement de premiers secours |         |
+| **DAP** | ![site_dap.png](../symbols/png/site_dap.png) | Détachement d'appui             |         |
 
 ### Secteurs d'intervention
 
 Secteurs d'intervention
 
-| Type                 | Symbole | Description                  | Exemple |
-| ---------------------| ------- | ---------------------------- | ------- |
-| **Feu**              | ???     | Feu                          |         |
-| **Désincarcération** | ???     | Désincarcération (pionnier)  |         |
-| **DCH**              | ???     | Défense contre hydrocarbures |         |
+| Type                 | Symbole                                                                  | Description                  | Exemple |
+| ---------------------| ------------------------------------------------------------------------ | ---------------------------- | ------- |
+| **Feu primaire**     | ![secteur_feu_primaire.png](../doc/png/secteur_feu_primaire.png)         | Feu primaire                 |         |
+| **Feu secondaire**   | ![secteur_feu_secondaire.png](../doc/png/secteur_feu_secondaire.png)     | Feu secondaire               |         |
+| **Feu renfort**      | ![secteur_feu_renfort.png](../doc/png/secteur_feu_renfort.png)           | Feu renfort                  |         |
+| **Désincarcération** | ![secteur_desincarceration.png](../doc/png/secteur_desincarceration.png) | Désincarcération (pionnier)  |         |
+| **DCH**              | ![secteur_dch.png](../doc/png/secteur_dch.png)                           | Défense contre hydrocarbures |         |
 
 ### Secteurs organisationnels
 
