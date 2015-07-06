@@ -9,6 +9,7 @@ ALTER TABLE sdis.dangers ADD COLUMN localisation varchar(255);
 ALTER TABLE sdis.dangers ADD COLUMN photo        varchar(255);
 ALTER TABLE sdis.dangers ADD COLUMN document     varchar(255);
 ALTER TABLE sdis.dangers ADD COLUMN remarque     varchar(255);
+ALTER TABLE sdis.dangers ADD COLUMN date_import  date;
 
 SELECT AddGeometryColumn('sdis', 'dangers', 'geom', 21781, 'Point', 2);
 CREATE INDEX dangers_geom_idx ON sdis.dangers USING GIST (geom);
@@ -26,6 +27,7 @@ ALTER TABLE sdis.risques ADD COLUMN localisation varchar(255);
 ALTER TABLE sdis.risques ADD COLUMN photo        varchar(255);
 ALTER TABLE sdis.risques ADD COLUMN document     varchar(255);
 ALTER TABLE sdis.risques ADD COLUMN remarque     varchar(255);
+ALTER TABLE sdis.risques ADD COLUMN date_import  date;
 
 SELECT AddGeometryColumn('sdis', 'risques', 'geom', 21781, 'Point', 2);
 CREATE INDEX risques_geom_idx ON sdis.risques USING GIST (geom);
@@ -54,11 +56,12 @@ CREATE INDEX acces_geom_idx ON sdis.acces USING GIST (geom);
 CREATE TABLE sdis.signalisation (id serial PRIMARY KEY);
 COMMENT ON TABLE sdis.signalisation IS 'Signalisation pour accès véhicules';
 
-ALTER TABLE sdis.signalisation ADD COLUMN type     varchar(255) NOT NULL; COMMENT ON COLUMN sdis.signalisation.type IS 'Sens interdit, Travaux, Danger, Interdiction camions, Hauteur limitée, Largeur limitée, Poids limité, Tout droit, Déviation';
-ALTER TABLE sdis.signalisation ADD COLUMN valeur   varchar(5);            COMMENT ON COLUMN sdis.signalisation.valeur IS 'Hauteur, largeur ou poids maximal';
-ALTER TABLE sdis.signalisation ADD COLUMN remarque varchar(255);
+ALTER TABLE sdis.signalisation ADD COLUMN type        varchar(255) NOT NULL; COMMENT ON COLUMN sdis.signalisation.type IS 'Sens interdit, Travaux, Danger, Interdiction camions, Hauteur limitée, Largeur limitée, Poids limité, Tout droit, Déviation';
+ALTER TABLE sdis.signalisation ADD COLUMN valeur      varchar(5);            COMMENT ON COLUMN sdis.signalisation.valeur IS 'Hauteur, largeur ou poids maximal';
+ALTER TABLE sdis.signalisation ADD COLUMN remarque    varchar(255);
+ALTER TABLE sdis.signalisation ADD COLUMN orientation int4;                  COMMENT ON COLUMN sdis.signalisation.orientation IS '[°]';
 
-SELECT AddGeometryColumn('sdis', 'signalisation', 'geom', 21781, 'MultiLineString', 2); COMMENT ON COLUMN sdis.signalisation.geom IS 'Symbole orienté';
+SELECT AddGeometryColumn('sdis', 'signalisation', 'geom', 21781, 'Point', 2);
 CREATE INDEX signalisation_geom_idx ON sdis.signalisation USING GIST (geom);
 
 
@@ -117,9 +120,10 @@ CREATE INDEX cles_geom_idx ON sdis.cles USING GIST (geom);
 CREATE TABLE sdis.codes (id serial PRIMARY KEY);
 COMMENT ON TABLE sdis.codes IS 'Digicodes';
 
-ALTER TABLE sdis.codes ADD COLUMN code         varchar(255) NOT NULL;
-ALTER TABLE sdis.codes ADD COLUMN localisation varchar(255);
-ALTER TABLE sdis.codes ADD COLUMN remarque     varchar(255);
+ALTER TABLE sdis.codes ADD COLUMN code          varchar(255) NOT NULL;
+ALTER TABLE sdis.codes ADD COLUMN localisation  varchar(255);
+ALTER TABLE sdis.codes ADD COLUMN date_controle date;
+ALTER TABLE sdis.codes ADD COLUMN remarque      varchar(255);
 
 SELECT AddGeometryColumn('sdis', 'codes', 'geom', 21781, 'Point', 2);
 CREATE INDEX codes_geom_idx ON sdis.codes USING GIST (geom);
@@ -154,20 +158,6 @@ ALTER TABLE sdis.dossiers_intervention ADD COLUMN remarque     varchar(255);
 
 SELECT AddGeometryColumn('sdis', 'dossiers_intervention', 'geom', 21781, 'Point', 2);
 CREATE INDEX dossiers_intervention_geom_idx ON sdis.dossiers_intervention USING GIST (geom);
-
-
-
-/* TABLE batiments */
-
---DROP TABLE IF EXISTS sdis.batiments CASCADE;
-CREATE TABLE sdis.batiments (id serial PRIMARY KEY);
-COMMENT ON TABLE sdis.batiments IS 'Bâtiments avec objet SDIS';
-
-ALTER TABLE sdis.batiments ADD COLUMN no_eca  varchar(20);
-ALTER TABLE sdis.batiments ADD COLUMN commune varchar(255);
-
-SELECT AddGeometryColumn('sdis', 'batiments', 'geom', 21781, 'MultiPolygon', 2);
-CREATE INDEX batiments_geom_idx ON sdis.batiments USING GIST (geom);
 
 
 
@@ -244,7 +234,7 @@ COMMENT ON TABLE sdis.sites IS 'Casernes et locaux';
 
 ALTER TABLE sdis.sites ADD COLUMN type      varchar(255) NOT NULL; COMMENT ON COLUMN sdis.sites.type IS 'DPS, DAP';
 ALTER TABLE sdis.sites ADD COLUMN categorie varchar(5);
-ALTER TABLE sdis.sites ADD COLUMN nom       varchar(255);
+ALTER TABLE sdis.sites ADD COLUMN nom       varchar(255) NOT NULL;
 
 SELECT AddGeometryColumn('sdis', 'sites', 'geom', 21781, 'Point', 2);
 CREATE INDEX sites_geom_idx ON sdis.sites USING GIST (geom);
@@ -276,3 +266,19 @@ ALTER TABLE sdis.secteurs_organisationnels ADD COLUMN nom  varchar(255);
 
 SELECT AddGeometryColumn('sdis', 'secteurs_organisationnels', 'geom', 21781, 'MultiPolygon', 2);
 CREATE INDEX secteurs_organisationnels_geom_idx ON sdis.secteurs_organisationnels USING GIST (geom);
+
+
+
+/* TABLE personnel_liste */
+
+--DROP TABLE IF EXISTS sdis.personnel_liste CASCADE;
+CREATE TABLE sdis.personnel_liste (id serial PRIMARY KEY);
+COMMENT ON TABLE sdis.personnel_liste IS 'Personnel d''intervention (liste)';
+
+ALTER TABLE sdis.personnel_liste ADD COLUMN grade   varchar(20)  NOT NULL;
+ALTER TABLE sdis.personnel_liste ADD COLUMN nom     varchar(255) NOT NULL;
+ALTER TABLE sdis.personnel_liste ADD COLUMN prenom  varchar(255) NOT NULL;
+ALTER TABLE sdis.personnel_liste ADD COLUMN rue     varchar(255) NOT NULL;
+ALTER TABLE sdis.personnel_liste ADD COLUMN numero  varchar(20)  NOT NULL;
+ALTER TABLE sdis.personnel_liste ADD COLUMN commune varchar(255) NOT NULL;
+ALTER TABLE sdis.personnel_liste ADD COLUMN groupe  varchar(20);
