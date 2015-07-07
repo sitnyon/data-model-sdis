@@ -73,7 +73,7 @@ Accès et cheminements
 | **Echelle**        | ![acces_echelle.png](../doc/png/acces_echelle.png)               | Facades accessibles avec une échelle automobile |                       |
 | **Entrée**         | ???                                                              | Entrée de bâtiment                              |                       |
 | **Motopompe**      | ???                                                              | Cheminement pour placer une motopompe           |                       |
-| **Barrage**        | ???                                                              | Cheminement pour mettre un barrage à l'eau      |                       |
+| **Barrage**        | ![acces_barrage.png](../doc/png/acces_barrage.png)               | Cheminement pour mettre un barrage à l'eau      |                       |
 
 ### Signalisation
 
