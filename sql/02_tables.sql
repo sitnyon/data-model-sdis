@@ -40,7 +40,7 @@ CREATE INDEX risques_geom_idx ON sdis.risques USING GIST (geom);
 CREATE TABLE sdis.acces (id serial PRIMARY KEY);
 COMMENT ON TABLE sdis.acces IS 'Accès et cheminements';
 
-ALTER TABLE sdis.acces ADD COLUMN type         varchar(255) NOT NULL; COMMENT ON COLUMN sdis.acces.type IS 'Véhicule, Reconnaissance, Echelle, Entrée, Motopompe, Barrage';
+ALTER TABLE sdis.acces ADD COLUMN type         varchar(255) NOT NULL; COMMENT ON COLUMN sdis.acces.type IS 'Véhicule, Reconnaissance, Echelle, Entrée, Motopompe, Barrage, Restriction circulation';
 ALTER TABLE sdis.acces ADD COLUMN localisation varchar(255);
 ALTER TABLE sdis.acces ADD COLUMN photo        varchar(255);
 ALTER TABLE sdis.acces ADD COLUMN remarque     varchar(255);
