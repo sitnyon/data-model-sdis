@@ -108,6 +108,7 @@ ALTER TABLE sdis.cles ADD COLUMN type         varchar(255) NOT NULL; COMMENT ON 
 ALTER TABLE sdis.cles ADD COLUMN numero       varchar(20);
 ALTER TABLE sdis.cles ADD COLUMN localisation varchar(255);
 ALTER TABLE sdis.cles ADD COLUMN remarque     varchar(255);
+ALTER TABLE sdis.cles ADD COLUMN inactif      bool;
 
 SELECT AddGeometryColumn('sdis', 'cles', 'geom', 21781, 'Point', 2);
 CREATE INDEX cles_geom_idx ON sdis.cles USING GIST (geom);
