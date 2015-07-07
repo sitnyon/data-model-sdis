@@ -37,7 +37,7 @@ Sources de danger
 | -------------- | -------------------------------------------------------------- | -------------------------------------- | ---------------------------------------------------------------------------- |
 | **Feu**        | ![danger_feu.png](../symbols/png/danger_feu.png)               | Danger particulier d’incendie          | Station-service, scierie                                                     |
 | **Gaz**        | ![danger_gaz.png](../symbols/png/danger_gaz.png)               | Gaz inflammable, risque d’explosion    | Citerne de gaz                                                               |
-| **Electrique** | ![danger_electrique.png](../symbols/png/danger_electrique.png) | Source de danger d’origine électrique  | Armoire électrique, panneaux solaires photovoltaïques                        |
+| **Electrique** | ![danger_electrique.png](../symbols/png/danger_electrique.png) | Source de danger d’origine électrique  | Station transformatrice, panneaux solaires photovoltaïques                   |
 | **Toxique**    | ![danger_toxique.png](../symbols/png/danger_toxique.png)       | Produits toxiques                      | Stock de produits                                                            |
 | **Radioactif** | ![danger_radioactif.png](../symbols/png/danger_radioactif.png) | Sources radioactives                   | Laboratoire                                                                  |
 | **Infectieux** | ![danger_infectieux.png](../symbols/png/danger_infectieux.png) | Substances infectieuses                | Laboratoire                                                                  |
