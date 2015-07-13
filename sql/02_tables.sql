@@ -1,6 +1,6 @@
-/* TABLE dangers */
+-- Table: sdis.dangers
 
---DROP TABLE IF EXISTS sdis.dangers CASCADE;
+-- DROP TABLE IF EXISTS sdis.dangers CASCADE;
 CREATE TABLE sdis.dangers (id serial PRIMARY KEY);
 COMMENT ON TABLE sdis.dangers IS 'Sources de danger';
 
@@ -16,9 +16,9 @@ CREATE INDEX dangers_geom_idx ON sdis.dangers USING GIST (geom);
 
 
 
-/* TABLE risques */
+-- Table: sdis.risques
 
---DROP TABLE IF EXISTS sdis.risques CASCADE;
+-- DROP TABLE IF EXISTS sdis.risques CASCADE;
 CREATE TABLE sdis.risques (id serial PRIMARY KEY);
 COMMENT ON TABLE sdis.risques IS 'Eléments à risque';
 
@@ -34,9 +34,9 @@ CREATE INDEX risques_geom_idx ON sdis.risques USING GIST (geom);
 
 
 
-/* TABLE acces */
+-- Table: sdis.acces
 
---DROP TABLE IF EXISTS sdis.acces CASCADE;
+-- DROP TABLE IF EXISTS sdis.acces CASCADE;
 CREATE TABLE sdis.acces (id serial PRIMARY KEY);
 COMMENT ON TABLE sdis.acces IS 'Accès et cheminements';
 
@@ -50,9 +50,9 @@ CREATE INDEX acces_geom_idx ON sdis.acces USING GIST (geom);
 
 
 
-/* TABLE signalisation */
+-- Table: sdis.signalisation
 
---DROP TABLE IF EXISTS sdis.signalisation CASCADE;
+-- DROP TABLE IF EXISTS sdis.signalisation CASCADE;
 CREATE TABLE sdis.signalisation (id serial PRIMARY KEY);
 COMMENT ON TABLE sdis.signalisation IS 'Signalisation pour accès véhicules';
 
@@ -66,9 +66,9 @@ CREATE INDEX signalisation_geom_idx ON sdis.signalisation USING GIST (geom);
 
 
 
-/* TABLE emplacements */
+-- Table: sdis.emplacements
 
---DROP TABLE IF EXISTS sdis.emplacements CASCADE;
+-- DROP TABLE IF EXISTS sdis.emplacements CASCADE;
 CREATE TABLE sdis.emplacements (id serial PRIMARY KEY);
 COMMENT ON TABLE sdis.emplacements IS 'Emplacements pour moyens d''intervention';
 
@@ -80,9 +80,9 @@ CREATE INDEX emplacements_geom_idx ON sdis.emplacements USING GIST (geom);
 
 
 
-/* TABLE detections */
+-- Table: sdis.detections
 
---DROP TABLE IF EXISTS sdis.detections CASCADE;
+-- DROP TABLE IF EXISTS sdis.detections CASCADE;
 CREATE TABLE sdis.detections (id serial PRIMARY KEY);
 COMMENT ON TABLE sdis.detections IS 'Alarmes avec télétransmission et dispositifs d''extinction';
 
@@ -98,9 +98,9 @@ CREATE INDEX detections_geom_idx ON sdis.detections USING GIST (geom);
 
 
 
-/* TABLE cles */
+-- Table: sdis.cles
 
---DROP TABLE IF EXISTS sdis.cles CASCADE;
+-- DROP TABLE IF EXISTS sdis.cles CASCADE;
 CREATE TABLE sdis.cles (id serial PRIMARY KEY);
 COMMENT ON TABLE sdis.cles IS 'Clés d''accès';
 
@@ -116,9 +116,9 @@ CREATE INDEX cles_geom_idx ON sdis.cles USING GIST (geom);
 
 
 
-/* TABLE codes */
+-- Table: sdis.codes
 
---DROP TABLE IF EXISTS sdis.codes CASCADE;
+-- DROP TABLE IF EXISTS sdis.codes CASCADE;
 CREATE TABLE sdis.codes (id serial PRIMARY KEY);
 COMMENT ON TABLE sdis.codes IS 'Digicodes';
 
@@ -132,9 +132,9 @@ CREATE INDEX codes_geom_idx ON sdis.codes USING GIST (geom);
 
 
 
-/* TABLE situation */
+-- Table: sdis.situation
 
---DROP TABLE IF EXISTS sdis.situation CASCADE;
+-- DROP TABLE IF EXISTS sdis.situation CASCADE;
 CREATE TABLE sdis.situation (id serial PRIMARY KEY);
 COMMENT ON TABLE sdis.situation IS 'Eléments de situation';
 
@@ -147,9 +147,9 @@ CREATE INDEX situation_geom_idx ON sdis.situation USING GIST (geom);
 
 
 
-/* TABLE dossiers_intervention */
+-- Table: sdis.dossiers_intervention
 
---DROP TABLE IF EXISTS sdis.dossiers_intervention CASCADE;
+-- DROP TABLE IF EXISTS sdis.dossiers_intervention CASCADE;
 CREATE TABLE sdis.dossiers_intervention (id serial PRIMARY KEY);
 COMMENT ON TABLE sdis.dossiers_intervention IS 'Dossiers d''intervention';
 
@@ -163,9 +163,9 @@ CREATE INDEX dossiers_intervention_geom_idx ON sdis.dossiers_intervention USING 
 
 
 
-/* TABLE bornes_hydrantes */
+-- Table: sdis.bornes_hydrantes
 
---DROP TABLE IF EXISTS sdis.bornes_hydrantes CASCADE;
+-- DROP TABLE IF EXISTS sdis.bornes_hydrantes CASCADE;
 CREATE TABLE sdis.bornes_hydrantes (id serial PRIMARY KEY);
 COMMENT ON TABLE sdis.bornes_hydrantes IS 'Bornes hydrantes';
 
@@ -181,9 +181,9 @@ CREATE INDEX bornes_hydrantes_geom_idx ON sdis.bornes_hydrantes USING GIST (geom
 
 
 
-/* TABLE puits_reservoirs */
+-- Table: sdis.puits_reservoirs
 
---DROP TABLE IF EXISTS sdis.puits_reservoirs CASCADE;
+-- DROP TABLE IF EXISTS sdis.puits_reservoirs CASCADE;
 CREATE TABLE sdis.puits_reservoirs (id serial PRIMARY KEY);
 COMMENT ON TABLE sdis.puits_reservoirs IS 'Puits et réservoirs';
 
@@ -197,9 +197,9 @@ CREATE INDEX puits_reservoirs_geom_idx ON sdis.puits_reservoirs USING GIST (geom
 
 
 
-/* TABLE tuyaux */
+-- Table: sdis.tuyaux
 
---DROP TABLE IF EXISTS sdis.tuyaux CASCADE;
+-- DROP TABLE IF EXISTS sdis.tuyaux CASCADE;
 CREATE TABLE sdis.tuyaux (id serial PRIMARY KEY);
 COMMENT ON TABLE sdis.tuyaux IS 'Emplacements pour tuyaux';
 
@@ -212,9 +212,9 @@ CREATE INDEX tuyaux_geom_idx ON sdis.tuyaux USING GIST (geom);
 
 
 
-/* TABLE barrages */
+-- Table: sdis.barrages
 
---DROP TABLE IF EXISTS sdis.barrages CASCADE;
+-- DROP TABLE IF EXISTS sdis.barrages CASCADE;
 CREATE TABLE sdis.barrages (id serial PRIMARY KEY);
 COMMENT ON TABLE sdis.barrages IS 'Barrages anti pollution';
 
@@ -228,9 +228,9 @@ CREATE INDEX barrages_geom_idx ON sdis.barrages USING GIST (geom);
 
 
 
-/* TABLE sites */
+-- Table: sdis.sites
 
---DROP TABLE IF EXISTS sdis.sites CASCADE;
+-- DROP TABLE IF EXISTS sdis.sites CASCADE;
 CREATE TABLE sdis.sites (id serial PRIMARY KEY);
 COMMENT ON TABLE sdis.sites IS 'Casernes et locaux';
 
@@ -243,9 +243,9 @@ CREATE INDEX sites_geom_idx ON sdis.sites USING GIST (geom);
 
 
 
-/* TABLE secteurs_intervention */
+-- Table: sdis.secteurs_intervention
 
---DROP TABLE IF EXISTS sdis.secteurs_intervention CASCADE;
+-- DROP TABLE IF EXISTS sdis.secteurs_intervention CASCADE;
 CREATE TABLE sdis.secteurs_intervention (id serial PRIMARY KEY);
 COMMENT ON TABLE sdis.secteurs_intervention IS 'Secteurs d''intervention';
 
@@ -257,9 +257,9 @@ CREATE INDEX secteurs_intervention_geom_idx ON sdis.secteurs_intervention USING 
 
 
 
-/* TABLE secteurs_organisationnels */
+-- Table: sdis.secteurs_organisationnels
 
---DROP TABLE IF EXISTS sdis.secteurs_organisationnels CASCADE;
+-- DROP TABLE IF EXISTS sdis.secteurs_organisationnels CASCADE;
 CREATE TABLE sdis.secteurs_organisationnels (id serial PRIMARY KEY);
 COMMENT ON TABLE sdis.secteurs_organisationnels IS 'Secteurs organisationnels';
 
@@ -271,9 +271,9 @@ CREATE INDEX secteurs_organisationnels_geom_idx ON sdis.secteurs_organisationnel
 
 
 
-/* TABLE personnel_liste */
+-- Table: sdis.personnel_liste
 
---DROP TABLE IF EXISTS sdis.personnel_liste CASCADE;
+-- DROP TABLE IF EXISTS sdis.personnel_liste CASCADE;
 CREATE TABLE sdis.personnel_liste (id serial PRIMARY KEY);
 COMMENT ON TABLE sdis.personnel_liste IS 'Personnel d''intervention (liste)';
 

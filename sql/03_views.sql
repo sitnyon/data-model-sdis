@@ -1,4 +1,4 @@
-/* VIEW batiments */
+-- View: sdis.batiments
 
 -- DROP VIEW sdis.batiments;
 CREATE VIEW sdis.batiments AS
@@ -36,7 +36,7 @@ COMMENT ON VIEW sdis.batiments IS 'Bâtiments avec objet SDIS';
 
 
 
-/* VIEW personnel */
+-- View: sdis.personnel
 
 -- DROP VIEW sdis.personnel;
 CREATE VIEW sdis.personnel AS
