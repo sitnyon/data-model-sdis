@@ -7,7 +7,7 @@ $BODY$BEGIN
 
     SELECT INTO new.photo
     CASE
-        WHEN new.photo IS NOT NULL THEN replace(new.photo, 'T:', '\\orcus\SDIS') -- Spécifique Nyon
+        WHEN new.photo IS NOT NULL THEN replace(new.photo, 'T:', '\\orcus\SDIS') -- SpÃ©cifique Nyon
         ELSE NULL
     END;
 
@@ -28,7 +28,7 @@ $BODY$BEGIN
 
     SELECT INTO new.document
     CASE
-        WHEN new.document IS NOT NULL THEN replace(new.document, 'T:', '\\orcus\SDIS') -- Spécifique Nyon
+        WHEN new.document IS NOT NULL THEN replace(new.document, 'T:', '\\orcus\SDIS') -- SpÃ©cifique Nyon
         ELSE NULL
     END;
 
@@ -48,7 +48,7 @@ CREATE TRIGGER tr_dangers_get_path_absolu_photo
   ON sdis.dangers
   FOR EACH ROW
   EXECUTE PROCEDURE sdis.fn_get_path_absolu_photo();
-COMMENT ON TRIGGER tr_dangers_get_path_absolu_photo ON sdis.dangers IS 'Exécute fn_get_path_absolu_photo()';
+COMMENT ON TRIGGER tr_dangers_get_path_absolu_photo ON sdis.dangers IS 'ExÃ©cute fn_get_path_absolu_photo()';
 
 
 
@@ -60,7 +60,7 @@ CREATE TRIGGER tr_dangers_get_path_absolu_document
   ON sdis.dangers
   FOR EACH ROW
   EXECUTE PROCEDURE sdis.fn_get_path_absolu_document();
-COMMENT ON TRIGGER tr_dangers_get_path_absolu_document ON sdis.dangers IS 'Exécute fn_get_path_absolu_document()';
+COMMENT ON TRIGGER tr_dangers_get_path_absolu_document ON sdis.dangers IS 'ExÃ©cute fn_get_path_absolu_document()';
 
 
 
@@ -72,7 +72,7 @@ CREATE TRIGGER tr_risques_get_path_absolu_photo
   ON sdis.risques
   FOR EACH ROW
   EXECUTE PROCEDURE sdis.fn_get_path_absolu_photo();
-COMMENT ON TRIGGER tr_risques_get_path_absolu_photo ON sdis.risques IS 'Exécute fn_get_path_absolu_photo()';
+COMMENT ON TRIGGER tr_risques_get_path_absolu_photo ON sdis.risques IS 'ExÃ©cute fn_get_path_absolu_photo()';
 
 
 
@@ -84,7 +84,7 @@ CREATE TRIGGER tr_risques_get_path_absolu_document
   ON sdis.risques
   FOR EACH ROW
   EXECUTE PROCEDURE sdis.fn_get_path_absolu_document();
-COMMENT ON TRIGGER tr_risques_get_path_absolu_document ON sdis.risques IS 'Exécute fn_get_path_absolu_document()';
+COMMENT ON TRIGGER tr_risques_get_path_absolu_document ON sdis.risques IS 'ExÃ©cute fn_get_path_absolu_document()';
 
 
 
@@ -96,7 +96,7 @@ CREATE TRIGGER tr_acces_get_path_absolu_photo
   ON sdis.acces
   FOR EACH ROW
   EXECUTE PROCEDURE sdis.fn_get_path_absolu_photo();
-COMMENT ON TRIGGER tr_acces_get_path_absolu_photo ON sdis.acces IS 'Exécute fn_get_path_absolu_photo()';
+COMMENT ON TRIGGER tr_acces_get_path_absolu_photo ON sdis.acces IS 'ExÃ©cute fn_get_path_absolu_photo()';
 
 
 
@@ -108,4 +108,4 @@ CREATE TRIGGER tr_dossiers_intervention_get_path_absolu_document
   ON sdis.dossiers_intervention
   FOR EACH ROW
   EXECUTE PROCEDURE sdis.fn_get_path_absolu_document();
-COMMENT ON TRIGGER tr_dossiers_intervention_get_path_absolu_document ON sdis.dossiers_intervention IS 'Exécute fn_get_path_absolu_document()';
+COMMENT ON TRIGGER tr_dossiers_intervention_get_path_absolu_document ON sdis.dossiers_intervention IS 'ExÃ©cute fn_get_path_absolu_document()';
