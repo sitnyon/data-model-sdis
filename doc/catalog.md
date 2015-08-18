@@ -179,20 +179,19 @@ Puits et réservoirs
 
 ### Tuyaux
 
-Emplacements pour tuyaux
+Transport d'eau
 
-| Type      | Symbole | Description             | Exemple                                  |
-| --------- | ------- | ----------------------- | ---------------------------------------- |
-| **Tuyau** | ???     | Emplacement pour tuyaux | Depuis motopompe, entre véhicules relais |
+| Type      | Symbole                            | Description     | Exemple                                  |
+| --------- | ---------------------------------- | --------------- | ---------------------------------------- |
+| **Tuyau** | ![tuyau.png](../doc/png/tuyau.png) | Transport d'eau | Depuis motopompe, entre véhicules relais |
 
 ### Barrages
 
 Barrages anti pollution
 
-| Type        | Symbole | Description                        | Exemple |
-| ----------- | ------- | ---------------------------------- | ------- |
-| **Rivière** | ???     | Barrage anti pollution sur rivière |         |
-| **Lac**     | ???     | Barrage anti pollution sur lac     |         |
+| Type        | Symbole                                | Description            | Exemple              |
+| ----------- | -------------------------------------- | ---------------------- | -------------------- |
+| **Barrage** | ![barrage.png](../doc/png/barrage.png) | Barrage anti pollution | Sur rivière, sur lac |
 
 Organisation
 ------------

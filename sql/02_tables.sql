@@ -218,8 +218,7 @@ CREATE INDEX tuyaux_geom_idx ON sdis.tuyaux USING GIST (geom);
 CREATE TABLE sdis.barrages (id serial PRIMARY KEY);
 COMMENT ON TABLE sdis.barrages IS 'Barrages anti pollution';
 
-ALTER TABLE sdis.barrages ADD COLUMN type         varchar(255) NOT NULL; COMMENT ON COLUMN sdis.barrages.type IS 'Rivière, Lac';
-ALTER TABLE sdis.barrages ADD COLUMN longueur     int4;                  COMMENT ON COLUMN sdis.barrages.longueur IS '[m]';
+ALTER TABLE sdis.barrages ADD COLUMN longueur     int4;         COMMENT ON COLUMN sdis.barrages.longueur IS '[m]';
 ALTER TABLE sdis.barrages ADD COLUMN localisation varchar(255);
 ALTER TABLE sdis.barrages ADD COLUMN remarque     varchar(255);
 ALTER TABLE sdis.barrages ADD COLUMN geom         geometry(MultiLineString, 21781);
