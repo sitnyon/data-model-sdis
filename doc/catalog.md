@@ -66,14 +66,15 @@ Accès
 
 Accès et cheminements
 
-| Type               | Symbole                                                          | Description                                     | Exemple               |
-| -------------------| ---------------------------------------------------------------- | ----------------------------------------------- | --------------------- |
-| **Véhicule**       | ![acces_vehicule.png](../doc/png/acces_vehicule.png)             | Accès pour les véhicules d'intervention         |                       |
-| **Reconnaissance** | ![acces_reconnaissance.png](../doc/png/acces_reconnaissance.png) | Cheminement pour la reconnaissance à pieds      | Accès cour intérieure |
-| **Echelle**        | ![acces_echelle.png](../doc/png/acces_echelle.png)               | Facades accessibles avec une échelle automobile |                       |
-| **Entrée**         | ???                                                              | Entrée de bâtiment                              |                       |
-| **Motopompe**      | ???                                                              | Cheminement pour placer une motopompe           |                       |
-| **Barrage**        | ![acces_barrage.png](../doc/png/acces_barrage.png)               | Cheminement pour mettre un barrage à l'eau      |                       |
+| Type                        | Symbole                                                                            | Description                                     | Exemple               |
+| ----------------------------| ---------------------------------------------------------------------------------- | ----------------------------------------------- | --------------------- |
+| **Véhicule**                | ![acces_vehicule.png](../doc/png/acces_vehicule.png)                               | Accès pour les véhicules d'intervention         |                       |
+| **Reconnaissance**          | ![acces_reconnaissance.png](../doc/png/acces_reconnaissance.png)                   | Cheminement pour la reconnaissance à pieds      | Accès cour intérieure |
+| **Echelle**                 | ![acces_echelle.png](../doc/png/acces_echelle.png)                                 | Facades accessibles avec une échelle automobile |                       |
+| **Entrée**                  | ???                                                                                | Entrée de bâtiment                              |                       |
+| **Motopompe**               | ???                                                                                | Cheminement pour placer une motopompe           |                       |
+| **Barrage**                 | ![acces_barrage.png](../doc/png/acces_barrage.png)                                 | Cheminement pour mettre un barrage à l'eau      |                       |
+| **Restriction circulation** | ![acces_restriction_circulation.png](../doc/png/acces_restriction_circulation.png) | Restriction de circulation                      |                       |
 
 ### Signalisation
 
@@ -178,20 +179,19 @@ Puits et réservoirs
 
 ### Tuyaux
 
-Emplacements pour tuyaux
+Transport d'eau
 
-| Type      | Symbole | Description             | Exemple                                  |
-| --------- | ------- | ----------------------- | ---------------------------------------- |
-| **Tuyau** | ???     | Emplacement pour tuyaux | Depuis motopompe, entre véhicules relais |
+| Type      | Symbole                            | Description     | Exemple                                  |
+| --------- | ---------------------------------- | --------------- | ---------------------------------------- |
+| **Tuyau** | ![tuyau.png](../doc/png/tuyau.png) | Transport d'eau | Depuis motopompe, entre véhicules relais |
 
 ### Barrages
 
 Barrages anti pollution
 
-| Type        | Symbole | Description                        | Exemple |
-| ----------- | ------- | ---------------------------------- | ------- |
-| **Rivière** | ???     | Barrage anti pollution sur rivière |         |
-| **Lac**     | ???     | Barrage anti pollution sur lac     |         |
+| Type        | Symbole                                | Description            | Exemple              |
+| ----------- | -------------------------------------- | ---------------------- | -------------------- |
+| **Barrage** | ![barrage.png](../doc/png/barrage.png) | Barrage anti pollution | Sur rivière, sur lac |
 
 Organisation
 ------------

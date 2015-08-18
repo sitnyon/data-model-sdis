@@ -15,7 +15,7 @@
    id="svg4870"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="acces_vehicule.svg"
+   sodipodi:docname="acces_reconnaissance.svg"
    inkscape:export-filename="Q:\800_SDIS\804_MODELE_DONNEES_SDIS\GitHub\data-model-sdis\symbols\png\detection.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
@@ -29,8 +29,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="4.4150002"
-     inkscape:cx="-28.098391"
-     inkscape:cy="8.1502838"
+     inkscape:cx="13.23796"
+     inkscape:cy="8.3767844"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -38,9 +38,9 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1835"
+     inkscape:window-width="1836"
      inkscape:window-height="1058"
-     inkscape:window-x="77"
+     inkscape:window-x="76"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:snap-grids="true"
@@ -53,7 +53,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -63,8 +63,13 @@
      id="layer1"
      transform="translate(0,-1002.3622)">
     <path
+       style="fill:none;fill-rule:evenodd;stroke:#0000ff;stroke-width:2.99999976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 0,1027.3622 44.999997,0"
+       id="path4139"
+       inkscape:connector-curvature="0" />
+    <path
        sodipodi:type="star"
-       style="fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:3.49883962;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#0000ff;fill-opacity:1;stroke:#0000ff;stroke-width:3.49883962;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4143"
        sodipodi:sides="3"
        sodipodi:cx="13.083198"
@@ -80,47 +85,5 @@
        inkscape:transform-center-x="-1.9169293"
        inkscape:transform-center-y="-9.7467351e-005"
        transform="matrix(1.0000198,0,0,0.89395441,27.499849,125.03644)" />
-    <ellipse
-       style="fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:2.80731583;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path4137"
-       cx="1.9999999"
-       cy="1027.3622"
-       rx="0.59634197"
-       ry="0.59634179" />
-    <ellipse
-       style="fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:2.80731583;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path4137-7"
-       cx="8"
-       cy="1027.3622"
-       rx="0.59634191"
-       ry="0.59634179" />
-    <ellipse
-       style="fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:2.80731583;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path4137-3"
-       cx="14"
-       cy="1027.3622"
-       rx="0.59634191"
-       ry="0.59634179" />
-    <ellipse
-       style="fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:2.80731583;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path4137-1"
-       cx="19.999998"
-       cy="1027.3622"
-       rx="0.59634191"
-       ry="0.59634179" />
-    <ellipse
-       style="fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:2.80731583;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path4137-18"
-       cx="25.999998"
-       cy="1027.3622"
-       rx="0.59634191"
-       ry="0.59634179" />
-    <ellipse
-       style="fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:2.80731583;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path4137-8"
-       cx="31.999998"
-       cy="1027.3622"
-       rx="0.59634191"
-       ry="0.59634179" />
   </g>
 </svg>
