@@ -203,6 +203,23 @@ COMMENT ON VIEW sdis.sd_vmf_dossiers_intervention IS 'Dossiers d''intervention';
 
 
 
+-- View: sdis.sd_vmf_batiments
+
+-- DROP VIEW sdis.sd_vmf_batiments;
+CREATE OR REPLACE VIEW sdis.sd_vmf_batiments AS
+
+    SELECT
+        a.id,
+        a.no_eca,
+        a.commune,
+        a.geom
+    FROM
+        sdis.sd_batiments a;
+
+COMMENT ON VIEW sdis.sd_vmf_batiments IS 'Bâtiments avec objet SDIS';
+
+
+
 -- View: sdis.sd_vmf_bornes_hydrantes
 
 -- DROP VIEW sdis.sd_vmf_bornes_hydrantes;
@@ -297,6 +314,27 @@ COMMENT ON VIEW sdis.sd_vmf_sites IS 'Casernes et locaux';
 
 
 
+-- View: sdis.sd_vmf_personnel
+
+-- DROP VIEW sdis.sd_vmf_personnel;
+CREATE OR REPLACE VIEW sdis.sd_vmf_personnel AS
+
+    SELECT
+        a.id,
+        a.grade,
+        a.nom,
+        a.prenom,
+        a.adresse,
+        a.commune,
+        a.groupe,
+        a.geom
+    FROM
+        sdis.sd_personnel a;
+
+COMMENT ON VIEW sdis.sd_vmf_personnel IS 'Personnel d''intervention';
+
+
+
 -- View: sdis.sd_vmf_secteurs_intervention
 
 -- DROP VIEW sdis.sd_vmf_secteurs_intervention;
@@ -328,41 +366,3 @@ CREATE OR REPLACE VIEW sdis.sd_vmf_secteurs_organisationnels AS
         sdis.sd_secteurs_organisationnels a;
 
 COMMENT ON VIEW sdis.sd_vmf_secteurs_organisationnels IS 'Secteurs organisationnels';
-
-
-
--- View: sdis.sd_vmf_batiments
-
--- DROP VIEW sdis.sd_vmf_batiments;
-CREATE OR REPLACE VIEW sdis.sd_vmf_batiments AS
-
-    SELECT
-        a.id,
-        a.no_eca,
-        a.commune,
-        a.geom
-    FROM
-        sdis.sd_batiments a;
-
-COMMENT ON VIEW sdis.sd_vmf_batiments IS 'Bâtiments avec objet SDIS';
-
-
-
--- View: sdis.sd_vmf_personnel
-
--- DROP VIEW sdis.sd_vmf_personnel;
-CREATE OR REPLACE VIEW sdis.sd_vmf_personnel AS
-
-    SELECT
-        a.id,
-        a.grade,
-        a.nom,
-        a.prenom,
-        a.adresse,
-        a.commune,
-        a.groupe,
-        a.geom
-    FROM
-        sdis.sd_personnel a;
-
-COMMENT ON VIEW sdis.sd_vmf_personnel IS 'Personnel d''intervention';
