@@ -346,7 +346,9 @@ CREATE OR REPLACE VIEW sdis.sd_vmf_secteurs_intervention AS
         a.sous_type,
         a.geom
     FROM
-        sdis.sd_secteurs_intervention a;
+        sdis.sd_secteurs_intervention a
+    ORDER BY
+        a.type DESC; -- For symbology purpose
 
 COMMENT ON VIEW sdis.sd_vmf_secteurs_intervention IS 'Secteurs d''intervention';
 
