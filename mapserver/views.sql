@@ -75,7 +75,7 @@ CREATE OR REPLACE VIEW sdis.sd_vmf_signalisation AS
         a.type,
         a.valeur,
         a.remarque,
-        a.orientation,
+        (360 - a.orientation) % 360 AS orientation,
         a.geom
     FROM
         sdis.sd_signalisation a;
