@@ -16,7 +16,6 @@ CREATE OR REPLACE VIEW sdis.sd_vmf_dangers AS
         a.photo,
         a.document,
         a.remarque,
-        to_char(a.date_import, 'DD.MM.YYYY') AS date_import,
         a.geom
     FROM
         sdis.sd_dangers a;
@@ -37,7 +36,6 @@ CREATE OR REPLACE VIEW sdis.sd_vmf_risques AS
         a.photo,
         a.document,
         a.remarque,
-        to_char(a.date_import, 'DD.MM.YYYY') AS date_import,
         a.geom
     FROM
         sdis.sd_risques a;
