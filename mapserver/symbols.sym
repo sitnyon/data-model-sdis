@@ -1,6 +1,6 @@
 #
 # Notes:
-#     - Replace `symbols/sd_` by `symbols/png/` to be compatible with original data model
+#     - Replace `symbols/sd_` by `symbols/png/` and `"sd_` by `"` to be compatible with original data model
 #     - Some symbols are not defined: emplacements, situation, puits_reservoirs, sites
 #
 
