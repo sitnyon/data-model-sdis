@@ -9,10 +9,10 @@ Documentation
 PostGIS
 -------
 
-* [Création du schéma](sql/01_schema.sql)
-* [Création des tables](sql/02_tables.sql)
-* [Création des vues](sql/03_views.sql)
-* [Création des triggers](sql/04_triggers.sql)
+* [Schéma](sql/01_schema.sql)
+* [Tables](sql/02_tables.sql)
+* [Vues](sql/03_views.sql)
+* [Triggers](sql/04_triggers.sql)
 
 ### Spécifique utilisateurs
 
@@ -21,4 +21,6 @@ PostGIS
 MapServer
 ---------
 
-* [Création des vues](mapserver/views.sql)
+* [Vues](mapserver/views.sql)
+* [Mapfile](mapserver/mapfile.map.in)
+* [Symboles](mapserver/symbols.sym)
