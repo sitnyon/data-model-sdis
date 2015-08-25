@@ -1,0 +1,1177 @@
+#
+# Notes:
+#     - Replace `sd_` by `` to be compatible with original data model
+#     - Some layers are not defined: emplacements, situation, puits_reservoirs, sites, secteurs_organisationnels
+#
+
+
+
+LAYER
+    NAME "sd_dangers"
+    TYPE POINT
+    DATA "geom FROM (SELECT geo.geom AS geom, geo.id,
+                            geo.type, geo.localisation, geo.photo, geo.document, geo.remarque
+                     FROM sdis.sd_dangers AS geo
+                     WHERE (%role_id% IN (${mapfile_data_noarea_subselect} 'sd_dangers'))
+                     ) AS foo USING UNIQUE id USING srid=21781"
+    METADATA
+        "wms_title"          "sd_dangers"
+        "ows_geom_type"      "point"
+        "gml_include_items"  "type,localisation,photo,document,remarque"
+        "wms_srs"            "epsg:21781"
+        "wfs_enable_request" "*"
+        "ows_geometries"     "geom"
+        ${mapserver_layer_metadata}
+    END
+    MINSCALEDENOM      1
+    MAXSCALEDENOM      3000
+    TOLERANCE          ${wms_tolerance}
+    CLASSITEM          "type"
+    LABELITEM          "remarque"
+    LABELMINSCALEDENOM 1
+    LABELMAXSCALEDENOM 800
+    CLASS
+        NAME       "Feu"
+        EXPRESSION "Feu"
+        STYLE
+            SYMBOL "sd_danger_feu"
+            SIZE   25
+        END
+        LABEL
+            TYPE         TRUETYPE
+            FONT         "arial_b"
+            SIZE         8
+            ANTIALIAS    TRUE
+            COLOR        0 0 0
+            OUTLINECOLOR 255 125 0
+            OUTLINEWIDTH 1
+            POSITION     LC
+            ALIGN        CENTER
+            OFFSET       0 5
+            WRAP         " "
+            MAXLENGTH    15
+            FORCE        TRUE
+        END
+    END
+    CLASS
+        NAME       "Gaz"
+        EXPRESSION "Gaz"
+        STYLE
+            SYMBOL "sd_danger_gaz"
+            SIZE   25
+        END
+        LABEL
+            TYPE         TRUETYPE
+            FONT         "arial_b"
+            SIZE         8
+            ANTIALIAS    TRUE
+            COLOR        0 0 0
+            OUTLINECOLOR 255 125 0
+            OUTLINEWIDTH 1
+            POSITION     LC
+            ALIGN        CENTER
+            OFFSET       0 5
+            WRAP         " "
+            MAXLENGTH    15
+            FORCE        TRUE
+        END
+    END
+    CLASS
+        NAME       "Electrique"
+        EXPRESSION "Electrique"
+        STYLE
+            SYMBOL "sd_danger_electrique"
+            SIZE   25
+        END
+        LABEL
+            TYPE         TRUETYPE
+            FONT         "arial_b"
+            SIZE         8
+            ANTIALIAS    TRUE
+            COLOR        0 0 0
+            OUTLINECOLOR 255 125 0
+            OUTLINEWIDTH 1
+            POSITION     LC
+            ALIGN        CENTER
+            OFFSET       0 5
+            WRAP         " "
+            MAXLENGTH    15
+            FORCE        TRUE
+        END
+    END
+    CLASS
+        NAME       "Toxique"
+        EXPRESSION "Toxique"
+        STYLE
+            SYMBOL "sd_danger_toxique"
+            SIZE   25
+        END
+        LABEL
+            TYPE         TRUETYPE
+            FONT         "arial_b"
+            SIZE         8
+            ANTIALIAS    TRUE
+            COLOR        0 0 0
+            OUTLINECOLOR 255 125 0
+            OUTLINEWIDTH 1
+            POSITION     LC
+            ALIGN        CENTER
+            OFFSET       0 5
+            WRAP         " "
+            MAXLENGTH    15
+            FORCE        TRUE
+        END
+    END
+    CLASS
+        NAME       "Radioactif"
+        EXPRESSION "Radioactif"
+        STYLE
+            SYMBOL "sd_danger_radioactif"
+            SIZE   25
+        END
+        LABEL
+            TYPE         TRUETYPE
+            FONT         "arial_b"
+            SIZE         8
+            ANTIALIAS    TRUE
+            COLOR        0 0 0
+            OUTLINECOLOR 255 125 0
+            OUTLINEWIDTH 1
+            POSITION     LC
+            ALIGN        CENTER
+            OFFSET       0 5
+            WRAP         " "
+            MAXLENGTH    15
+            FORCE        TRUE
+        END
+    END
+    CLASS
+        NAME       "Infectieux"
+        EXPRESSION "Infectieux"
+        STYLE
+            SYMBOL "sd_danger_infectieux"
+            SIZE   25
+        END
+        LABEL
+            TYPE         TRUETYPE
+            FONT         "arial_b"
+            SIZE         8
+            ANTIALIAS    TRUE
+            COLOR        0 0 0
+            OUTLINECOLOR 255 125 0
+            OUTLINEWIDTH 1
+            POSITION     LC
+            ALIGN        CENTER
+            OFFSET       0 5
+            WRAP         " "
+            MAXLENGTH    15
+            FORCE        TRUE
+        END
+    END
+    CLASS
+        NAME       "Pollution"
+        EXPRESSION "Pollution"
+        STYLE
+            SYMBOL "sd_danger_pollution"
+            SIZE   25
+        END
+        LABEL
+            TYPE         TRUETYPE
+            FONT         "arial_b"
+            SIZE         8
+            ANTIALIAS    TRUE
+            COLOR        0 0 0
+            OUTLINECOLOR 255 125 0
+            OUTLINEWIDTH 1
+            POSITION     LC
+            ALIGN        CENTER
+            OFFSET       0 5
+            WRAP         " "
+            MAXLENGTH    15
+            FORCE        TRUE
+        END
+    END
+    CLASS
+        NAME       "Autre"
+        EXPRESSION "Autre"
+        STYLE
+            SYMBOL "sd_danger_autre"
+            SIZE   25
+        END
+        LABEL
+            TYPE         TRUETYPE
+            FONT         "arial_b"
+            SIZE         8
+            ANTIALIAS    TRUE
+            COLOR        0 0 0
+            OUTLINECOLOR 255 125 0
+            OUTLINEWIDTH 1
+            POSITION     LC
+            ALIGN        CENTER
+            OFFSET       0 5
+            WRAP         " "
+            MAXLENGTH    15
+            FORCE        TRUE
+        END
+    END
+    STATUS         ON
+    PROJECTION     "init=epsg:21781" END
+    TEMPLATE       fooOnlyForWMSGetFeatureInfo
+    DUMP           TRUE
+    CONNECTIONTYPE POSTGIS
+    PROCESSING     "CLOSE_CONNECTION=DEFER"
+    CONNECTION     "${mapserver_connection}"
+END
+
+LAYER
+    NAME "sd_risques"
+    TYPE POINT
+    DATA "geom FROM (SELECT geo.geom AS geom, geo.id,
+                            geo.type, geo.localisation, geo.photo, geo.document, geo.remarque
+                     FROM sdis.sd_risques AS geo
+                     WHERE (%role_id% IN (${mapfile_data_noarea_subselect} 'sd_risques'))
+                     ) AS foo USING UNIQUE id USING srid=21781"
+    METADATA
+        "wms_title"          "sd_risques"
+        "ows_geom_type"      "point"
+        "gml_include_items"  "type,localisation,photo,document,remarque"
+        "wms_srs"            "epsg:21781"
+        "wfs_enable_request" "*"
+        "ows_geometries"     "geom"
+        ${mapserver_layer_metadata}
+    END
+    MINSCALEDENOM      1
+    MAXSCALEDENOM      3000
+    TOLERANCE          ${wms_tolerance}
+    LABELITEM          "remarque"
+    LABELMINSCALEDENOM 1
+    LABELMAXSCALEDENOM 800
+    CLASS
+        NAME       "Risque"
+        EXPRESSION ("[type]" != "Bâtiment isolé")
+        STYLE
+            SYMBOL "sd_risque"
+            SIZE   25
+        END
+        LABEL
+            TYPE         TRUETYPE
+            FONT         "arial_b"
+            SIZE         8
+            ANTIALIAS    TRUE
+            COLOR        0 0 0
+            OUTLINECOLOR 255 220 0
+            OUTLINEWIDTH 1
+            POSITION     LC
+            ALIGN        CENTER
+            OFFSET       0 5
+            WRAP         " "
+            MAXLENGTH    15
+            FORCE        TRUE
+        END
+    END
+    CLASS
+        NAME       "Bâtiment isolé"
+        EXPRESSION ("[type]" = "Bâtiment isolé")
+        STYLE
+            SYMBOL "sd_risque_hydraulique"
+            SIZE   25
+        END
+        LABEL
+            TYPE         TRUETYPE
+            FONT         "arial_b"
+            SIZE         8
+            ANTIALIAS    TRUE
+            COLOR        0 0 0
+            OUTLINECOLOR 50 180 255
+            OUTLINEWIDTH 1
+            POSITION     LC
+            ALIGN        CENTER
+            OFFSET       0 5
+            WRAP         " "
+            MAXLENGTH    15
+            FORCE        TRUE
+        END
+    END
+    STATUS         ON
+    PROJECTION     "init=epsg:21781" END
+    TEMPLATE       fooOnlyForWMSGetFeatureInfo
+    DUMP           TRUE
+    CONNECTIONTYPE POSTGIS
+    PROCESSING     "CLOSE_CONNECTION=DEFER"
+    CONNECTION     "${mapserver_connection}"
+END
+
+LAYER
+    NAME  "sd_acces_l"
+    GROUP "sd_acces"
+    TYPE  LINE
+    DATA  "geom FROM (SELECT geo.geom AS geom, geo.id,
+                             geo.type, geo.localisation, geo.photo, geo.remarque
+                      FROM sdis.sd_acces AS geo
+                      WHERE (%role_id% IN (${mapfile_data_noarea_subselect} 'sd_acces'))
+                      ) AS foo USING UNIQUE id USING srid=21781"
+    METADATA
+        "wms_title"          "sd_acces_l"
+        "wms_group_title"    "sd_acces"
+        "ows_geom_type"      "multiline"
+        "gml_include_items"  "type,localisation,photo,remarque"
+        "wms_srs"            "epsg:21781"
+        "wfs_enable_request" "*"
+        "ows_geometries"     "geom"
+        ${mapserver_layer_metadata}
+    END
+    MINSCALEDENOM 1
+    MAXSCALEDENOM 3000
+    TOLERANCE     ${wms_tolerance}
+    CLASSITEM     "type"
+    CLASS
+        NAME       "Véhicule"
+        EXPRESSION "Véhicule"
+        STYLE
+            SYMBOL "circle"
+            SIZE   7.5
+            COLOR  255 0 0
+            GAP    7.5
+        END
+        STYLE
+            GEOMTRANSFORM "end"
+            SYMBOL        "triangle3"
+            SIZE          20
+            COLOR         255 0 0
+            ANGLE         AUTO
+        END
+    END
+    CLASS
+        NAME       "Reconnaissance"
+        EXPRESSION "Reconnaissance"
+        STYLE
+            SYMBOL "circle"
+            SIZE   7.5
+            COLOR  0 127 0
+            GAP    7.5
+        END
+        STYLE
+            GEOMTRANSFORM "end"
+            SYMBOL        "triangle3"
+            SIZE          20
+            COLOR         0 127 0
+            ANGLE         AUTO
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 1450
+    END
+    CLASS
+        NAME       "Echelle"
+        EXPRESSION "Echelle"
+        STYLE
+            WIDTH 3
+            COLOR 63 150 208
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 1450
+    END
+    CLASS
+        NAME       "Barrage"
+        EXPRESSION "Barrage"
+        STYLE
+            SYMBOL "circle"
+            SIZE   7.5
+            COLOR  255 125 0
+            GAP    7.5
+        END
+        STYLE
+            GEOMTRANSFORM "end"
+            SYMBOL        "triangle3"
+            SIZE          20
+            COLOR         255 125 0
+            ANGLE         AUTO
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 1450
+    END
+    CLASS
+        NAME       "Restriction circulation"
+        EXPRESSION "Restriction circulation"
+        STYLE
+            WIDTH 15
+            COLOR 255 150 150
+        END
+        STYLE
+            SYMBOL "cross"
+            SIZE   40
+            WIDTH  2
+            COLOR  255 0 0
+            ANGLE  45
+        END
+    END
+    STATUS         ON
+    PROJECTION     "init=epsg:21781" END
+    TEMPLATE       fooOnlyForWMSGetFeatureInfo
+    DUMP           TRUE
+    CONNECTIONTYPE POSTGIS
+    PROCESSING     "CLOSE_CONNECTION=DEFER"
+    CONNECTION     "${mapserver_connection}"
+END
+
+LAYER
+    NAME  "sd_acces_echelle_pt"
+    GROUP "sd_acces"
+    TYPE  POINT
+    DATA  "geom FROM (SELECT geo.geom AS geom, geo.id,
+                             geo.type, geo.localisation, geo.photo, geo.remarque, geo.orientation
+                      FROM sdis.sd_acces_echelle_pt AS geo
+                      WHERE (%role_id% IN (${mapfile_data_noarea_subselect} 'sd_acces'))
+                      ) AS foo USING UNIQUE id USING srid=21781"
+    METADATA
+        "wms_title"          "sd_acces_echelle_pt"
+        "wms_group_title"    "sd_acces"
+        "ows_geom_type"      "point"
+        "gml_include_items"  "type,localisation,photo,remarque"
+        "wms_srs"            "epsg:21781"
+        "wfs_enable_request" "*"
+        "ows_geometries"     "geom"
+        ${mapserver_layer_metadata}
+    END
+    MINSCALEDENOM 1
+    MAXSCALEDENOM 1450
+    TOLERANCE     ${wms_tolerance}
+    CLASS
+        NAME "Echelle"
+        STYLE
+            SYMBOL "sd_acces_echelle"
+            SIZE   15
+            ANGLE  [orientation]
+        END
+    END
+    STATUS         ON
+    PROJECTION     "init=epsg:21781" END
+    TEMPLATE       fooOnlyForWMSGetFeatureInfo
+    DUMP           TRUE
+    CONNECTIONTYPE POSTGIS
+    PROCESSING     "CLOSE_CONNECTION=DEFER"
+    CONNECTION     "${mapserver_connection}"
+END
+
+LAYER
+    NAME "sd_signalisation"
+    TYPE POINT
+    DATA "geom FROM (SELECT geo.geom AS geom, geo.id,
+                            geo.type, geo.valeur, geo.remarque, geo.orientation
+                     FROM sdis.sd_signalisation AS geo
+                     WHERE (%role_id% IN (${mapfile_data_noarea_subselect} 'sd_signalisation'))
+                     ) AS foo USING UNIQUE id USING srid=21781"
+    METADATA
+        "wms_title"          "sd_signalisation"
+        "ows_geom_type"      "point"
+        "gml_include_items"  "type,valeur,remarque"
+        "wms_srs"            "epsg:21781"
+        "wfs_enable_request" "*"
+        "ows_geometries"     "geom"
+        ${mapserver_layer_metadata}
+    END
+    MINSCALEDENOM 1
+    MAXSCALEDENOM 1450
+    TOLERANCE     ${wms_tolerance}
+    CLASSITEM     "type"
+    LABELITEM     "valeur"
+    CLASS
+        NAME       "Sens interdit"
+        EXPRESSION "Sens interdit"
+        STYLE
+            SYMBOL "sd_signalisation_sens_interdit"
+            SIZE   45
+            ANGLE  [orientation]
+        END
+    END
+    CLASS
+        NAME       "Travaux"
+        EXPRESSION "Travaux"
+        STYLE
+            SYMBOL "sd_signalisation_travaux"
+            SIZE   45
+            ANGLE  [orientation]
+        END
+    END
+    CLASS
+        NAME       "Danger"
+        EXPRESSION "Danger"
+        STYLE
+            SYMBOL "sd_signalisation_danger"
+            SIZE   45
+            ANGLE  [orientation]
+        END
+    END
+    CLASS
+        NAME       "Interdiction camions"
+        EXPRESSION "Interdiction camions"
+        STYLE
+            SYMBOL "sd_signalisation_interdiction_camions"
+            SIZE   45
+            ANGLE  [orientation]
+        END
+    END
+    CLASS
+        NAME       "Hauteur limitée"
+        EXPRESSION "Hauteur limitée"
+        STYLE
+            SYMBOL "sd_signalisation_hauteur_limitee"
+            SIZE   45
+            ANGLE  [orientation]
+        END
+        LABEL
+            TYPE         TRUETYPE
+            FONT         "arial"
+            SIZE         7
+            ANTIALIAS    TRUE
+            COLOR        0 0 0
+            OUTLINECOLOR 255 255 255
+            OUTLINEWIDTH 1
+            POSITION     CC
+            ALIGN        CENTER
+            FORCE        TRUE
+        END
+    END
+    CLASS
+        NAME       "Largeur limitée"
+        EXPRESSION "Largeur limitée"
+        STYLE
+            SYMBOL "sd_signalisation_largeur_limitee"
+            SIZE   45
+            ANGLE  [orientation]
+        END
+        LABEL
+            TYPE         TRUETYPE
+            FONT         "arial"
+            SIZE         7
+            ANTIALIAS    TRUE
+            COLOR        0 0 0
+            OUTLINECOLOR 255 255 255
+            OUTLINEWIDTH 1
+            POSITION     CC
+            ALIGN        CENTER
+            FORCE        TRUE
+        END
+    END
+    CLASS
+        NAME       "Poids limité"
+        EXPRESSION "Poids limité"
+        STYLE
+            SYMBOL "sd_signalisation_poids_limite"
+            SIZE   45
+            ANGLE  [orientation]
+        END
+        LABEL
+            TYPE         TRUETYPE
+            FONT         "arial"
+            SIZE         7
+            ANTIALIAS    TRUE
+            COLOR        0 0 0
+            OUTLINECOLOR 255 255 255
+            OUTLINEWIDTH 1
+            POSITION     CC
+            ALIGN        CENTER
+            FORCE        TRUE
+        END
+    END
+    CLASS
+        NAME       "Tout droit"
+        EXPRESSION "Tout droit"
+        STYLE
+            SYMBOL "sd_signalisation_tout_droit"
+            SIZE   45
+            ANGLE  [orientation]
+        END
+    END
+    CLASS
+        NAME       "Déviation"
+        EXPRESSION "Déviation"
+        STYLE
+            SYMBOL "sd_signalisation_deviation"
+            SIZE   15
+            ANGLE  [orientation]
+        END
+    END
+    STATUS         ON
+    PROJECTION     "init=epsg:21781" END
+    TEMPLATE       fooOnlyForWMSGetFeatureInfo
+    DUMP           TRUE
+    CONNECTIONTYPE POSTGIS
+    PROCESSING     "CLOSE_CONNECTION=DEFER"
+    CONNECTION     "${mapserver_connection}"
+END
+
+LAYER
+    NAME "sd_detections"
+    TYPE POINT
+    DATA "geom FROM (SELECT geo.geom AS geom, geo.id,
+                            geo.numero, geo.feu, geo.gaz, geo.sprinkler, geo.localisation, geo.remarque
+                     FROM sdis.sd_detections AS geo
+                     WHERE (%role_id% IN (${mapfile_data_noarea_subselect} 'sd_detections'))
+                     ) AS foo USING UNIQUE id USING srid=21781"
+    METADATA
+        "wms_title"          "sd_detections"
+        "ows_geom_type"      "point"
+        "gml_include_items"  "numero,feu,gaz,sprinkler,localisation,remarque"
+        "wms_srs"            "epsg:21781"
+        "wfs_enable_request" "*"
+        "ows_geometries"     "geom"
+        ${mapserver_layer_metadata}
+    END
+    MINSCALEDENOM 1
+    MAXSCALEDENOM 800
+    TOLERANCE     ${wms_tolerance}
+    LABELITEM     "remarque"
+    CLASS
+        NAME "Détections"
+        STYLE
+            SYMBOL "sd_detection"
+            SIZE   20
+        END
+        LABEL
+            TYPE         TRUETYPE
+            FONT         "arial_b"
+            SIZE         8
+            ANTIALIAS    TRUE
+            COLOR        255 255 255
+            OUTLINECOLOR 255 0 0
+            OUTLINEWIDTH 1
+            POSITION     LC
+            ALIGN        CENTER
+            OFFSET       0 5
+            WRAP         " "
+            MAXLENGTH    15
+            FORCE        TRUE
+        END
+    END
+    STATUS         ON
+    PROJECTION     "init=epsg:21781" END
+    TEMPLATE       fooOnlyForWMSGetFeatureInfo
+    DUMP           TRUE
+    CONNECTIONTYPE POSTGIS
+    PROCESSING     "CLOSE_CONNECTION=DEFER"
+    CONNECTION     "${mapserver_connection}"
+END
+
+LAYER
+    NAME "sd_cles"
+    TYPE POINT
+    DATA "geom FROM (SELECT geo.geom AS geom, geo.id,
+                            geo.type, geo.numero, geo.localisation, geo.remarque, geo.date_controle
+                     FROM sdis.sd_cles AS geo
+                     WHERE (%role_id% IN (${mapfile_data_noarea_subselect} 'sd_cles'))
+                     ) AS foo USING UNIQUE id USING srid=21781"
+    METADATA
+        "wms_title"          "sd_cles"
+        "ows_geom_type"      "point"
+        "gml_include_items"  "type,numero,localisation,remarque,date_controle"
+        "wms_srs"            "epsg:21781"
+        "wfs_enable_request" "*"
+        "ows_geometries"     "geom"
+        ${mapserver_layer_metadata}
+    END
+    MINSCALEDENOM 1
+    MAXSCALEDENOM 1450
+    TOLERANCE     ${wms_tolerance}
+    CLASSITEM     "type"
+    LABELITEM     "numero"
+    CLASS
+        NAME       "Clé"
+        EXPRESSION "Clé"
+        STYLE
+            SYMBOL "sd_cle"
+            SIZE   20
+        END
+        LABEL
+            TYPE         TRUETYPE
+            FONT         "arial_b"
+            SIZE         8
+            ANTIALIAS    TRUE
+            COLOR        0 0 0
+            OUTLINECOLOR 255 0 0
+            OUTLINEWIDTH 1
+            POSITION     UR
+            ALIGN        CENTER
+            OFFSET       5 3
+            FORCE        TRUE
+        END
+    END
+    CLASS
+        NAME       "Tube"
+        EXPRESSION "Tube"
+        STYLE
+            SYMBOL "sd_cle_tube"
+            SIZE   20
+        END
+        LABEL
+            TYPE         TRUETYPE
+            FONT         "arial_b"
+            SIZE         8
+            ANTIALIAS    TRUE
+            COLOR        0 0 0
+            OUTLINECOLOR 255 0 0
+            OUTLINEWIDTH 1
+            POSITION     UR
+            ALIGN        CENTER
+            OFFSET       5 3
+            FORCE        TRUE
+        END
+    END
+    STATUS         ON
+    PROJECTION     "init=epsg:21781" END
+    TEMPLATE       fooOnlyForWMSGetFeatureInfo
+    DUMP           TRUE
+    CONNECTIONTYPE POSTGIS
+    PROCESSING     "CLOSE_CONNECTION=DEFER"
+    CONNECTION     "${mapserver_connection}"
+END
+
+LAYER
+    NAME "sd_codes"
+    TYPE POINT
+    DATA "geom FROM (SELECT geo.geom AS geom, geo.id,
+                            geo.code, geo.localisation, geo.date_controle, geo.remarque
+                     FROM sdis.sd_codes AS geo
+                     WHERE (%role_id% IN (${mapfile_data_noarea_subselect} 'sd_codes'))
+                     ) AS foo USING UNIQUE id USING srid=21781"
+    METADATA
+        "wms_title"          "sd_codes"
+        "ows_geom_type"      "point"
+        "gml_include_items"  "code,localisation,date_controle,remarque"
+        "wms_srs"            "epsg:21781"
+        "wfs_enable_request" "*"
+        "ows_geometries"     "geom"
+        ${mapserver_layer_metadata}
+    END
+    MINSCALEDENOM 1
+    MAXSCALEDENOM 1450
+    TOLERANCE     ${wms_tolerance}
+    LABELITEM     "code"
+    CLASS
+        NAME "Codes"
+        STYLE
+            SYMBOL "sd_code"
+            SIZE   20
+        END
+        LABEL
+            TYPE         TRUETYPE
+            FONT         "arial_b"
+            SIZE         8
+            ANTIALIAS    TRUE
+            COLOR        0 0 0
+            OUTLINECOLOR 255 255 255
+            OUTLINEWIDTH 1
+            POSITION     LC
+            ALIGN        CENTER
+            OFFSET       0 5
+            FORCE        TRUE
+        END
+    END
+    STATUS         ON
+    PROJECTION     "init=epsg:21781" END
+    TEMPLATE       fooOnlyForWMSGetFeatureInfo
+    DUMP           TRUE
+    CONNECTIONTYPE POSTGIS
+    PROCESSING     "CLOSE_CONNECTION=DEFER"
+    CONNECTION     "${mapserver_connection}"
+END
+
+LAYER
+    NAME "sd_dossiers_intervention"
+    TYPE POINT
+    DATA "geom FROM (SELECT geo.geom AS geom, geo.id,
+                            geo.document, geo.localisation, geo.statut, geo.remarque
+                     FROM sdis.sd_dossiers_intervention AS geo
+                     WHERE (%role_id% IN (${mapfile_data_noarea_subselect} 'sd_dossiers_intervention'))
+                     ) AS foo USING UNIQUE id USING srid=21781"
+    METADATA
+        "wms_title"          "sd_dossiers_intervention"
+        "ows_geom_type"      "point"
+        "gml_include_items"  "document,localisation,statut,remarque"
+        "wms_srs"            "epsg:21781"
+        "wfs_enable_request" "*"
+        "ows_geometries"     "geom"
+        ${mapserver_layer_metadata}
+    END
+    MINSCALEDENOM 1
+    MAXSCALEDENOM 1450
+    TOLERANCE     ${wms_tolerance}
+    CLASS
+        NAME "Dossiers d'intervention"
+        STYLE
+            SYMBOL "sd_dossier_intervention"
+            SIZE   20
+        END
+    END
+    STATUS         ON
+    PROJECTION     "init=epsg:21781" END
+    TEMPLATE       fooOnlyForWMSGetFeatureInfo
+    DUMP           TRUE
+    CONNECTIONTYPE POSTGIS
+    PROCESSING     "CLOSE_CONNECTION=DEFER"
+    CONNECTION     "${mapserver_connection}"
+END
+
+LAYER
+    NAME "sd_batiments"
+    TYPE POLYGON
+    DATA "geom FROM (SELECT geo.geom AS geom, geo.id
+                     FROM sdis.sd_batiments AS geo
+                     WHERE (%role_id% IN (${mapfile_data_noarea_subselect} 'sd_batiments'))
+                     ) AS foo USING UNIQUE id USING srid=21781"
+    METADATA
+        "wms_title"          "sd_batiments"
+        "ows_geom_type"      "multipolygon"
+        "gml_include_items"  ""
+        "wms_srs"            "epsg:21781"
+        "wfs_enable_request" "*"
+        "ows_geometries"     "geom"
+        ${mapserver_layer_metadata}
+    END
+    MINSCALEDENOM 1
+    MAXSCALEDENOM 30000
+    TOLERANCE     ${wms_tolerance}
+    CLASS
+        NAME "Bâtiments"
+        STYLE
+            OUTLINECOLOR 0 0 0
+            WIDTH        2.5
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 3000
+    END
+    CLASS
+        NAME "Bâtiments"
+        STYLE
+            OUTLINECOLOR 0 0 0
+            WIDTH        1
+        END
+        MINSCALEDENOM 3000
+        MAXSCALEDENOM 30000
+    END
+    STATUS         ON
+    PROJECTION     "init=epsg:21781" END
+    TEMPLATE       fooOnlyForWMSGetFeatureInfo
+    DUMP           TRUE
+    CONNECTIONTYPE POSTGIS
+    PROCESSING     "CLOSE_CONNECTION=DEFER"
+    CONNECTION     "${mapserver_connection}"
+END
+
+LAYER
+    NAME "sd_bornes_hydrantes"
+    TYPE POINT
+    DATA "geom FROM (SELECT geo.geom AS geom, geo.id,
+                            geo.type, geo.numero, geo.sortie, geo.pression, geo.debit, geo.remarque
+                     FROM sdis.sd_bornes_hydrantes AS geo
+                     WHERE (%role_id% IN (${mapfile_data_noarea_subselect} 'sd_bornes_hydrantes'))
+                     ) AS foo USING UNIQUE id USING srid=21781"
+    METADATA
+        "wms_title"          "sd_bornes_hydrantes"
+        "ows_geom_type"      "point"
+        "gml_include_items"  "type,numero,sortie,pression,debit,remarque"
+        "wms_srs"            "epsg:21781"
+        "wfs_enable_request" "*"
+        "ows_geometries"     "geom"
+        ${mapserver_layer_metadata}
+    END
+    MINSCALEDENOM 1
+    MAXSCALEDENOM 1450
+    TOLERANCE     ${wms_tolerance}
+    CLASSITEM     "type"
+    LABELITEM     "numero"
+    CLASS
+        NAME       "Hors-sol"
+        EXPRESSION "Hors-sol"
+        STYLE
+            SYMBOL "sd_borne_hydrante"
+            SIZE   13
+        END
+        LABEL
+            TYPE         TRUETYPE
+            FONT         "arial_b"
+            SIZE         8
+            ANTIALIAS    TRUE
+            COLOR        255 255 255
+            OUTLINECOLOR 0 120 190
+            OUTLINEWIDTH 1
+            POSITION     UR
+            ALIGN        CENTER
+            OFFSET       5 3
+            FORCE        TRUE
+        END
+    END
+    CLASS
+        NAME       "Souterraine"
+        EXPRESSION "Souterraine"
+        STYLE
+            SYMBOL "sd_borne_hydrante_souterraine"
+            SIZE   13
+        END
+        LABEL
+            TYPE         TRUETYPE
+            FONT         "arial_b"
+            SIZE         8
+            ANTIALIAS    TRUE
+            COLOR        255 255 255
+            OUTLINECOLOR 0 120 190
+            OUTLINEWIDTH 1
+            POSITION     UR
+            ALIGN        CENTER
+            OFFSET       5 3
+            FORCE        TRUE
+        END
+    END
+    STATUS         ON
+    PROJECTION     "init=epsg:21781" END
+    TEMPLATE       fooOnlyForWMSGetFeatureInfo
+    DUMP           TRUE
+    CONNECTIONTYPE POSTGIS
+    PROCESSING     "CLOSE_CONNECTION=DEFER"
+    CONNECTION     "${mapserver_connection}"
+END
+
+LAYER
+    NAME "sd_tuyaux"
+    TYPE LINE
+    DATA "geom FROM (SELECT geo.geom AS geom, geo.id,
+                            geo.diametre, geo.longueur, geo.remarque
+                     FROM sdis.sd_tuyaux AS geo
+                     WHERE (%role_id% IN (${mapfile_data_noarea_subselect} 'sd_tuyaux'))
+                     ) AS foo USING UNIQUE id USING srid=21781"
+    METADATA
+        "wms_title"          "sd_tuyaux"
+        "ows_geom_type"      "multiline"
+        "gml_include_items"  "diametre,longueur,remarque"
+        "wms_srs"            "epsg:21781"
+        "wfs_enable_request" "*"
+        "ows_geometries"     "geom"
+        ${mapserver_layer_metadata}
+    END
+    MINSCALEDENOM 1
+    MAXSCALEDENOM 1450
+    TOLERANCE     ${wms_tolerance}
+    CLASS
+        NAME "Tuyaux"
+        STYLE
+            WIDTH 5
+            COLOR 0 0 255
+        END
+        STYLE
+            GEOMTRANSFORM "end"
+            SYMBOL        "triangle3"
+            SIZE          20
+            COLOR         0 0 255
+            ANGLE         AUTO
+        END
+    END
+    STATUS         ON
+    PROJECTION     "init=epsg:21781" END
+    TEMPLATE       fooOnlyForWMSGetFeatureInfo
+    DUMP           TRUE
+    CONNECTIONTYPE POSTGIS
+    PROCESSING     "CLOSE_CONNECTION=DEFER"
+    CONNECTION     "${mapserver_connection}"
+END
+
+LAYER
+    NAME "sd_barrages"
+    TYPE LINE
+    DATA "geom FROM (SELECT geo.geom AS geom, geo.id,
+                            geo.longueur, geo.localisation, geo.remarque
+                     FROM sdis.sd_barrages AS geo
+                     WHERE (%role_id% IN (${mapfile_data_noarea_subselect} 'sd_barrages'))
+                     ) AS foo USING UNIQUE id USING srid=21781"
+    METADATA
+        "wms_title"          "sd_barrages"
+        "ows_geom_type"      "multiline"
+        "gml_include_items"  "longueur,localisation,remarque"
+        "wms_srs"            "epsg:21781"
+        "wfs_enable_request" "*"
+        "ows_geometries"     "geom"
+        ${mapserver_layer_metadata}
+    END
+    MINSCALEDENOM 1
+    MAXSCALEDENOM 1450
+    TOLERANCE     ${wms_tolerance}
+    CLASS
+        NAME "Barrages"
+        STYLE
+            WIDTH 5
+            COLOR 255 125 0
+        END
+        STYLE
+            GEOMTRANSFORM "start"
+            SYMBOL        "circle"
+            SIZE          15
+            COLOR         255 125 0
+        END
+        STYLE
+            GEOMTRANSFORM "end"
+            SYMBOL        "circle"
+            SIZE          15
+            COLOR         255 125 0
+        END
+    END
+    STATUS         ON
+    PROJECTION     "init=epsg:21781" END
+    TEMPLATE       fooOnlyForWMSGetFeatureInfo
+    DUMP           TRUE
+    CONNECTIONTYPE POSTGIS
+    PROCESSING     "CLOSE_CONNECTION=DEFER"
+    CONNECTION     "${mapserver_connection}"
+END
+
+LAYER
+    NAME "sd_personnel"
+    TYPE POINT
+    DATA "geom FROM (SELECT geo.geom AS geom, geo.id,
+                            geo.grade, geo.nom, geo.prenom, geo.adresse, geo.commune, geo.groupe
+                     FROM sdis.sd_personnel AS geo
+                     WHERE (%role_id% IN (${mapfile_data_noarea_subselect} 'sd_personnel'))
+                     ) AS foo USING UNIQUE id USING srid=21781"
+    METADATA
+        "wms_title"          "sd_personnel"
+        "ows_geom_type"      "point"
+        "gml_include_items"  "grade,nom,prenom,adresse,commune,groupe"
+        "wms_srs"            "epsg:21781"
+        "wfs_enable_request" "*"
+        "ows_geometries"     "geom"
+        ${mapserver_layer_metadata}
+    END
+    MINSCALEDENOM 1
+    MAXSCALEDENOM 30000
+    TOLERANCE     ${wms_tolerance}
+    LABELMINSCALEDENOM 1
+    LABELMAXSCALEDENOM 8000
+    CLASS
+        NAME       "Jour"
+        EXPRESSION ("[groupe]" ~ "J")
+        STYLE
+            SYMBOL "sd_personnel_jour"
+            SIZE   20
+        END
+        TEXT "[grade] [nom] [prenom]"
+        LABEL
+            TYPE         TRUETYPE
+            FONT         "arial_b"
+            SIZE         8
+            ANTIALIAS    TRUE
+            COLOR        0 0 0
+            OUTLINECOLOR 255 255 0
+            OUTLINEWIDTH 1
+            POSITION     LC
+            ALIGN        CENTER
+            OFFSET       0 5
+            WRAP         " "
+            MAXLENGTH    15
+            FORCE        TRUE
+        END
+    END
+    CLASS
+        NAME       "Nuit"
+        EXPRESSION ("[groupe]" ~ "N")
+        STYLE
+            SYMBOL "sd_personnel_nuit"
+            SIZE   20
+        END
+        TEXT "[grade] [nom] [prenom]"
+        LABEL
+            TYPE         TRUETYPE
+            FONT         "arial_b"
+            SIZE         8
+            ANTIALIAS    TRUE
+            COLOR        0 0 0
+            OUTLINECOLOR 50 180 255
+            OUTLINEWIDTH 1
+            POSITION     LC
+            ALIGN        CENTER
+            OFFSET       0 5
+            WRAP         " "
+            MAXLENGTH    15
+            FORCE        TRUE
+        END
+    END
+    STATUS         ON
+    PROJECTION     "init=epsg:21781" END
+    TEMPLATE       fooOnlyForWMSGetFeatureInfo
+    DUMP           TRUE
+    CONNECTIONTYPE POSTGIS
+    PROCESSING     "CLOSE_CONNECTION=DEFER"
+    CONNECTION     "${mapserver_connection}"
+END
+
+LAYER
+    NAME "sd_secteurs_intervention"
+    TYPE POLYGON
+    DATA "geom FROM (SELECT geo.geom AS geom, geo.id,
+                            geo.type, geo.sous_type
+                     FROM sdis.sd_secteurs_intervention AS geo
+                     WHERE (%role_id% IN (${mapfile_data_noarea_subselect} 'sd_secteurs_intervention'))
+                     ) AS foo USING UNIQUE id USING srid=21781"
+    METADATA
+        "wms_title"          "sd_secteurs_intervention"
+        "ows_geom_type"      "multipolygon"
+        "gml_include_items"  "type,sous_type"
+        "wms_srs"            "epsg:21781"
+        "wfs_enable_request" "*"
+        "ows_geometries"     "geom"
+        ${mapserver_layer_metadata}
+    END
+    MINSCALEDENOM 1
+    MAXSCALEDENOM 199999
+    TOLERANCE     ${wms_tolerance}
+    CLASS
+        NAME       "Secteurs DCH"
+        EXPRESSION ("[type]" = "DCH")
+        STYLE
+            OUTLINECOLOR  170 0 255
+            WIDTH         5
+            GEOMTRANSFORM (buffer([shape], 5))
+        END
+    END
+    CLASS
+        NAME       "Secteurs pionnier"
+        EXPRESSION ("[type]" = "Désincarcération")
+        STYLE
+            OUTLINECOLOR 0 0 255
+            WIDTH        5
+        END
+    END
+    CLASS
+        NAME       "Feu primaire"
+        EXPRESSION ("[type]" = "Feu" && "[sous_type]" = "Feu primaire")
+        STYLE
+            COLOR        245 148 50
+            OPACITY      70
+            OUTLINECOLOR 0 0 0
+            WIDTH        1
+        END
+    END
+    CLASS
+        NAME       "Feu secondaire"
+        EXPRESSION ("[type]" = "Feu" && "[sous_type]" = "Feu secondaire")
+        STYLE
+            COLOR        255 255 127
+            OPACITY      70
+            OUTLINECOLOR 0 0 0
+            WIDTH        1
+        END
+    END
+    CLASS
+        NAME       "Feu renfort"
+        EXPRESSION ("[type]" = "Feu" && "[sous_type]" = "Feu renfort")
+        STYLE
+            COLOR        170 255 127
+            OPACITY      70
+            OUTLINECOLOR 0 0 0
+            WIDTH        1
+        END
+    END
+    STATUS         ON
+    PROJECTION     "init=epsg:21781" END
+    TEMPLATE       fooOnlyForWMSGetFeatureInfo
+    DUMP           TRUE
+    CONNECTIONTYPE POSTGIS
+    PROCESSING     "CLOSE_CONNECTION=DEFER"
+    CONNECTION     "${mapserver_connection}"
+END
