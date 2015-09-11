@@ -266,7 +266,7 @@ CREATE OR REPLACE VIEW sdis.sd_vmf_tuyaux AS
     SELECT
         a.id,
         a.diametre,
-        COALESCE(a.longueur || ' [m]', NULL) AS longueur,
+        COALESCE(ROUND(ST_Length(a.geom) / 10 :: numeric) * 10 || ' [m]', NULL) AS longueur, -- Longueur arrondie à 10 [m]
         a.remarque,
         a.geom
     FROM
