@@ -23,13 +23,11 @@ LAYER
         "ows_geometries"     "geom"
         ${mapserver_layer_metadata}
     END
-    MINSCALEDENOM      1
-    MAXSCALEDENOM      3000
-    TOLERANCE          ${wms_tolerance}
-    CLASSITEM          "type"
-    LABELITEM          "remarque"
-    LABELMINSCALEDENOM 1
-    LABELMAXSCALEDENOM 800
+    MINSCALEDENOM 1
+    MAXSCALEDENOM 800
+    TOLERANCE     ${wms_tolerance}
+    CLASSITEM     "type"
+    LABELITEM     "remarque"
     CLASS
         NAME       "Feu"
         EXPRESSION "Feu"
@@ -240,12 +238,11 @@ LAYER
         "ows_geometries"     "geom"
         ${mapserver_layer_metadata}
     END
-    MINSCALEDENOM      1
-    MAXSCALEDENOM      3000
-    TOLERANCE          ${wms_tolerance}
-    LABELITEM          "remarque"
-    LABELMINSCALEDENOM 1
-    LABELMAXSCALEDENOM 800
+    MINSCALEDENOM 1
+    MAXSCALEDENOM 800
+    TOLERANCE     ${wms_tolerance}
+    CLASSITEM     "type"
+    LABELITEM     "remarque"
     CLASS
         NAME       "Risque"
         EXPRESSION ("[type]" != "Bâtiment isolé")
@@ -340,6 +337,8 @@ LAYER
             COLOR         255 0 0
             ANGLE         AUTO
         END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 1450
     END
     CLASS
         NAME       "Reconnaissance"
@@ -386,8 +385,6 @@ LAYER
             COLOR         255 125 0
             ANGLE         AUTO
         END
-        MINSCALEDENOM 1
-        MAXSCALEDENOM 1450
     END
     CLASS
         NAME       "Restriction circulation"
@@ -469,11 +466,12 @@ LAYER
         "ows_geometries"     "geom"
         ${mapserver_layer_metadata}
     END
-    MINSCALEDENOM 1
-    MAXSCALEDENOM 1450
-    TOLERANCE     ${wms_tolerance}
-    CLASSITEM     "type"
-    LABELITEM     "valeur"
+    MINSCALEDENOM    1
+    MAXSCALEDENOM    1450
+    SYMBOLSCALEDENOM 800
+    TOLERANCE        ${wms_tolerance}
+    CLASSITEM        "type"
+    LABELITEM        "valeur"
     CLASS
         NAME       "Sens interdit"
         EXPRESSION "Sens interdit"
@@ -670,7 +668,7 @@ LAYER
         ${mapserver_layer_metadata}
     END
     MINSCALEDENOM 1
-    MAXSCALEDENOM 1450
+    MAXSCALEDENOM 800
     TOLERANCE     ${wms_tolerance}
     CLASSITEM     "type"
     LABELITEM     "numero"
@@ -743,7 +741,7 @@ LAYER
         ${mapserver_layer_metadata}
     END
     MINSCALEDENOM 1
-    MAXSCALEDENOM 1450
+    MAXSCALEDENOM 800
     TOLERANCE     ${wms_tolerance}
     LABELITEM     "code"
     CLASS
@@ -793,7 +791,7 @@ LAYER
         ${mapserver_layer_metadata}
     END
     MINSCALEDENOM 1
-    MAXSCALEDENOM 1450
+    MAXSCALEDENOM 800
     TOLERANCE     ${wms_tolerance}
     CLASS
         NAME "Dossiers d'intervention"
@@ -875,7 +873,7 @@ LAYER
         ${mapserver_layer_metadata}
     END
     MINSCALEDENOM 1
-    MAXSCALEDENOM 1450
+    MAXSCALEDENOM 3000
     TOLERANCE     ${wms_tolerance}
     CLASSITEM     "type"
     LABELITEM     "numero"
