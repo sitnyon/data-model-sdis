@@ -477,9 +477,33 @@ LAYER
         EXPRESSION "Sens interdit"
         STYLE
             SYMBOL "sd_signalisation_sens_interdit"
+            SIZE   20
+            ANGLE  [orientation]
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 300
+    END
+    CLASS
+        NAME       "Sens interdit"
+        EXPRESSION "Sens interdit"
+        STYLE
+            SYMBOL "sd_signalisation_sens_interdit"
             SIZE   45
             ANGLE  [orientation]
         END
+        MINSCALEDENOM 300
+        MAXSCALEDENOM 1450
+    END
+    CLASS
+        NAME       "Travaux"
+        EXPRESSION "Travaux"
+        STYLE
+            SYMBOL "sd_signalisation_travaux"
+            SIZE   20
+            ANGLE  [orientation]
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 300
     END
     CLASS
         NAME       "Travaux"
@@ -489,6 +513,19 @@ LAYER
             SIZE   45
             ANGLE  [orientation]
         END
+        MINSCALEDENOM 300
+        MAXSCALEDENOM 1450
+    END
+    CLASS
+        NAME       "Danger"
+        EXPRESSION "Danger"
+        STYLE
+            SYMBOL "sd_signalisation_danger"
+            SIZE   20
+            ANGLE  [orientation]
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 300
     END
     CLASS
         NAME       "Danger"
@@ -498,6 +535,19 @@ LAYER
             SIZE   45
             ANGLE  [orientation]
         END
+        MINSCALEDENOM 300
+        MAXSCALEDENOM 1450
+    END
+    CLASS
+        NAME       "Interdiction camions"
+        EXPRESSION "Interdiction camions"
+        STYLE
+            SYMBOL "sd_signalisation_interdiction_camions"
+            SIZE   20
+            ANGLE  [orientation]
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 300
     END
     CLASS
         NAME       "Interdiction camions"
@@ -507,6 +557,31 @@ LAYER
             SIZE   45
             ANGLE  [orientation]
         END
+        MINSCALEDENOM 300
+        MAXSCALEDENOM 1450
+    END
+    CLASS
+        NAME       "Hauteur limitée"
+        EXPRESSION "Hauteur limitée"
+        STYLE
+            SYMBOL "sd_signalisation_hauteur_limitee"
+            SIZE   20
+            ANGLE  [orientation]
+        END
+        LABEL
+            TYPE         TRUETYPE
+            FONT         "arial"
+            SIZE         3
+            ANTIALIAS    TRUE
+            COLOR        0 0 0
+            OUTLINECOLOR 255 255 255
+            OUTLINEWIDTH 1
+            POSITION     CC
+            ALIGN        CENTER
+            FORCE        TRUE
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 300
     END
     CLASS
         NAME       "Hauteur limitée"
@@ -528,6 +603,31 @@ LAYER
             ALIGN        CENTER
             FORCE        TRUE
         END
+        MINSCALEDENOM 300
+        MAXSCALEDENOM 1450
+    END
+    CLASS
+        NAME       "Largeur limitée"
+        EXPRESSION "Largeur limitée"
+        STYLE
+            SYMBOL "sd_signalisation_largeur_limitee"
+            SIZE   20
+            ANGLE  [orientation]
+        END
+        LABEL
+            TYPE         TRUETYPE
+            FONT         "arial"
+            SIZE         3
+            ANTIALIAS    TRUE
+            COLOR        0 0 0
+            OUTLINECOLOR 255 255 255
+            OUTLINEWIDTH 1
+            POSITION     CC
+            ALIGN        CENTER
+            FORCE        TRUE
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 300
     END
     CLASS
         NAME       "Largeur limitée"
@@ -549,6 +649,31 @@ LAYER
             ALIGN        CENTER
             FORCE        TRUE
         END
+        MINSCALEDENOM 300
+        MAXSCALEDENOM 1450
+    END
+    CLASS
+        NAME       "Poids limité"
+        EXPRESSION "Poids limité"
+        STYLE
+            SYMBOL "sd_signalisation_poids_limite"
+            SIZE   20
+            ANGLE  [orientation]
+        END
+        LABEL
+            TYPE         TRUETYPE
+            FONT         "arial"
+            SIZE         3
+            ANTIALIAS    TRUE
+            COLOR        0 0 0
+            OUTLINECOLOR 255 255 255
+            OUTLINEWIDTH 1
+            POSITION     CC
+            ALIGN        CENTER
+            FORCE        TRUE
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 300
     END
     CLASS
         NAME       "Poids limité"
@@ -570,6 +695,19 @@ LAYER
             ALIGN        CENTER
             FORCE        TRUE
         END
+        MINSCALEDENOM 300
+        MAXSCALEDENOM 1450
+    END
+    CLASS
+        NAME       "Tout droit"
+        EXPRESSION "Tout droit"
+        STYLE
+            SYMBOL "sd_signalisation_tout_droit"
+            SIZE   20
+            ANGLE  [orientation]
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 300
     END
     CLASS
         NAME       "Tout droit"
@@ -579,6 +717,19 @@ LAYER
             SIZE   45
             ANGLE  [orientation]
         END
+        MINSCALEDENOM 300
+        MAXSCALEDENOM 1450
+    END
+    CLASS
+        NAME       "Déviation"
+        EXPRESSION "Déviation"
+        STYLE
+            SYMBOL "sd_signalisation_deviation"
+            SIZE   7
+            ANGLE  [orientation]
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 300
     END
     CLASS
         NAME       "Déviation"
@@ -588,6 +739,8 @@ LAYER
             SIZE   15
             ANGLE  [orientation]
         END
+        MINSCALEDENOM 300
+        MAXSCALEDENOM 1450
     END
     STATUS         ON
     PROJECTION     "init=epsg:21781" END
