@@ -22,9 +22,9 @@ Catalogue des objets
     * [Barrages](#barrages)
 5. [Organisation](#organisation)
     * [Sites](#sites)
+    * [Personnel d'intervention](#personnel-dintervention)
     * [Secteurs d'intervention](#secteurs-dintervention)
     * [Secteurs organisationnels](#secteurs-organisationnels)
-    * [Personnel d'intervention](#personnel-dintervention)
 
 Dangers
 -------
@@ -205,6 +205,15 @@ Casernes et locaux
 | **DPS** | ![site_dps.png](../symbols/png/site_dps.png) | Détachement de premiers secours |         |
 | **DAP** | ![site_dap.png](../symbols/png/site_dap.png) | Détachement d'appui             |         |
 
+### Personnel d'intervention
+
+Personnel d'intervention (*vue*)
+
+| Type     | Symbole                                                  | Description | Exemple |
+| -------- | -------------------------------------------------------- | ------------| ------- |
+| **Jour** | ![personnel_jour.png](../symbols/png/personnel_jour.png) | Groupe Jour |         |
+| **Nuit** | ![personnel_nuit.png](../symbols/png/personnel_nuit.png) | Groupe Nuit |         |
+
 ### Secteurs d'intervention
 
 Secteurs d'intervention
@@ -224,12 +233,3 @@ Secteurs organisationnels
 | Type     | Symbole | Description | Exemple |
 | -------- | ------- | ----------- | ------- |
 | ???      |         |             |         |
-
-### Personnel d'intervention
-
-Personnel d'intervention (*vue*)
-
-| Type     | Symbole                                                  | Description | Exemple |
-| -------- | -------------------------------------------------------- | ------------| ------- |
-| **Jour** | ![personnel_jour.png](../symbols/png/personnel_jour.png) | Groupe Jour |         |
-| **Nuit** | ![personnel_nuit.png](../symbols/png/personnel_nuit.png) | Groupe Nuit |         |
