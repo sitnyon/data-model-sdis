@@ -12,12 +12,12 @@ CREATE VIEW sdis.batiments AS
     FROM
         mo.mo_baths b -- Spécifique Nyon
     JOIN (
-        SELECT geom FROM sdis.dangers               UNION
-        SELECT geom FROM sdis.risques               UNION
-        SELECT geom FROM sdis.detections            UNION
-        SELECT geom FROM sdis.cles                  UNION
-        SELECT geom FROM sdis.codes                 UNION
-        SELECT geom FROM sdis.situation             UNION
+        SELECT geom FROM sdis.dangers UNION
+        SELECT geom FROM sdis.risques UNION
+        SELECT geom FROM sdis.detections UNION
+        SELECT geom FROM sdis.cles UNION
+        SELECT geom FROM sdis.codes UNION
+        SELECT geom FROM sdis.situation UNION
         SELECT geom FROM sdis.dossiers_intervention
     ) j ON ST_Intersects(j.geom, b.geom)
 
@@ -32,12 +32,12 @@ CREATE VIEW sdis.batiments AS
     FROM
         cad.cad_va_bat_hs_comm b -- Spécifique Nyon
     JOIN (
-        SELECT geom FROM sdis.dangers               UNION
-        SELECT geom FROM sdis.risques               UNION
-        SELECT geom FROM sdis.detections            UNION
-        SELECT geom FROM sdis.cles                  UNION
-        SELECT geom FROM sdis.codes                 UNION
-        SELECT geom FROM sdis.situation             UNION
+        SELECT geom FROM sdis.dangers UNION
+        SELECT geom FROM sdis.risques UNION
+        SELECT geom FROM sdis.detections UNION
+        SELECT geom FROM sdis.cles UNION
+        SELECT geom FROM sdis.codes UNION
+        SELECT geom FROM sdis.situation UNION
         SELECT geom FROM sdis.dossiers_intervention
     ) j ON ST_Intersects(j.geom, b.geom)
     ;
