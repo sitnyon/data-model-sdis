@@ -91,6 +91,7 @@ ALTER TABLE sdis.detections ADD COLUMN feu bool;
 ALTER TABLE sdis.detections ADD COLUMN gaz bool;
 ALTER TABLE sdis.detections ADD COLUMN sprinkler bool;
 ALTER TABLE sdis.detections ADD COLUMN localisation varchar(255);
+ALTER TABLE sdis.detections ADD COLUMN photo varchar(255);
 ALTER TABLE sdis.detections ADD COLUMN remarque varchar(255);
 ALTER TABLE sdis.detections ADD COLUMN geom geometry(Point, 2056);
 

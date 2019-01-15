@@ -111,6 +111,7 @@ CREATE OR REPLACE VIEW sdis.sd_vmf_detections AS
         CASE a.gaz WHEN TRUE THEN 'Oui' ELSE NULL END AS gaz,
         CASE a.sprinkler WHEN TRUE THEN 'Oui' ELSE NULL END AS sprinkler,
         a.localisation,
+        a.photo,
         a.remarque,
         a.geom
     FROM

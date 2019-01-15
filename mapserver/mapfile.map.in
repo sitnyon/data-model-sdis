@@ -755,14 +755,14 @@ LAYER
     NAME "sd_detections"
     TYPE POINT
     DATA "geom FROM (SELECT geo.geom AS geom, geo.id,
-                            geo.numero, geo.feu, geo.gaz, geo.sprinkler, geo.localisation, geo.remarque
+                            geo.numero, geo.feu, geo.gaz, geo.sprinkler, geo.localisation, geo.photo, geo.remarque
                      FROM sdis.sd_detections AS geo
                      WHERE (%role_id% IN (${mapfile_data_noarea_subselect} 'sd_detections'))
                      ) AS foo USING UNIQUE id USING srid=2056"
     METADATA
         "wms_title" "sd_detections"
         "ows_geom_type" "point"
-        "gml_include_items" "numero,feu,gaz,sprinkler,localisation,remarque"
+        "gml_include_items" "numero,feu,gaz,sprinkler,localisation,photo,remarque"
         "wms_srs" "epsg:2056"
         "wfs_enable_request" "*"
         "ows_geometries" "geom"

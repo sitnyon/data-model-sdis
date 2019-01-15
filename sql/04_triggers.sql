@@ -109,3 +109,15 @@ CREATE TRIGGER tr_dossiers_intervention_get_path_absolu_document
     FOR EACH ROW
     EXECUTE PROCEDURE sdis.fn_get_path_absolu_document();
 COMMENT ON TRIGGER tr_dossiers_intervention_get_path_absolu_document ON sdis.dossiers_intervention IS 'Exécute fn_get_path_absolu_document()';
+
+
+
+-- Trigger: tr_detections_get_path_absolu_photo on sdis.detections
+
+-- DROP TRIGGER tr_detections_get_path_absolu_photo ON sdis.detections;
+CREATE TRIGGER tr_detections_get_path_absolu_photo
+    BEFORE INSERT OR UPDATE OF photo
+    ON sdis.detections
+    FOR EACH ROW
+    EXECUTE PROCEDURE sdis.fn_get_path_absolu_photo();
+COMMENT ON TRIGGER tr_detections_get_path_absolu_photo ON sdis.detections IS 'Exécute fn_get_path_absolu_photo()';
