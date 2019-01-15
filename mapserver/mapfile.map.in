@@ -771,7 +771,7 @@ LAYER
     MINSCALEDENOM 1
     MAXSCALEDENOM 800
     TOLERANCE ${wms_tolerance}
-    LABELITEM "remarque"
+    LABELITEM "localisation"
     CLASS
         NAME "Détections"
         STYLE
