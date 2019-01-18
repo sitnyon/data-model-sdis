@@ -13,6 +13,7 @@ CREATE OR REPLACE VIEW sdis.sd_vmf_dangers AS
         a.id,
         a.type,
         a.localisation,
+        a.adresse,
         a.photo,
         a.document,
         a.remarque,
@@ -33,6 +34,7 @@ CREATE OR REPLACE VIEW sdis.sd_vmf_risques AS
         a.id,
         a.type,
         a.localisation,
+        a.adresse,
         a.photo,
         a.document,
         a.remarque,
@@ -53,6 +55,7 @@ CREATE OR REPLACE VIEW sdis.sd_vmf_acces AS
         a.id,
         a.type,
         a.localisation,
+        a.adresse,
         a.photo,
         a.remarque,
         a.geom
@@ -111,6 +114,7 @@ CREATE OR REPLACE VIEW sdis.sd_vmf_detections AS
         CASE a.gaz WHEN TRUE THEN 'Oui' ELSE NULL END AS gaz,
         CASE a.sprinkler WHEN TRUE THEN 'Oui' ELSE NULL END AS sprinkler,
         a.localisation,
+        a.adresse,
         a.photo,
         a.remarque,
         a.geom
@@ -131,6 +135,7 @@ CREATE OR REPLACE VIEW sdis.sd_vmf_cles AS
         a.type,
         a.numero,
         a.localisation,
+        a.adresse,
         a.remarque,
         to_char(a.date_controle, 'DD.MM.YYYY') AS date_controle,
         a.geom
@@ -153,6 +158,7 @@ CREATE OR REPLACE VIEW sdis.sd_vmf_codes AS
         a.id,
         a.code,
         a.localisation,
+        a.adresse,
         to_char(a.date_controle, 'DD.MM.YYYY') AS date_controle,
         a.remarque,
         a.geom
@@ -172,6 +178,7 @@ CREATE OR REPLACE VIEW sdis.sd_vmf_situation AS
         a.id,
         a.type,
         a.localisation,
+        a.adresse,
         a.remarque,
         a.geom
     FROM
@@ -190,6 +197,7 @@ CREATE OR REPLACE VIEW sdis.sd_vmf_dossiers_intervention AS
         a.id,
         a.document,
         a.localisation,
+        a.adresse,
         a.statut,
         a.remarque,
         a.geom
@@ -286,6 +294,7 @@ CREATE OR REPLACE VIEW sdis.sd_vmf_barrages AS
         a.id,
         COALESCE(a.longueur || ' [m]', NULL) AS longueur,
         a.localisation,
+        a.adresse,
         a.remarque,
         a.geom
     FROM

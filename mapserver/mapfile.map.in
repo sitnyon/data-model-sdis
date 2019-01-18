@@ -10,14 +10,14 @@ LAYER
     NAME "sd_dangers"
     TYPE POINT
     DATA "geom FROM (SELECT geo.geom AS geom, geo.id,
-                            geo.type, geo.localisation, geo.photo, geo.document, geo.remarque
+                            geo.type, geo.localisation, geo.adresse, geo.photo, geo.document, geo.remarque
                      FROM sdis.sd_dangers AS geo
                      WHERE (%role_id% IN (${mapfile_data_noarea_subselect} 'sd_dangers'))
                      ) AS foo USING UNIQUE id USING srid=2056"
     METADATA
         "wms_title" "sd_dangers"
         "ows_geom_type" "point"
-        "gml_include_items" "type,localisation,photo,document,remarque"
+        "gml_include_items" "type,localisation,adresse,photo,document,remarque"
         "wms_srs" "epsg:2056"
         "wfs_enable_request" "*"
         "ows_geometries" "geom"
@@ -225,14 +225,14 @@ LAYER
     NAME "sd_risques"
     TYPE POINT
     DATA "geom FROM (SELECT geo.geom AS geom, geo.id,
-                            geo.type, geo.localisation, geo.photo, geo.document, geo.remarque
+                            geo.type, geo.localisation, geo.adresse, geo.photo, geo.document, geo.remarque
                      FROM sdis.sd_risques AS geo
                      WHERE (%role_id% IN (${mapfile_data_noarea_subselect} 'sd_risques'))
                      ) AS foo USING UNIQUE id USING srid=2056"
     METADATA
         "wms_title" "sd_risques"
         "ows_geom_type" "point"
-        "gml_include_items" "type,localisation,photo,document,remarque"
+        "gml_include_items" "type,localisation,adresse,photo,document,remarque"
         "wms_srs" "epsg:2056"
         "wfs_enable_request" "*"
         "ows_geometries" "geom"
@@ -303,7 +303,7 @@ LAYER
     GROUP "sd_acces"
     TYPE LINE
     DATA "geom FROM (SELECT geo.geom AS geom, geo.id,
-                             geo.type, geo.localisation, geo.photo, geo.remarque
+                             geo.type, geo.localisation, geo.adresse, geo.photo, geo.remarque
                      FROM sdis.sd_acces AS geo
                      WHERE (%role_id% IN (${mapfile_data_noarea_subselect} 'sd_acces'))
                      ) AS foo USING UNIQUE id USING srid=2056"
@@ -311,7 +311,7 @@ LAYER
         "wms_title" "sd_acces_l"
         "wms_group_title" "sd_acces"
         "ows_geom_type" "multiline"
-        "gml_include_items" "type,localisation,photo,remarque"
+        "gml_include_items" "type,localisation,adresse,photo,remarque"
         "wms_srs" "epsg:2056"
         "wfs_enable_request" "*"
         "ows_geometries" "geom"
@@ -415,7 +415,7 @@ LAYER
     GROUP "sd_acces"
     TYPE POINT
     DATA "geom FROM (SELECT geo.geom AS geom, geo.id,
-                             geo.type, geo.localisation, geo.photo, geo.remarque, geo.orientation
+                             geo.type, geo.localisation, geo.adresse, geo.photo, geo.remarque, geo.orientation
                      FROM sdis.sd_acces_echelle_pt AS geo
                      WHERE (%role_id% IN (${mapfile_data_noarea_subselect} 'sd_acces'))
                      ) AS foo USING UNIQUE id USING srid=2056"
@@ -423,7 +423,7 @@ LAYER
         "wms_title" "sd_acces_echelle_pt"
         "wms_group_title" "sd_acces"
         "ows_geom_type" "point"
-        "gml_include_items" "type,localisation,photo,remarque"
+        "gml_include_items" "type,localisation,adresse,photo,remarque"
         "wms_srs" "epsg:2056"
         "wfs_enable_request" "*"
         "ows_geometries" "geom"
@@ -755,14 +755,14 @@ LAYER
     NAME "sd_detections"
     TYPE POINT
     DATA "geom FROM (SELECT geo.geom AS geom, geo.id,
-                            geo.numero, geo.feu, geo.gaz, geo.sprinkler, geo.localisation, geo.photo, geo.remarque
+                            geo.numero, geo.feu, geo.gaz, geo.sprinkler, geo.localisation, geo.adresse, geo.photo, geo.remarque
                      FROM sdis.sd_detections AS geo
                      WHERE (%role_id% IN (${mapfile_data_noarea_subselect} 'sd_detections'))
                      ) AS foo USING UNIQUE id USING srid=2056"
     METADATA
         "wms_title" "sd_detections"
         "ows_geom_type" "point"
-        "gml_include_items" "numero,feu,gaz,sprinkler,localisation,photo,remarque"
+        "gml_include_items" "numero,feu,gaz,sprinkler,localisation,adresse,photo,remarque"
         "wms_srs" "epsg:2056"
         "wfs_enable_request" "*"
         "ows_geometries" "geom"
@@ -807,14 +807,14 @@ LAYER
     NAME "sd_cles"
     TYPE POINT
     DATA "geom FROM (SELECT geo.geom AS geom, geo.id,
-                            geo.type, geo.numero, geo.localisation, geo.remarque, geo.date_controle
+                            geo.type, geo.numero, geo.localisation, geo.adresse, geo.remarque, geo.date_controle
                      FROM sdis.sd_cles AS geo
                      WHERE (%role_id% IN (${mapfile_data_noarea_subselect} 'sd_cles'))
                      ) AS foo USING UNIQUE id USING srid=2056"
     METADATA
         "wms_title" "sd_cles"
         "ows_geom_type" "point"
-        "gml_include_items" "type,numero,localisation,remarque,date_controle"
+        "gml_include_items" "type,numero,localisation,adresse,remarque,date_controle"
         "wms_srs" "epsg:2056"
         "wfs_enable_request" "*"
         "ows_geometries" "geom"
@@ -880,14 +880,14 @@ LAYER
     NAME "sd_codes"
     TYPE POINT
     DATA "geom FROM (SELECT geo.geom AS geom, geo.id,
-                            geo.code, geo.localisation, geo.date_controle, geo.remarque
+                            geo.code, geo.localisation, geo.adresse, geo.date_controle, geo.remarque
                      FROM sdis.sd_codes AS geo
                      WHERE (%role_id% IN (${mapfile_data_noarea_subselect} 'sd_codes'))
                      ) AS foo USING UNIQUE id USING srid=2056"
     METADATA
         "wms_title" "sd_codes"
         "ows_geom_type" "point"
-        "gml_include_items" "code,localisation,date_controle,remarque"
+        "gml_include_items" "code,localisation,adresse,date_controle,remarque"
         "wms_srs" "epsg:2056"
         "wfs_enable_request" "*"
         "ows_geometries" "geom"
@@ -930,14 +930,14 @@ LAYER
     NAME "sd_dossiers_intervention"
     TYPE POINT
     DATA "geom FROM (SELECT geo.geom AS geom, geo.id,
-                            geo.document, geo.localisation, geo.statut, geo.remarque
+                            geo.document, geo.localisation, geo.adresse, geo.statut, geo.remarque
                      FROM sdis.sd_dossiers_intervention AS geo
                      WHERE (%role_id% IN (${mapfile_data_noarea_subselect} 'sd_dossiers_intervention'))
                      ) AS foo USING UNIQUE id USING srid=2056"
     METADATA
         "wms_title" "sd_dossiers_intervention"
         "ows_geom_type" "point"
-        "gml_include_items" "document,localisation,statut,remarque"
+        "gml_include_items" "document,localisation,adresse,statut,remarque"
         "wms_srs" "epsg:2056"
         "wfs_enable_request" "*"
         "ows_geometries" "geom"
@@ -1128,14 +1128,14 @@ LAYER
     NAME "sd_barrages"
     TYPE LINE
     DATA "geom FROM (SELECT geo.geom AS geom, geo.id,
-                            geo.longueur, geo.localisation, geo.remarque
+                            geo.longueur, geo.localisation, geo.adresse, geo.remarque
                      FROM sdis.sd_barrages AS geo
                      WHERE (%role_id% IN (${mapfile_data_noarea_subselect} 'sd_barrages'))
                      ) AS foo USING UNIQUE id USING srid=2056"
     METADATA
         "wms_title" "sd_barrages"
         "ows_geom_type" "multiline"
-        "gml_include_items" "longueur,localisation,remarque"
+        "gml_include_items" "longueur,localisation,adresse,remarque"
         "wms_srs" "epsg:2056"
         "wfs_enable_request" "*"
         "ows_geometries" "geom"

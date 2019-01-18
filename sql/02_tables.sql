@@ -6,6 +6,7 @@ COMMENT ON TABLE sdis.dangers IS 'Sources de danger';
 
 ALTER TABLE sdis.dangers ADD COLUMN type varchar(255) NOT NULL; COMMENT ON COLUMN sdis.dangers.type IS 'Feu, Gaz, Electrique, Toxique, Radioactif, Infectieux, Pollution, Autre';
 ALTER TABLE sdis.dangers ADD COLUMN localisation varchar(255);
+ALTER TABLE sdis.dangers ADD COLUMN adresse varchar(255);
 ALTER TABLE sdis.dangers ADD COLUMN photo varchar(255);
 ALTER TABLE sdis.dangers ADD COLUMN document varchar(255);
 ALTER TABLE sdis.dangers ADD COLUMN remarque varchar(255);
@@ -24,6 +25,7 @@ COMMENT ON TABLE sdis.risques IS 'Eléments à risque';
 
 ALTER TABLE sdis.risques ADD COLUMN type varchar(255) NOT NULL; COMMENT ON COLUMN sdis.risques.type IS 'EMS, Hôpital, Ecole, Parking souterrain, Bien culturel, Pisciculture, Bâtiment isolé, Autre';
 ALTER TABLE sdis.risques ADD COLUMN localisation varchar(255);
+ALTER TABLE sdis.risques ADD COLUMN adresse varchar(255);
 ALTER TABLE sdis.risques ADD COLUMN photo varchar(255);
 ALTER TABLE sdis.risques ADD COLUMN document varchar(255);
 ALTER TABLE sdis.risques ADD COLUMN remarque varchar(255);
@@ -42,6 +44,7 @@ COMMENT ON TABLE sdis.acces IS 'Accès et cheminements';
 
 ALTER TABLE sdis.acces ADD COLUMN type varchar(255) NOT NULL; COMMENT ON COLUMN sdis.acces.type IS 'Véhicule, Reconnaissance, Echelle, Entrée, Motopompe, Barrage, Restriction circulation';
 ALTER TABLE sdis.acces ADD COLUMN localisation varchar(255);
+ALTER TABLE sdis.acces ADD COLUMN adresse varchar(255);
 ALTER TABLE sdis.acces ADD COLUMN photo varchar(255);
 ALTER TABLE sdis.acces ADD COLUMN remarque varchar(255);
 ALTER TABLE sdis.acces ADD COLUMN geom geometry(MultiLineString, 2056);
@@ -91,6 +94,7 @@ ALTER TABLE sdis.detections ADD COLUMN feu bool;
 ALTER TABLE sdis.detections ADD COLUMN gaz bool;
 ALTER TABLE sdis.detections ADD COLUMN sprinkler bool;
 ALTER TABLE sdis.detections ADD COLUMN localisation varchar(255);
+ALTER TABLE sdis.detections ADD COLUMN adresse varchar(255);
 ALTER TABLE sdis.detections ADD COLUMN photo varchar(255);
 ALTER TABLE sdis.detections ADD COLUMN remarque varchar(255);
 ALTER TABLE sdis.detections ADD COLUMN geom geometry(Point, 2056);
@@ -108,6 +112,7 @@ COMMENT ON TABLE sdis.cles IS 'Clés d''accès';
 ALTER TABLE sdis.cles ADD COLUMN type varchar(255) NOT NULL; COMMENT ON COLUMN sdis.cles.type IS 'Clé, Tube';
 ALTER TABLE sdis.cles ADD COLUMN numero varchar(20);
 ALTER TABLE sdis.cles ADD COLUMN localisation varchar(255);
+ALTER TABLE sdis.cles ADD COLUMN adresse varchar(255);
 ALTER TABLE sdis.cles ADD COLUMN remarque varchar(255);
 ALTER TABLE sdis.cles ADD COLUMN date_controle date;
 ALTER TABLE sdis.cles ADD COLUMN inactif bool;
@@ -125,6 +130,7 @@ COMMENT ON TABLE sdis.codes IS 'Digicodes';
 
 ALTER TABLE sdis.codes ADD COLUMN code varchar(255) NOT NULL;
 ALTER TABLE sdis.codes ADD COLUMN localisation varchar(255);
+ALTER TABLE sdis.codes ADD COLUMN adresse varchar(255);
 ALTER TABLE sdis.codes ADD COLUMN date_controle date;
 ALTER TABLE sdis.codes ADD COLUMN remarque varchar(255);
 ALTER TABLE sdis.codes ADD COLUMN geom geometry(Point, 2056);
@@ -141,6 +147,7 @@ COMMENT ON TABLE sdis.situation IS 'Eléments de situation';
 
 ALTER TABLE sdis.situation ADD COLUMN type varchar(255) NOT NULL; COMMENT ON COLUMN sdis.situation.type IS 'Ascenseur';
 ALTER TABLE sdis.situation ADD COLUMN localisation varchar(255);
+ALTER TABLE sdis.situation ADD COLUMN adresse varchar(255);
 ALTER TABLE sdis.situation ADD COLUMN remarque varchar(255);
 ALTER TABLE sdis.situation ADD COLUMN geom geometry(Point, 2056);
 
@@ -156,6 +163,7 @@ COMMENT ON TABLE sdis.dossiers_intervention IS 'Dossiers d''intervention';
 
 ALTER TABLE sdis.dossiers_intervention ADD COLUMN document varchar(255) NOT NULL;
 ALTER TABLE sdis.dossiers_intervention ADD COLUMN localisation varchar(255);
+ALTER TABLE sdis.dossiers_intervention ADD COLUMN adresse varchar(255);
 ALTER TABLE sdis.dossiers_intervention ADD COLUMN statut varchar(255); COMMENT ON COLUMN sdis.dossiers_intervention.statut IS 'En vigueur, Provisoire, A modifier';
 ALTER TABLE sdis.dossiers_intervention ADD COLUMN remarque varchar(255);
 ALTER TABLE sdis.dossiers_intervention ADD COLUMN geom geometry(Point, 2056);
@@ -221,6 +229,7 @@ COMMENT ON TABLE sdis.barrages IS 'Barrages anti pollution';
 
 ALTER TABLE sdis.barrages ADD COLUMN longueur int4; COMMENT ON COLUMN sdis.barrages.longueur IS '[m]';
 ALTER TABLE sdis.barrages ADD COLUMN localisation varchar(255);
+ALTER TABLE sdis.barrages ADD COLUMN adresse varchar(255);
 ALTER TABLE sdis.barrages ADD COLUMN remarque varchar(255);
 ALTER TABLE sdis.barrages ADD COLUMN geom geometry(MultiLineString, 2056);
 
