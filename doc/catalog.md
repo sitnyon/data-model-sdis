@@ -234,4 +234,4 @@ Secteurs organisationnels
 | ---------------- | ------------------------------------------------ | -------------------- | ------- |
 | **Nyon-Dôle**    | ![nyon_dole.png](../doc/png/nyon_dole.png)       | Secteur Nyon-Dôle    |         |
 | **Gland-Serine** | ![gland_serine.png](../doc/png/gland_serine.png) | Secteur Gland-Serine |         |
-| **Terre Sainte** | ![gland_serine.png](../doc/png/terre_sainte.png) | Secteur Terre Sainte |         |
+| **Terre Sainte** | ![terre_sainte.png](../doc/png/terre_sainte.png) | Secteur Terre Sainte |         |
