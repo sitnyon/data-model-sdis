@@ -230,6 +230,8 @@ Secteurs d'intervention
 
 Secteurs organisationnels
 
-| Type     | Symbole | Description | Exemple |
-| -------- | ------- | ----------- | ------- |
-| ???      |         |             |         |
+| Type             | Symbole                                          | Description  | Exemple |
+| ---------------- | -------------------------------------------------| ------------ | ------- |
+| **Nyon-Dôle**    | ![nyon_dole.png](../doc/png/nyon_dole.png)       | Nyon-Dôle    |         |
+| **Gland-Serine** | ![gland_serine.png](../doc/png/gland_serine.png) | Gland-Serine |         |
+| **Terre Sainte** |                                                  |              |         |
