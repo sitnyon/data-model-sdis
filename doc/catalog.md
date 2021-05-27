@@ -200,10 +200,11 @@ Organisation
 
 Casernes et locaux
 
-| Type    | Symbole                                      | Description                     | Exemple |
-| ------- | -------------------------------------------- | ------------------------------- | ------- |
-| **DPS** | ![site_dps.png](../symbols/png/site_dps.png) | Détachement de premiers secours |         |
-| **DAP** | ![site_dap.png](../symbols/png/site_dap.png) | Détachement d'appui             |         |
+| Type      | Symbole                                            | Description                     | Exemple |
+| --------- | -------------------------------------------------- | ------------------------------- | ------- |
+| **DPS**   | ![site_dps.png](../symbols/png/site_dps.png)       | Détachement de premiers secours |         |
+| **DAP**   | ![site_dap.png](../symbols/png/site_dap.png)       | Détachement d'appui             |         |
+| **Local** | ![site_local.png](../symbols/png/site_local.png)   | Local                           |         |
 
 ### Personnel d'intervention
 
