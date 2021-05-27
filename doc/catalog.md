@@ -209,14 +209,14 @@ Casernes et locaux
 
 Personnel d'intervention (*vue*)
 
-| Type                            | Symbole                                                                        | Description           | Exemple |
-| ------------------------------- | ------------------------------------------------------------------------------ | --------------------- | ------- |
-| **Jour (Gland-Serine)**         | ![sd_personnel_jour_gs.png](../symbols/png/sd_personnel_jour_gs.png)           | Groupe Jour           |         |
-| **Nuit (Gland-Serine)**         | ![sd_personnel_nuit_gs.png](../symbols/png/sd_personnel_nuit_gs.png)           | Groupe Nuit           |         |
-| **Jour et nuit (Gland-Serine)** | ![sd_personnel_jour_nuit_gs.png](../symbols/png/sd_personnel_jour_nuit_gs.png) | Groupe Jour et Nuit   |         |
-| **Jour (Nyon-Dôle)**            | ![sd_personnel_jour_nd.png](../symbols/png/sd_personnel_jour_nd.png)           | Groupe Jour           |         |
-| **Nuit (Nyon-Dôle)**            | ![sd_personnel_nuit_nd.png](../symbols/png/sd_personnel_nuit_nd.png)           | Groupe Nuit           |         |
-| **Jour et nuit (Nyon-Dôle)**    | ![sd_personnel_jour_nuit_nd.png](../symbols/png/sd_personnel_jour_nuit_nd.png) | Groupe Jour et nuit   |         |
+| Type                            | Symbole                                                                        | Description                        | Exemple |
+| ------------------------------- | ------------------------------------------------------------------------------ | ---------------------------------- | ------- |
+| **Jour (Gland-Serine)**         | ![sd_personnel_jour_gs.png](../symbols/png/sd_personnel_jour_gs.png)           | Groupe Jour (Gland-Serine)         |         |
+| **Nuit (Gland-Serine)**         | ![sd_personnel_nuit_gs.png](../symbols/png/sd_personnel_nuit_gs.png)           | Groupe Nuit (Gland-Serine)         |         |
+| **Jour et nuit (Gland-Serine)** | ![sd_personnel_jour_nuit_gs.png](../symbols/png/sd_personnel_jour_nuit_gs.png) | Groupe Jour et Nuit (Gland-Serine) |         |
+| **Jour (Nyon-Dôle)**            | ![sd_personnel_jour_nd.png](../symbols/png/sd_personnel_jour_nd.png)           | Groupe Jour (Nyon-Dôle)            |         |
+| **Nuit (Nyon-Dôle)**            | ![sd_personnel_nuit_nd.png](../symbols/png/sd_personnel_nuit_nd.png)           | Groupe Nuit (Nyon-Dôle)            |         |
+| **Jour et nuit (Nyon-Dôle)**    | ![sd_personnel_jour_nuit_nd.png](../symbols/png/sd_personnel_jour_nuit_nd.png) | Groupe Jour et nuit (Nyon-Dôle)    |         |
 
 ### Secteurs d'intervention
 
