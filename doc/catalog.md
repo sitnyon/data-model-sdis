@@ -96,11 +96,11 @@ Signalisation pour accès véhicules
 
 Emplacements pour moyens d'intervention
 
-| Type            | Symbole | Description | Exemple                                          |
-| --------------- | ------- | ----------- | ------------------------------------------------ |
-| **Motopompe**   | ???     | Motopompe   | Pour du pompage dans rivière                     |
-| **Tonne pompe** | ???     | Tonne pompe | Pour un véhicule relais                          |
-| **Echelle**     | ???     | Echelle     | En fonction d'arbres, accès à plusieurs façacdes |
+| Type            | Symbole                                                                  | Description | Exemple                                          |
+| --------------- | ------------------------------------------------------------------------ | ---------   | ------------------------------------------------ |
+| **Motopompe**   | ![emplacements_motopompe.png](../doc/png/emplacements_motopompe.png)     | Motopompe   | Pour du pompage dans rivière                     |
+| **Tonne pompe** | ![emplacements_tonne_pompe.png](../doc/png/emplacements_tonne_pompe.png) | Tonne pompe | Pour un véhicule relais                          |
+| **Echelle**     | ![emplacements_echelle.png](../doc/png/emplacements_echelle.png)         | Echelle     | En fonction d'arbres, accès à plusieurs façacdes |
 
 Objectifs
 ---------
