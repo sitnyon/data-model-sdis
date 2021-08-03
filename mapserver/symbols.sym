@@ -1,10 +1,32 @@
 #
 # Notes:
 #     - Replace `symbols/sd_` by `symbols/png/` and `"sd_` by `"` to be compatible with original data model
-#     - Some symbols are not defined: emplacements, situation, puits_reservoirs, sites
-#
 
 
+
+    SYMBOL
+        NAME "sd_cle"
+        TYPE PIXMAP
+        IMAGE "symbols/sd_cle.png"
+    END
+
+    SYMBOL
+        NAME "sd_cle_tube"
+        TYPE PIXMAP
+        IMAGE "symbols/sd_cle_tube.png"
+    END
+
+    SYMBOL
+        NAME "sd_danger_autre"
+        TYPE PIXMAP
+        IMAGE "symbols/sd_danger_autre.png"
+    END
+
+    SYMBOL
+        NAME "sd_danger_electrique"
+        TYPE PIXMAP
+        IMAGE "symbols/sd_danger_electrique.png"
+    END
 
     SYMBOL
         NAME "sd_danger_feu"
@@ -16,24 +38,6 @@
         NAME "sd_danger_gaz"
         TYPE PIXMAP
         IMAGE "symbols/sd_danger_gaz.png"
-    END
-
-    SYMBOL
-        NAME "sd_danger_electrique"
-        TYPE PIXMAP
-        IMAGE "symbols/sd_danger_electrique.png"
-    END
-
-    SYMBOL
-        NAME "sd_danger_toxique"
-        TYPE PIXMAP
-        IMAGE "symbols/sd_danger_toxique.png"
-    END
-
-    SYMBOL
-        NAME "sd_danger_radioactif"
-        TYPE PIXMAP
-        IMAGE "symbols/sd_danger_radioactif.png"
     END
 
     SYMBOL
@@ -49,9 +53,99 @@
     END
 
     SYMBOL
-        NAME "sd_danger_autre"
+        NAME "sd_danger_radioactif"
         TYPE PIXMAP
-        IMAGE "symbols/sd_danger_autre.png"
+        IMAGE "symbols/sd_danger_radioactif.png"
+    END
+
+    SYMBOL
+        NAME "sd_danger_toxique"
+        TYPE PIXMAP
+        IMAGE "symbols/sd_danger_toxique.png"
+    END
+
+    SYMBOL
+        NAME "sd_detection"
+        TYPE PIXMAP
+        IMAGE "symbols/sd_detection.png"
+    END
+
+    SYMBOL
+        NAME "sd_dossier_intervention"
+        TYPE PIXMAP
+        IMAGE "symbols/sd_dossier_intervention.png"
+    END
+
+    SYMBOL
+        NAME "sd_emplacements_echelle"
+        TYPE PIXMAP
+        IMAGE "symbols/sd_emplacements_echelle.png"
+    END
+
+    SYMBOL
+        NAME "sd_emplacements_motopompe"
+        TYPE PIXMAP
+        IMAGE "symbols/sd_emplacements_motopompe.png"
+    END
+
+    SYMBOL
+        NAME "sd_emplacements_tonne_pompe"
+        TYPE PIXMAP
+        IMAGE "symbols/sd_emplacements_tonne_pompe.png"
+    END
+
+    SYMBOL
+        NAME "sd_personnel_jour_gs"
+        TYPE PIXMAP
+        IMAGE "symbols/sd_personnel_jour_gs.png"
+    END
+
+    SYMBOL
+        NAME "sd_personnel_jour_nd"
+        TYPE PIXMAP
+        IMAGE "symbols/sd_personnel_jour_nd.png"
+    END
+
+    SYMBOL
+        NAME "sd_personnel_nuit_gs"
+        TYPE PIXMAP
+        IMAGE "symbols/sd_personnel_nuit_gs.png"
+    END
+
+    SYMBOL
+        NAME "sd_personnel_nuit_nd"
+        TYPE PIXMAP
+        IMAGE "symbols/sd_personnel_nuit_nd.png"
+    END
+
+    SYMBOL
+        NAME "sd_personnel_jour_nuit_gs"
+        TYPE PIXMAP
+        IMAGE "symbols/sd_personnel_jour_nuit_gs.png"
+    END
+
+    SYMBOL
+        NAME "sd_personnel_jour_nuit_nd"
+        TYPE PIXMAP
+        IMAGE "symbols/sd_personnel_jour_nuit_nd.png"
+    END
+
+    SYMBOL
+        NAME "sd_puits_reservoirs_commande_reservoir"
+        TYPE PIXMAP
+        IMAGE "symbols/sd_puits_reservoirs_commande_reservoir.png"
+    END
+
+    SYMBOL
+        NAME "sd_puits_reservoirs_puit"
+        TYPE PIXMAP
+        IMAGE "symbols/sd_puits_reservoirs_puit.png"
+    END
+
+    SYMBOL
+        NAME "sd_puits_reservoirs_reservoir"
+        TYPE PIXMAP
+        IMAGE "symbols/sd_puits_reservoirs_reservoir.png"
     END
 
     SYMBOL
@@ -64,118 +158,4 @@
         NAME "sd_risque_hydraulique"
         TYPE PIXMAP
         IMAGE "symbols/sd_risque_hydraulique.png"
-    END
-
-    SYMBOL
-        NAME "sd_acces_echelle"
-        TYPE PIXMAP
-        IMAGE "symbols/sd_acces_echelle.png"
-    END
-
-    SYMBOL
-        NAME "sd_signalisation_sens_interdit"
-        TYPE PIXMAP
-        IMAGE "symbols/sd_signalisation_sens_interdit.png"
-    END
-
-    SYMBOL
-        NAME "sd_signalisation_travaux"
-        TYPE PIXMAP
-        IMAGE "symbols/sd_signalisation_travaux.png"
-    END
-
-    SYMBOL
-        NAME "sd_signalisation_danger"
-        TYPE PIXMAP
-        IMAGE "symbols/sd_signalisation_danger.png"
-    END
-
-    SYMBOL
-        NAME "sd_signalisation_interdiction_camions"
-        TYPE PIXMAP
-        IMAGE "symbols/sd_signalisation_interdiction_camions.png"
-    END
-
-    SYMBOL
-        NAME "sd_signalisation_hauteur_limitee"
-        TYPE PIXMAP
-        IMAGE "symbols/sd_signalisation_hauteur_limitee.png"
-    END
-
-    SYMBOL
-        NAME "sd_signalisation_largeur_limitee"
-        TYPE PIXMAP
-        IMAGE "symbols/sd_signalisation_largeur_limitee.png"
-    END
-
-    SYMBOL
-        NAME "sd_signalisation_poids_limite"
-        TYPE PIXMAP
-        IMAGE "symbols/sd_signalisation_poids_limite.png"
-    END
-
-    SYMBOL
-        NAME "sd_signalisation_tout_droit"
-        TYPE PIXMAP
-        IMAGE "symbols/sd_signalisation_tout_droit.png"
-    END
-
-    SYMBOL
-        NAME "sd_signalisation_deviation"
-        TYPE PIXMAP
-        IMAGE "symbols/sd_signalisation_deviation.png"
-    END
-
-    SYMBOL
-        NAME "sd_detection"
-        TYPE PIXMAP
-        IMAGE "symbols/sd_detection.png"
-    END
-
-    SYMBOL
-        NAME "sd_cle"
-        TYPE PIXMAP
-        IMAGE "symbols/sd_cle.png"
-    END
-
-    SYMBOL
-        NAME "sd_cle_tube"
-        TYPE PIXMAP
-        IMAGE "symbols/sd_cle_tube.png"
-    END
-
-    SYMBOL
-        NAME "sd_code"
-        TYPE PIXMAP
-        IMAGE "symbols/sd_code.png"
-    END
-
-    SYMBOL
-        NAME "sd_dossier_intervention"
-        TYPE PIXMAP
-        IMAGE "symbols/sd_dossier_intervention.png"
-    END
-
-    SYMBOL
-        NAME "sd_borne_hydrante"
-        TYPE PIXMAP
-        IMAGE "symbols/sd_borne_hydrante.png"
-    END
-
-    SYMBOL
-        NAME "sd_borne_hydrante_souterraine"
-        TYPE PIXMAP
-        IMAGE "symbols/sd_borne_hydrante_souterraine.png"
-    END
-
-    SYMBOL
-        NAME "sd_personnel_jour"
-        TYPE PIXMAP
-        IMAGE "symbols/sd_personnel_jour.png"
-    END
-
-    SYMBOL
-        NAME "sd_personnel_nuit"
-        TYPE PIXMAP
-        IMAGE "symbols/sd_personnel_nuit.png"
     END
