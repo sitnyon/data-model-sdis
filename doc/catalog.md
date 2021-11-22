@@ -162,10 +162,11 @@ Moyens
 
 Bornes hydrantes
 
-| Type            | Symbole                                                                          | Description                | Exemple |
-| ----------------| -------------------------------------------------------------------------------- | -------------------------- | ------- |
-| **Hors-sol**    | ![borne_hydrante.png](../symbols/png/borne_hydrante.png)                         | Borne hydrante             |         |
-| **Souterraine** | ![borne_hydrante_souterraine.png](../symbols/png/borne_hydrante_souterraine.png) | Borne hydrante souterraine |         |
+| Type             | Symbole                                                                            | Description                 | Exemple |
+| ---------------- | ---------------------------------------------------------------------------------- | --------------------------  | ------- |
+| **Hors-sol**     | ![borne_hydrante.png](../symbols/png/borne_hydrante.png)                           | Borne hydrante              |         |
+| **Souterraine**  | ![borne_hydrante_souterraine.png](../symbols/png/borne_hydrante_souterraine.png)   | Borne hydrante souterraine  |         |
+| **Hors service** | ![borne_hydrante_hors_service.png](../symbols/png/borne_hydrante_hors_service.png) | Borne hydrante hors service |         |
 
 ### Puits réservoirs
 
