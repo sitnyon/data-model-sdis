@@ -127,13 +127,13 @@ Emplacements pour moyens d'intervention
 
 Points d'accès
 
-| Type                   | Symbole                                                                              | Description | Exemple                 |
-| ---------------------- | ------------------------------------------------------------------------------------ | ---------   | ----------------------- |
-| **Barrière**           | ![points_acces_barriere.png](../symbols/png/points_acces_barriere.png)                   |             |                         |
-| **Borne**              | ![secu_points_acces_borne.png](../symbols/png/secu_points_acces_borne.png)               |             |                         |
-| **Grille**             | ![points_acces_grille.png](../symbols/png/points_acces_grille.png)                       |             |                         |
-| **Portail autoroute**  | ![points_acces_portail_autoroute.png](../symbols/png/points_acces_portail_autoroute.png) |             |                         |
-| **Autres**             | ![points_acces_autre.png](../symbols/png/points_acces_autre.png)                         |             |                         |
+| Type                   | Symbole                                                                                  | Description       | Exemple                 |
+| ---------------------- | ---------------------------------------------------------------------------------------- | ------------------| ----------------------- |
+| **Barrière**           | ![points_acces_barriere.png](../symbols/png/points_acces_barriere.png)                   | Barrière          |                         |
+| **Borne**              | ![secu_points_acces_borne.png](../symbols/png/secu_points_acces_borne.png)               | Borne             |                         |
+| **Grille**             | ![points_acces_grille.png](../symbols/png/points_acces_grille.png)                       | Grille            |                         |
+| **Portail autoroute**  | ![points_acces_portail_autoroute.png](../symbols/png/points_acces_portail_autoroute.png) | Portail autoroute |                         |
+| **Autres**             | ![points_acces_autre.png](../symbols/png/points_acces_autre.png)                         | Autres            |                         |
 
 Dangers
 -------
@@ -169,6 +169,14 @@ Eléments à risque
 | **Bâtiment isolé**     | ![risque_hydraulique.png](../symbols/png/risque_hydraulique.png) | Bâtiment ne disposant pas d’alimentation en eau suffisante en cas d’incendie | Hameau, ferme isolée       |
 | **Autre**              | ![risque.png](../symbols/png/risque.png)                         | Autre risque                                                                 |                            |
 
+### Zones de danger
+
+Zones de danger
+
+| Type                         | Symbole                                                          | Description                                                                  | Exemple                    |
+| -----------------------------| ---------------------------------------------------------------- | ---------------------------------------------------------------------------- | -------------------------- |
+| **Zones de danger ligne HT** | ![ligne_ht.png](../doc/png/ligne_ht.png)                         | Ligne à Haute Tension                                                        |                            |
+
 Moyens
 ------
 
@@ -188,7 +196,7 @@ Prises d'arrosage SANE
 
 | Type                       | Symbole                                      | Description                                                     | Exemple |
 | -------------------------- | -------------------------------------------- | --------------------------------------------------------------- | ------- |
-| **Prises d'arrosage SANE** | ![prise_sane.png](../doc/png/prise_sane.png) | Prise d'arrosage SANE (Syndicat d'arrosage de Nyon et environs) |         |
+| **Prises d'arrosage SANE** | ![prise_sane.png](../doc/png/prise_sane.png) | Prise d'arrosage SANE (Syndicat d'Arrosage de Nyon et Environs) |         |
 
 
 ### Puits réservoirs
