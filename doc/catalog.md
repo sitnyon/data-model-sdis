@@ -81,20 +81,6 @@ Dossiers d'intervention
 Accès
 -----
 
-### Accès
-
-Accès et cheminements
-
-| Type                        | Symbole                                                                            | Description                                     | Exemple               |
-| ----------------------------| ---------------------------------------------------------------------------------- | ----------------------------------------------- | --------------------- |
-| **Véhicule**                | ![acces_vehicule.png](../doc/png/acces_vehicule.png)                               | Accès pour les véhicules d'intervention         |                       |
-| **Reconnaissance**          | ![acces_reconnaissance.png](../doc/png/acces_reconnaissance.png)                   | Cheminement pour la reconnaissance à pieds      | Accès cour intérieure |
-| **Echelle**                 | ![acces_echelle.png](../doc/png/acces_echelle.png)                                 | Facades accessibles avec une échelle automobile |                       |
-| **Entrée**                  | ![acces_entree.png](../doc/png/acces_entree.png)                                   | Entrée de bâtiment                              |                       |
-| **Motopompe**               | ???                                                                                | Cheminement pour placer une motopompe           |                       |
-| **Barrage**                 | ![acces_barrage.png](../doc/png/acces_barrage.png)                                 | Cheminement pour mettre un barrage à l'eau      |                       |
-| **Restriction circulation** | ![acces_restriction_circulation.png](../doc/png/acces_restriction_circulation.png) | Restriction de circulation                      |                       |
-
 ### Signalisation
 
 Signalisation pour accès véhicules
@@ -111,15 +97,43 @@ Signalisation pour accès véhicules
 | **Tout droit**           | ![signalisation_tout_droit.png](../symbols/png/signalisation_tout_droit.png)                     | Tout droit                           |                       |
 | **Déviation**            | ![signalisation_deviation.png](../symbols/png/signalisation_deviation.png)                       | Déviation                            |                       |
 
+### Accès
+
+Accès et cheminements
+
+| Type                        | Symbole                                                                            | Description                                     | Exemple               |
+| ----------------------------| ---------------------------------------------------------------------------------- | ----------------------------------------------- | --------------------- |
+| **Véhicule**                | ![acces_vehicule.png](../doc/png/acces_vehicule.png)                               | Accès pour les véhicules d'intervention         |                       |
+| **Reconnaissance**          | ![acces_reconnaissance.png](../doc/png/acces_reconnaissance.png)                   | Cheminement pour la reconnaissance à pieds      | Accès cour intérieure |
+| **Echelle**                 | ![acces_echelle.png](../doc/png/acces_echelle.png)                                 | Facades accessibles avec une échelle automobile |                       |
+| **Entrée**                  | ![acces_entree.png](../doc/png/acces_entree.png)                                   | Entrée de bâtiment                              |                       |
+| **Motopompe**               | ![acces_motopompe.png](../doc/png/acces_motopompe.png)                             | Cheminement pour placer une motopompe           |                       |
+| **Barrage**                 | ![acces_barrage.png](../doc/png/acces_barrage.png)                                 | Cheminement pour mettre un barrage à l'eau      |                       |
+| **Restriction circulation** | ![acces_restriction_circulation.png](../doc/png/acces_restriction_circulation.png) | Restriction de circulation                      |                       |
+
+
 ### Emplacements
 
 Emplacements pour moyens d'intervention
 
 | Type            | Symbole                                                                  | Description | Exemple                                          |
 | --------------- | ------------------------------------------------------------------------ | ---------   | ------------------------------------------------ |
+| **Echelle**     | ![emplacements_echelle.png](../doc/png/emplacements_echelle.png)         | Echelle     | En fonction d'arbres, accès à plusieurs façacdes |
 | **Motopompe**   | ![emplacements_motopompe.png](../doc/png/emplacements_motopompe.png)     | Motopompe   | Pour du pompage dans rivière                     |
 | **Tonne pompe** | ![emplacements_tonne_pompe.png](../doc/png/emplacements_tonne_pompe.png) | Tonne pompe | Pour un véhicule relais                          |
-| **Echelle**     | ![emplacements_echelle.png](../doc/png/emplacements_echelle.png)         | Echelle     | En fonction d'arbres, accès à plusieurs façacdes |
+
+
+### Points d'accès
+
+Points d'accès
+
+| Type                   | Symbole                                                                              | Description | Exemple                 |
+| ---------------------- | ------------------------------------------------------------------------------------ | ---------   | ----------------------- |
+| **Barrière**           | ![points_acces_barriere.png](../symbols/png/points_acces_barriere.png)                   |             |                         |
+| **Borne**              | ![secu_points_acces_borne.png](../symbols/png/secu_points_acces_borne.png)               |             |                         |
+| **Grille**             | ![points_acces_grille.png](../symbols/png/points_acces_grille.png)                       |             |                         |
+| **Portail autoroute**  | ![points_acces_portail_autoroute.png](../symbols/png/points_acces_portail_autoroute.png) |             |                         |
+| **Autres**             | ![points_acces_autre.png](../symbols/png/points_acces_autre.png)                         |             |                         |
 
 Dangers
 -------
@@ -168,15 +182,24 @@ Bornes hydrantes
 | **Souterraine**  | ![borne_hydrante_souterraine.png](../symbols/png/borne_hydrante_souterraine.png)   | Borne hydrante souterraine  |         |
 | **Hors service** | ![borne_hydrante_hors_service.png](../symbols/png/borne_hydrante_hors_service.png) | Borne hydrante hors service |         |
 
+### Prises d'arrosage SANE
+
+Prises d'arrosage SANE
+
+| Type                       | Symbole                                      | Description                                                     | Exemple |
+| -------------------------- | -------------------------------------------- | --------------------------------------------------------------- | ------- |
+| **Prises d'arrosage SANE** | ![prise_sane.png](../doc/png/prise_sane.png) | Prise d'arrosage SANE (Syndicat d'arrosage de Nyon et environs) |         |
+
+
 ### Puits réservoirs
 
 Puits et réservoirs
 
 | Type                   | Symbole                                                          | Description                                                  | Exemple |
 | ---------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------ | ------- |
+| **Commande réservoir** | ![reservoir_commande.png](../symbols/png/reservoir_commande.png) | Interrupteur de commande à distance pour la réserve incendie |         |
 | **Puit**               | ![puit.png](../symbols/png/puit.png)                             | Puit avec réserve d’eau en cas d’incendie                    |         |
 | **Réservoir**          | ![reservoir.png](../symbols/png/reservoir.png)                   | Réservoir                                                    |         |
-| **Commande réservoir** | ![reservoir_commande.png](../symbols/png/reservoir_commande.png) | Interrupteur de commande à distance pour la réserve incendie |         |
 
 ### Transport d'eau
 
