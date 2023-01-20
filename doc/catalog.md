@@ -1,64 +1,82 @@
 Catalogue des objets
 ====================
 
-1. [Dangers](#dangers)
-    * [Dangers](#dangers-1)
-    * [Risques](#risques)
-2. [Accès](#acc%C3%A8s)
+1. [Urgences](#urgences)
+    * [Accès immeubles](#acc%C3%A8s-immeubles)
+2. [Objectifs](#objectifs)
+    * [Détections](#d%C3%A9tections)
+    * [Clés](#cl%C3%A9s)
+    * [Situation](#situation)
+    * [Dossiers d'intervention](#dossiers-dintervention)
+3. [Accès](#acc%C3%A8s)
     * [Accès](#acc%C3%A8s-1)
     * [Signalisation](#signalisation)
     * [Emplacements](#emplacements)
-3. [Objectifs](#objectifs)
-    * [Détections](#d%C3%A9tections)
-    * [Clés](#cl%C3%A9s)
-    * [Codes](#codes)
-    * [Situation](#situation)
-    * [Dossiers d'intervention](#dossiers-dintervention)
-    * [Bâtiments](#b%C3%A2timents)
-4. [Moyens](#moyens)
+4. [Dangers](#dangers)
+    * [Dangers](#dangers-1)
+    * [Risques](#risques)
+    * [Zones de danger](#zones-danger)
+5. [Moyens](#moyens)
     * [Bornes hydrantes](#bornes-hydrantes)
+    * [Prises d'arrosage SANE](#prises-arrosages-sane)
     * [Puits réservoirs](#puits-r%C3%A9servoirs)
-    * [Tuyaux](#tuyaux)
+    * [Transports d'eau](#transports-eau)
     * [Barrages](#barrages)
-5. [Organisation](#organisation)
-    * [Sites](#sites)
+6. [Bâtiments](#b%C3%A2timents)
+    * [Bâtiments](#b%C3%A2timents-1)
+7. [Organisation](#organisation)
     * [Personnel d'intervention](#personnel-dintervention)
     * [Secteurs d'intervention](#secteurs-dintervention)
+    * [Sites](#sites)
     * [Secteurs organisationnels](#secteurs-organisationnels)
 
-Dangers
+Urgences
 -------
 
-### Dangers
+### Accès immeubles
 
-Sources de danger
+Digicodes
 
-| Type           | Symbole                                                        | Description                            | Exemple                                                                      |
-| -------------- | -------------------------------------------------------------- | -------------------------------------- | ---------------------------------------------------------------------------- |
-| **Feu**        | ![danger_feu.png](../symbols/png/danger_feu.png)               | Danger particulier d’incendie          | Station-service, scierie                                                     |
-| **Gaz**        | ![danger_gaz.png](../symbols/png/danger_gaz.png)               | Gaz inflammable, risque d’explosion    | Citerne de gaz                                                               |
-| **Electrique** | ![danger_electrique.png](../symbols/png/danger_electrique.png) | Source de danger d’origine électrique  | Station transformatrice, panneaux solaires photovoltaïques                   |
-| **Toxique**    | ![danger_toxique.png](../symbols/png/danger_toxique.png)       | Produits toxiques                      | Stock de produits                                                            |
-| **Radioactif** | ![danger_radioactif.png](../symbols/png/danger_radioactif.png) | Sources radioactives                   | Laboratoire                                                                  |
-| **Infectieux** | ![danger_infectieux.png](../symbols/png/danger_infectieux.png) | Substances infectieuses                | Laboratoire                                                                  |
-| **Pollution**  | ![danger_pollution.png](../symbols/png/danger_pollution.png)   | Produits pouvant causer des pollutions | Stock de produits                                                            |
-| **Autre**      | ![danger_autre.png](../symbols/png/danger_autre.png)           | Autres sources de danger               | Installation d'enfumage en cas d'effraction, appareil IRM, animaux dangereux |
+| Type     | Symbole                              | Description                   | Exemple |
+| -------- | ------------------------------------ | ----------------------------- | ------- |
+| **Code** | ![code.png](../symbols/png/code.png) | Accès verrouillé par digicode |         |
 
-### Risques
+Objectifs
+---------
 
-Eléments à risque
+### Détections
 
-| Type                   | Symbole                                                          | Description                                                                  | Exemple                    |
-| ---------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------------------- | -------------------------- |
-| **EMS**                | ![risque.png](../symbols/png/risque.png)                         | Maison de retraite                                                           |                            |
-| **Hôpital**            | ![risque.png](../symbols/png/risque.png)                         | Hôpital, clinique, centre de convalescence, foyer d’handicapés               |                            |
-| **Ecole**              | ![risque.png](../symbols/png/risque.png)                         | Ecole, garderie                                                              |                            |
-| **Parking souterrain** | ![risque.png](../symbols/png/risque.png)                         | Parking souterrain collectif                                                 |                            |
-| **Bien culturel**      | ![risque.png](../symbols/png/risque.png)                         | Biens mobiliers ou immobiliers à préserver en priorité                       | Archives communales, musée |
-| **Pisciculture**       | ![risque.png](../symbols/png/risque.png)                         | Site présentant un risque accru en cas de pollution de rivière               |                            |
-| **Bâtiment élevé**     | ![risque.png](../symbols/png/risque.png)                         | Bâtiment supérieur ou égal à 25 m                                            |                            |
-| **Bâtiment isolé**     | ![risque_hydraulique.png](../symbols/png/risque_hydraulique.png) | Bâtiment ne disposant pas d’alimentation en eau suffisante en cas d’incendie | Hameau, ferme isolée       |
-| **Autre**              | ![risque.png](../symbols/png/risque.png)                         | Autre risque                                                                 |                            |
+Alarmes avec télétransmission et dispositifs d'extinction
+
+| Type          | Symbole                                        | Description                                  | Exemple |
+| ------------- | ---------------------------------------------- | -------------------------------------------- | ------- |
+| **Détection** | ![detection.png](../symbols/png/detection.png) | Alarme incendie, détection de gaz, sprinkler |         |
+
+### Clés
+
+Clés d'accès
+
+| Type     | Symbole                                      | Description              | Exemple |
+| -------- | -------------------------------------------- | ------------------------ | ------- |
+| **Clé**  | ![cle.png](../symbols/png/cle.png)           | Accès verrouillé par clé |         |
+| **Tube** | ![cle_tube.png](../symbols/png/cle_tube.png) | Tube à clé               |         |
+
+
+### Situation
+
+Eléments de situation
+
+| Type          | Symbole                                        | Description | Exemple |
+| ------------- | ---------------------------------------------- | ----------- | ------- |
+| **Ascenseur** | ![ascenseur.png](../symbols/png/ascenseur.png) | Ascenseur   |         |
+
+### Dossiers d'intervention
+
+Dossiers d'intervention
+
+| Type                     | Symbole                                                              | Description            | Exemple |
+| ------------------------ | -------------------------------------------------------------------- | ---------------------- | ------- |
+| **Dossier intervention** | ![dossier_intervention.png](../symbols/png/dossier_intervention.png) | Dossier d'intervention |         |
 
 Accès
 -----
@@ -103,58 +121,39 @@ Emplacements pour moyens d'intervention
 | **Tonne pompe** | ![emplacements_tonne_pompe.png](../doc/png/emplacements_tonne_pompe.png) | Tonne pompe | Pour un véhicule relais                          |
 | **Echelle**     | ![emplacements_echelle.png](../doc/png/emplacements_echelle.png)         | Echelle     | En fonction d'arbres, accès à plusieurs façacdes |
 
-Objectifs
----------
+Dangers
+-------
 
-### Détections
+### Dangers
 
-Alarmes avec télétransmission et dispositifs d'extinction
+Sources de danger
 
-| Type          | Symbole                                        | Description                                  | Exemple |
-| ------------- | ---------------------------------------------- | -------------------------------------------- | ------- |
-| **Détection** | ![detection.png](../symbols/png/detection.png) | Alarme incendie, détection de gaz, sprinkler |         |
+| Type           | Symbole                                                        | Description                            | Exemple                                                                      |
+| -------------- | -------------------------------------------------------------- | -------------------------------------- | ---------------------------------------------------------------------------- |
+| **Feu**        | ![danger_feu.png](../symbols/png/danger_feu.png)               | Danger particulier d’incendie          | Station-service, scierie                                                     |
+| **Gaz**        | ![danger_gaz.png](../symbols/png/danger_gaz.png)               | Gaz inflammable, risque d’explosion    | Citerne de gaz                                                               |
+| **Electrique** | ![danger_electrique.png](../symbols/png/danger_electrique.png) | Source de danger d’origine électrique  | Station transformatrice, panneaux solaires photovoltaïques                   |
+| **Toxique**    | ![danger_toxique.png](../symbols/png/danger_toxique.png)       | Produits toxiques                      | Stock de produits                                                            |
+| **Radioactif** | ![danger_radioactif.png](../symbols/png/danger_radioactif.png) | Sources radioactives                   | Laboratoire                                                                  |
+| **Infectieux** | ![danger_infectieux.png](../symbols/png/danger_infectieux.png) | Substances infectieuses                | Laboratoire                                                                  |
+| **Pollution**  | ![danger_pollution.png](../symbols/png/danger_pollution.png)   | Produits pouvant causer des pollutions | Stock de produits                                                            |
+| **Autre**      | ![danger_autre.png](../symbols/png/danger_autre.png)           | Autres sources de danger               | Installation d'enfumage en cas d'effraction, appareil IRM, animaux dangereux |
 
-### Clés
+### Risques
 
-Clés d'accès
+Eléments à risque
 
-| Type     | Symbole                                      | Description              | Exemple |
-| -------- | -------------------------------------------- | ------------------------ | ------- |
-| **Clé**  | ![cle.png](../symbols/png/cle.png)           | Accès verrouillé par clé |         |
-| **Tube** | ![cle_tube.png](../symbols/png/cle_tube.png) | Tube à clé               |         |
-
-### Codes
-
-Digicodes
-
-| Type     | Symbole                              | Description                   | Exemple |
-| -------- | ------------------------------------ | ----------------------------- | ------- |
-| **Code** | ![code.png](../symbols/png/code.png) | Accès verrouillé par digicode |         |
-
-
-### Situation
-
-Eléments de situation
-
-| Type          | Symbole                                        | Description | Exemple |
-| ------------- | ---------------------------------------------- | ----------- | ------- |
-| **Ascenseur** | ![ascenseur.png](../symbols/png/ascenseur.png) | Ascenseur   |         |
-
-### Dossiers d'intervention
-
-Dossiers d'intervention
-
-| Type                     | Symbole                                                              | Description            | Exemple |
-| ------------------------ | -------------------------------------------------------------------- | ---------------------- | ------- |
-| **Dossier intervention** | ![dossier_intervention.png](../symbols/png/dossier_intervention.png) | Dossier d'intervention |         |
-
-### Bâtiments
-
-Bâtiments avec objet SDIS (*vue*)
-
-| Type         | Symbole                                  | Description              | Exemple                                                                                            |
-| ------------ | ---------------------------------------- | ------------------------ | -------------------------------------------------------------------------------------------------- |
-| **Bâtiment** | ![batiment.png](../doc/png/batiment.png) | Bâtiment avec objet SDIS | Bâtiment accessible avec clé, bâtiment avec source de danger, bâtiment avec dossier d'intervention |
+| Type                   | Symbole                                                          | Description                                                                  | Exemple                    |
+| ---------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------------------- | -------------------------- |
+| **EMS**                | ![risque.png](../symbols/png/risque.png)                         | Maison de retraite                                                           |                            |
+| **Hôpital**            | ![risque.png](../symbols/png/risque.png)                         | Hôpital, clinique, centre de convalescence, foyer d’handicapés               |                            |
+| **Ecole**              | ![risque.png](../symbols/png/risque.png)                         | Ecole, garderie                                                              |                            |
+| **Parking souterrain** | ![risque.png](../symbols/png/risque.png)                         | Parking souterrain collectif                                                 |                            |
+| **Bien culturel**      | ![risque.png](../symbols/png/risque.png)                         | Biens mobiliers ou immobiliers à préserver en priorité                       | Archives communales, musée |
+| **Pisciculture**       | ![risque.png](../symbols/png/risque.png)                         | Site présentant un risque accru en cas de pollution de rivière               |                            |
+| **Bâtiment élevé**     | ![risque.png](../symbols/png/risque.png)                         | Bâtiment supérieur ou égal à 25 m                                            |                            |
+| **Bâtiment isolé**     | ![risque_hydraulique.png](../symbols/png/risque_hydraulique.png) | Bâtiment ne disposant pas d’alimentation en eau suffisante en cas d’incendie | Hameau, ferme isolée       |
+| **Autre**              | ![risque.png](../symbols/png/risque.png)                         | Autre risque                                                                 |                            |
 
 Moyens
 ------
@@ -179,7 +178,7 @@ Puits et réservoirs
 | **Réservoir**          | ![reservoir.png](../symbols/png/reservoir.png)                   | Réservoir                                                    |         |
 | **Commande réservoir** | ![reservoir_commande.png](../symbols/png/reservoir_commande.png) | Interrupteur de commande à distance pour la réserve incendie |         |
 
-### Tuyaux
+### Transport d'eau
 
 Transport d'eau
 
@@ -195,33 +194,27 @@ Barrages anti pollution
 | ----------- | -------------------------------------- | ---------------------- | -------------------- |
 | **Barrage** | ![barrage.png](../doc/png/barrage.png) | Barrage anti pollution | Sur rivière, sur lac |
 
+### Bâtiments
+
+Bâtiments avec objet SDIS (*vue*)
+
+| Type         | Symbole                                  | Description              | Exemple                                                                                            |
+| ------------ | ---------------------------------------- | ------------------------ | -------------------------------------------------------------------------------------------------- |
+| **Bâtiment** | ![batiment.png](../doc/png/batiment.png) | Bâtiment avec objet SDIS | Bâtiment accessible avec clé, bâtiment avec source de danger, bâtiment avec dossier d'intervention |
+
 Organisation
 ------------
-
-### Sites
-
-Casernes et locaux
-
-| Type      | Symbole                                            | Description                     | Exemple |
-| --------- | -------------------------------------------------- | ------------------------------- | ------- |
-| **DPS**   | ![site_dps.png](../symbols/png/site_dps.png)       | Détachement de premiers secours |         |
-| **DAP**   | ![site_dap.png](../symbols/png/site_dap.png)       | Détachement d'appui             |         |
-| **Local** | ![site_local.png](../symbols/png/site_local.png)   | Local                           |         |
 
 ### Personnel d'intervention
 
 Personnel d'intervention (*vue*)
 
-| Type                            | Symbole                                                                        | Description                        | Exemple |
-| ------------------------------- | ------------------------------------------------------------------------------ | ---------------------------------- | ------- |
-| **Jour (Gland-Serine)**         | ![sd_personnel_jour_gs.png](../symbols/png/sd_personnel_jour_gs.png)           | Groupe Jour (Gland-Serine)         |         |
-| **Nuit (Gland-Serine)**         | ![sd_personnel_nuit_gs.png](../symbols/png/sd_personnel_nuit_gs.png)           | Groupe Nuit (Gland-Serine)         |         |
-| **Jour et nuit (Gland-Serine)** | ![sd_personnel_jour_nuit_gs.png](../symbols/png/sd_personnel_jour_nuit_gs.png) | Groupe Jour et Nuit (Gland-Serine) |         |
-| **CI-DIR (Gland-Serine)**       | ![sd_personnel_dir_gs.png](../symbols/png/sd_personnel_dir_gs.png)             | Groupe CI-DIR (Gland-Serine)       |         |
-| **Jour (Nyon-Dôle)**            | ![sd_personnel_jour_nd.png](../symbols/png/sd_personnel_jour_nd.png)           | Groupe Jour (Nyon-Dôle)            |         |
-| **Nuit (Nyon-Dôle)**            | ![sd_personnel_nuit_nd.png](../symbols/png/sd_personnel_nuit_nd.png)           | Groupe Nuit (Nyon-Dôle)            |         |
-| **Jour et nuit (Nyon-Dôle)**    | ![sd_personnel_jour_nuit_nd.png](../symbols/png/sd_personnel_jour_nuit_nd.png) | Groupe Jour et nuit (Nyon-Dôle)    |         |
-| **CI-DIR (Nyon-Dôle)**          | ![sd_personnel_dir_nd.png](../symbols/png/sd_personnel_dir_nd.png)             | Groupe CI-DIR (Nyon-Dôle)          |         |
+| Type                | Symbole                                                                        | Descriptio             | Exemple |
+| ------------------- | ------------------------------------------------------------------------------ |----------------------- | ------- |
+| **Jour**            | ![sd_personnel_jour_nd.png](../symbols/png/sd_personnel_jour_nd.png)           | Groupe Jour            |         |
+| **Nuit**            | ![sd_personnel_nuit_nd.png](../symbols/png/sd_personnel_nuit_nd.png)           | Groupe Nuit            |         |
+| **Jour et nuit**    | ![sd_personnel_jour_nuit_nd.png](../symbols/png/sd_personnel_jour_nuit_nd.png) | Groupe Jour et nuit    |         |
+| **CI-DIR**          | ![sd_personnel_dir_nd.png](../symbols/png/sd_personnel_dir_nd.png)             | Groupe CI-DIR          |         |
 
 ### Secteurs d'intervention
 
@@ -234,6 +227,16 @@ Secteurs d'intervention
 | **Feu renfort**      | ![secteur_feu_renfort.png](../doc/png/secteur_feu_renfort.png)           | Feu renfort                  |         |
 | **Désincarcération** | ![secteur_desincarceration.png](../doc/png/secteur_desincarceration.png) | Désincarcération (pionnier)  |         |
 | **DCH**              | ![secteur_dch.png](../doc/png/secteur_dch.png)                           | Défense contre hydrocarbures |         |
+
+### Sites
+
+Casernes et locaux
+
+| Type      | Symbole                                            | Description                     | Exemple |
+| --------- | -------------------------------------------------- | ------------------------------- | ------- |
+| **DPS**   | ![site_dps.png](../symbols/png/site_dps.png)       | Détachement de premiers secours |         |
+| **DAP**   | ![site_dap.png](../symbols/png/site_dap.png)       | Détachement d'appui             |         |
+| **Local** | ![site_local.png](../symbols/png/site_local.png)   | Local                           |         |
 
 ### Secteurs organisationnels
 
