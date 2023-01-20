@@ -1,181 +1,185 @@
 #
 # Notes:
-#     - Replace `symbols/sd_` by `symbols/png/` and `"sd_` by `"` to be compatible with original data model
-#     - Some symbols are not defined: emplacements, situation, puits_reservoirs, sites
+#     - Replace `symbols/pom_` by `symbols/png/` and `"pom_` by `"` to be compatible with original data model
 #
 
 
-
     SYMBOL
-        NAME "sd_danger_feu"
+        NAME "pom_acces_echelle"
         TYPE PIXMAP
-        IMAGE "symbols/sd_danger_feu.png"
+        IMAGE "symbols/pom_acces_echelle.png"
     END
 
     SYMBOL
-        NAME "sd_danger_gaz"
+        NAME "pom_borne_hydrante"
         TYPE PIXMAP
-        IMAGE "symbols/sd_danger_gaz.png"
+        IMAGE "symbols/pom_borne_hydrante.png"
     END
 
     SYMBOL
-        NAME "sd_danger_electrique"
+        NAME "pom_borne_hydrante_hors_service"
         TYPE PIXMAP
-        IMAGE "symbols/sd_danger_electrique.png"
+        IMAGE "symbols/pom_borne_hydrante_hors_service.png"
     END
 
     SYMBOL
-        NAME "sd_danger_toxique"
+        NAME "pom_borne_hydrante_souterraine"
         TYPE PIXMAP
-        IMAGE "symbols/sd_danger_toxique.png"
+        IMAGE "symbols/pom_borne_hydrante_souterraine.png"
     END
 
     SYMBOL
-        NAME "sd_danger_radioactif"
+        NAME "pom_cle"
         TYPE PIXMAP
-        IMAGE "symbols/sd_danger_radioactif.png"
+        IMAGE "symbols/pom_cle.png"
     END
 
     SYMBOL
-        NAME "sd_danger_infectieux"
+        NAME "pom_cle_tube"
         TYPE PIXMAP
-        IMAGE "symbols/sd_danger_infectieux.png"
+        IMAGE "symbols/pom_cle_tube.png"
     END
 
     SYMBOL
-        NAME "sd_danger_pollution"
+        NAME "pom_danger_autre"
         TYPE PIXMAP
-        IMAGE "symbols/sd_danger_pollution.png"
+        IMAGE "symbols/pom_danger_autre.png"
     END
 
     SYMBOL
-        NAME "sd_danger_autre"
+        NAME "pom_danger_electrique"
         TYPE PIXMAP
-        IMAGE "symbols/sd_danger_autre.png"
+        IMAGE "symbols/pom_danger_electrique.png"
     END
 
     SYMBOL
-        NAME "sd_risque"
+        NAME "pom_danger_feu"
         TYPE PIXMAP
-        IMAGE "symbols/sd_risque.png"
+        IMAGE "symbols/pom_danger_feu.png"
     END
 
     SYMBOL
-        NAME "sd_risque_hydraulique"
+        NAME "pom_danger_gaz"
         TYPE PIXMAP
-        IMAGE "symbols/sd_risque_hydraulique.png"
+        IMAGE "symbols/pom_danger_gaz.png"
     END
 
     SYMBOL
-        NAME "sd_acces_echelle"
+        NAME "pom_danger_infectieux"
         TYPE PIXMAP
-        IMAGE "symbols/sd_acces_echelle.png"
+        IMAGE "symbols/pom_danger_infectieux.png"
     END
 
     SYMBOL
-        NAME "sd_signalisation_sens_interdit"
+        NAME "pom_danger_pollution"
         TYPE PIXMAP
-        IMAGE "symbols/sd_signalisation_sens_interdit.png"
+        IMAGE "symbols/pom_danger_pollution.png"
     END
 
     SYMBOL
-        NAME "sd_signalisation_travaux"
+        NAME "pom_danger_radioactif"
         TYPE PIXMAP
-        IMAGE "symbols/sd_signalisation_travaux.png"
+        IMAGE "symbols/pom_danger_radioactif.png"
     END
 
     SYMBOL
-        NAME "sd_signalisation_danger"
+        NAME "pom_danger_toxique"
         TYPE PIXMAP
-        IMAGE "symbols/sd_signalisation_danger.png"
+        IMAGE "symbols/pom_danger_toxique.png"
     END
 
     SYMBOL
-        NAME "sd_signalisation_interdiction_camions"
+        NAME "pom_detection"
         TYPE PIXMAP
-        IMAGE "symbols/sd_signalisation_interdiction_camions.png"
+        IMAGE "symbols/pom_detection.png"
     END
 
     SYMBOL
-        NAME "sd_signalisation_hauteur_limitee"
+        NAME "pom_dossier_intervention"
         TYPE PIXMAP
-        IMAGE "symbols/sd_signalisation_hauteur_limitee.png"
+        IMAGE "symbols/pom_dossier_intervention.png"
     END
 
     SYMBOL
-        NAME "sd_signalisation_largeur_limitee"
+        NAME "pom_emplacements_echelle"
         TYPE PIXMAP
-        IMAGE "symbols/sd_signalisation_largeur_limitee.png"
+        IMAGE "symbols/pom_emplacements_echelle.png"
     END
 
     SYMBOL
-        NAME "sd_signalisation_poids_limite"
+        NAME "pom_emplacements_motopompe"
         TYPE PIXMAP
-        IMAGE "symbols/sd_signalisation_poids_limite.png"
+        IMAGE "symbols/pom_emplacements_motopompe.png"
     END
 
     SYMBOL
-        NAME "sd_signalisation_tout_droit"
+        NAME "pom_emplacements_tonne_pompe"
         TYPE PIXMAP
-        IMAGE "symbols/sd_signalisation_tout_droit.png"
+        IMAGE "symbols/pom_emplacements_tonne_pompe.png"
     END
 
     SYMBOL
-        NAME "sd_signalisation_deviation"
+        NAME "pom_personnel_jour_gs"
         TYPE PIXMAP
-        IMAGE "symbols/sd_signalisation_deviation.png"
+        IMAGE "symbols/pom_personnel_jour_gs.png"
     END
 
     SYMBOL
-        NAME "sd_detection"
+        NAME "pom_personnel_jour_nd"
         TYPE PIXMAP
-        IMAGE "symbols/sd_detection.png"
+        IMAGE "symbols/pom_personnel_jour_nd.png"
     END
 
     SYMBOL
-        NAME "sd_cle"
+        NAME "pom_personnel_nuit_gs"
         TYPE PIXMAP
-        IMAGE "symbols/sd_cle.png"
+        IMAGE "symbols/pom_personnel_nuit_gs.png"
     END
 
     SYMBOL
-        NAME "sd_cle_tube"
+        NAME "pom_personnel_nuit_nd"
         TYPE PIXMAP
-        IMAGE "symbols/sd_cle_tube.png"
+        IMAGE "symbols/pom_personnel_nuit_nd.png"
     END
 
     SYMBOL
-        NAME "sd_code"
+        NAME "pom_personnel_jour_nuit_gs"
         TYPE PIXMAP
-        IMAGE "symbols/sd_code.png"
+        IMAGE "symbols/pom_personnel_jour_nuit_gs.png"
     END
 
     SYMBOL
-        NAME "sd_dossier_intervention"
+        NAME "pom_personnel_jour_nuit_nd"
         TYPE PIXMAP
-        IMAGE "symbols/sd_dossier_intervention.png"
+        IMAGE "symbols/pom_personnel_jour_nuit_nd.png"
     END
 
     SYMBOL
-        NAME "sd_borne_hydrante"
+        NAME "pom_puits_reservoirs_commande_reservoir"
         TYPE PIXMAP
-        IMAGE "symbols/sd_borne_hydrante.png"
+        IMAGE "symbols/pom_puits_reservoirs_commande_reservoir.png"
     END
 
     SYMBOL
-        NAME "sd_borne_hydrante_souterraine"
+        NAME "pom_puits_reservoirs_puit"
         TYPE PIXMAP
-        IMAGE "symbols/sd_borne_hydrante_souterraine.png"
+        IMAGE "symbols/pom_puits_reservoirs_puit.png"
     END
 
     SYMBOL
-        NAME "sd_personnel_jour"
+        NAME "pom_puits_reservoirs_reservoir"
         TYPE PIXMAP
-        IMAGE "symbols/sd_personnel_jour.png"
+        IMAGE "symbols/pom_puits_reservoirs_reservoir.png"
     END
 
     SYMBOL
-        NAME "sd_personnel_nuit"
+        NAME "pom_risque"
         TYPE PIXMAP
-        IMAGE "symbols/sd_personnel_nuit.png"
+        IMAGE "symbols/pom_risque.png"
+    END
+
+    SYMBOL
+        NAME "pom_risque_hydraulique"
+        TYPE PIXMAP
+        IMAGE "symbols/pom_risque_hydraulique.png"
     END
