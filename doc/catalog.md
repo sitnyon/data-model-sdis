@@ -56,6 +56,7 @@ Eléments à risque
 | **Parking souterrain** | ![risque.png](../symbols/png/risque.png)                         | Parking souterrain collectif                                                 |                            |
 | **Bien culturel**      | ![risque.png](../symbols/png/risque.png)                         | Biens mobiliers ou immobiliers à préserver en priorité                       | Archives communales, musée |
 | **Pisciculture**       | ![risque.png](../symbols/png/risque.png)                         | Site présentant un risque accru en cas de pollution de rivière               |                            |
+| **Bâtiment élevé**     | ![risque.png](../symbols/png/risque.png)                         | Bâtiment supérieur ou égal à 25 m                                            |                            |
 | **Bâtiment isolé**     | ![risque_hydraulique.png](../symbols/png/risque_hydraulique.png) | Bâtiment ne disposant pas d’alimentation en eau suffisante en cas d’incendie | Hameau, ferme isolée       |
 | **Autre**              | ![risque.png](../symbols/png/risque.png)                         | Autre risque                                                                 |                            |
 
