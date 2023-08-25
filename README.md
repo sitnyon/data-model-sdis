@@ -6,21 +6,22 @@ Documentation
 
 * [Catalogue des objets](doc/catalog.md)
 
-PostGIS
--------
+PostgreSQL/PostGIS
+------------------
 
 * [Schéma](sql/01_schema.sql)
-* [Tables](sql/02_tables.sql)
-* [Vues](sql/03_views.sql)
-* [Triggers](sql/04_triggers.sql)
-
-### Spécifique utilisateurs
-
-* [Nyon](sql/nyon.sql)
+* [Fonctions](sql/02_functions.sql)
+* [Tables](sql/03_tables.sql)
+* [Vues](sql/04_views.sql)
+* [Default](sql/05_default.sql)
+* [Contraintes](sql/06_constraints.sql)
+* [Indexes](sql/07_indexes.sql)
+* [Triggers](sql/08_triggers.sql)
+* [Contraintes étrangères](sql/09_fk_constraints.sql)
+* [Privilèges](sql/10_acl.sql)
 
 MapServer
 ---------
 
-* [Vues](mapserver/views.sql)
 * [Mapfile](mapserver/mapfile.map.in)
 * [Symboles](mapserver/symbols.sym)

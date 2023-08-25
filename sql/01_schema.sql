@@ -1,5 +1,8 @@
--- Schema: sdis
+--
+-- Name: pompiers; Type: SCHEMA; Schema: -; Owner: postgres
+--
 
--- DROP SCHEMA IF EXISTS sdis CASCADE;
-CREATE SCHEMA sdis;
-COMMENT ON SCHEMA sdis IS 'Géodonnées SDIS';
+CREATE SCHEMA pompiers;
+
+
+ALTER SCHEMA pompiers OWNER TO postgres;
