@@ -14,12 +14,12 @@
 4. [Dangers](#dangers)
     * [Dangers](#dangers-1)
     * [Risques](#risques)
-    * [Zones de danger](#zones-danger)
+    * [Zones de danger](#zones-de-danger)
 5. [Moyens](#moyens)
     * [Bornes hydrantes](#bornes-hydrantes)
-    * [Prises d'arrosage SANE](#prises-arrosages-sane)
+    * [Prises d'arrosage SANE](#prises-darrosage-sane)
     * [Réserves d'eau](#r%C3%A9serves-deau)
-    * [Transports d'eau](#transports-eau)
+    * [Transport d'eau](#transport-deau)
     * [Barrages](#barrages)
 6. [Bâtiments](#b%C3%A2timents)
     * [Bâtiments](#b%C3%A2timents-1)
@@ -37,7 +37,7 @@ Accès immeubles
 
 | Type                | Symbole                                                              | Description                                                                                        | Exemple |
 | ------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ------- |
-| **Accès immeubles** | ![secu_acces_immeubles.svg](../symbols/svg/secu_acces_immeubles.svg) | Accès verrouillé par digicode, à défaut numéro de téléphone du concierge ou service d'intervention |         |
+| **Accès immeubles** | ![acces_immeubles.svg](../doc/png/acces_immeubles.svg)               | Accès verrouillé par digicode, à défaut numéro de téléphone du concierge ou service d'intervention |         |
 
 ## Objectifs
 
@@ -221,6 +221,8 @@ Barrages anti pollution
 | Type        | Symbole                                | Description            | Exemple              |
 | ----------- | -------------------------------------- | ---------------------- | -------------------- |
 | **Barrage** | ![barrage.png](../doc/png/barrage.png) | Barrage anti pollution | Sur rivière, sur lac |
+
+## Bâtiments
 
 ### Bâtiments
 
