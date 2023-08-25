@@ -19,7 +19,7 @@ Catalogue des objets
 5. [Moyens](#moyens)
     * [Bornes hydrantes](#bornes-hydrantes)
     * [Prises d'arrosage SANE](#prises-arrosages-sane)
-    * [Puits réservoirs](#puits-r%C3%A9servoirs)
+    * [Réserves d'eau](#r%C3%A9serves-eau)
     * [Transports d'eau](#transports-eau)
     * [Barrages](#barrages)
 6. [Bâtiments](#b%C3%A2timents)
@@ -199,15 +199,18 @@ Prises d'arrosage SANE
 | **Prises d'arrosage SANE** | ![prise_sane.png](../doc/png/prise_sane.png) | Prise d'arrosage SANE (Syndicat d'Arrosage de Nyon et Environs) |         |
 
 
-### Puits réservoirs
+### Réserves d'eau
 
-Puits et réservoirs
+Réserves d'eau
 
 | Type                   | Symbole                                                          | Description                                                  | Exemple |
 | ---------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------ | ------- |
-| **Commande réservoir** | ![reservoir_commande.png](../symbols/png/reservoir_commande.png) | Interrupteur de commande à distance pour la réserve incendie |         |
+| **Citerne**            | ![citerne.png](../symbols/png/citerne.png)                       | Citerne                                                      |         |
+| **Citerne mobile**     | ![citerne_mobile.png](../symbols/png/citerne_mobile.png)         | Citerne mobile                                               |         |
+| **Etang, gouille**     | ![etang_gouille.png](../symbols/png/etang_gouille.png)           | Etang, gouille                                               |         |
 | **Puit**               | ![puit.png](../symbols/png/puit.png)                             | Puit avec réserve d’eau en cas d’incendie                    |         |
 | **Réservoir**          | ![reservoir.png](../symbols/png/reservoir.png)                   | Réservoir                                                    |         |
+| **Commande réservoir** | ![reservoir_commande.png](../symbols/png/reservoir_commande.png) | Interrupteur de commande à distance pour la réserve incendie |         |
 
 ### Transport d'eau
 
@@ -240,7 +243,7 @@ Organisation
 
 Personnel d'intervention (*vue*)
 
-| Type                | Symbole                                                                        | Descriptio             | Exemple |
+| Type                | Symbole                                                                        | Description            | Exemple |
 | ------------------- | ------------------------------------------------------------------------------ |----------------------- | ------- |
 | **Jour**            | ![sd_personnel_jour_nd.png](../symbols/png/sd_personnel_jour_nd.png)           | Groupe Jour            |         |
 | **Nuit**            | ![sd_personnel_nuit_nd.png](../symbols/png/sd_personnel_nuit_nd.png)           | Groupe Nuit            |         |
