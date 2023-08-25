@@ -21,10 +21,10 @@
 
 ### Pompiers
 
-* [Mapfile](mapserver/pompiers/mapfile.map.in)
+* [Mapfile](mapserver/pompiers/mapfile.map.tmpl)
 * [Symboles](mapserver/pompiers/symbols.sym)
 
 ### Sécurité (Commmun police, pompiers, ambulance)
 
-* [Mapfile](mapserver/securite/mapfile.map.in)
+* [Mapfile](mapserver/securite/mapfile.map.tmpl)
 * [Symboles](mapserver/securite/symbols.sym)

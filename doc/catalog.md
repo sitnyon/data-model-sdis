@@ -37,7 +37,7 @@ Accès immeubles
 
 | Type                | Symbole                                                              | Description                                                                                        | Exemple |
 | ------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ------- |
-| **Accès immeubles** | ![acces_immeubles.svg](../doc/png/acces_immeubles.svg)               | Accès verrouillé par digicode, à défaut numéro de téléphone du concierge ou service d'intervention |         |
+| **Accès immeubles** | ![acces_immeubles.png](../doc/png/acces_immeubles.png)               | Accès verrouillé par digicode, à défaut numéro de téléphone du concierge ou service d'intervention |         |
 
 ## Objectifs
 
