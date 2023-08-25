@@ -1,13 +1,10 @@
-Modèle de données SDIS
-======================
+# Modèle de données SDIS
 
-Documentation
--------------
+## Documentation
 
 * [Catalogue des objets](doc/catalog.md)
 
-PostgreSQL/PostGIS
-------------------
+## PostgreSQL/PostGIS
 
 * [Schéma](sql/01_schema.sql)
 * [Fonctions](sql/02_functions.sql)
@@ -20,8 +17,7 @@ PostgreSQL/PostGIS
 * [Contraintes étrangères](sql/09_fk_constraints.sql)
 * [Privilèges](sql/10_acl.sql)
 
-MapServer
----------
+## MapServer
 
 ### Pompiers
 
