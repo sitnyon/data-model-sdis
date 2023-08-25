@@ -203,7 +203,7 @@ Réserves d'eau
 | **Citerne mobile**     | ![pom_reserves_eau_citerne_mobile.png](../symbols/png/pom_reserves_eau_citerne_mobile.png)         | Citerne mobile                                               |         |
 | **Etang, gouille**     | ![pom_reserves_eau_etang_gouille.png](../symbols/png/pom_reserves_eau_etang_gouille.png)           | Etang, gouille                                               |         |
 | **Puit**               | ![pom_reserves_eau_puit.png](../symbols/png/pom_reserves_eau_puit.png)                             | Puit avec réserve d’eau en cas d’incendie                    |         |
-| **Réservoir**          | ![reservoir.png](../symbols/png/reservoir.png)                                                     | Réservoir                                                    |         |
+| **Réservoir**          | ![pom_reserves_eau_reservoir.png](../symbols/png/pom_reserves_eau_reservoir.png)                   | Réservoir                                                    |         |
 | **Commande réservoir** | ![pom_reserves_eau_commande_reservoir.png](../symbols/png/pom_reserves_eau_commande_reservoir.png) | Interrupteur de commande à distance pour la réserve incendie |         |
 
 ### Transport d'eau
