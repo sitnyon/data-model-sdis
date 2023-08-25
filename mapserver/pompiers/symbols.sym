@@ -1,8 +1,4 @@
-#
-# Notes:
-#     - Replace `symbols/pom_` by `symbols/png/` and `"pom_` by `"` to be compatible with original data model
-#
-
+SYMBOLSET
 
     SYMBOL
         NAME "pom_acces_echelle"
@@ -89,6 +85,90 @@
     END
 
     SYMBOL
+        NAME "pom_edit_cle_a_controler"
+        TYPE PIXMAP
+        IMAGE "symbols/pom_edit_cle_a_controler.png"
+    END
+
+    SYMBOL
+        NAME "pom_edit_cle_defectueuse"
+        TYPE PIXMAP
+        IMAGE "symbols/pom_edit_cle_defectueuse.png"
+    END
+
+    SYMBOL
+        NAME "pom_edit_cle_non_controlee"
+        TYPE PIXMAP
+        IMAGE "symbols/pom_edit_cle_non_controlee.png"
+    END
+
+    SYMBOL
+        NAME "pom_edit_cle_tube_defectueux"
+        TYPE PIXMAP
+        IMAGE "symbols/pom_edit_cle_tube_defectueux.png"
+    END
+
+    SYMBOL
+        NAME "pom_edit_cle_tube_a_controler"
+        TYPE PIXMAP
+        IMAGE "symbols/pom_edit_cle_tube_a_controler.png"
+    END
+
+    SYMBOL
+        NAME "pom_edit_cle_tube_non_controle"
+        TYPE PIXMAP
+        IMAGE "symbols/pom_edit_cle_tube_non_controle.png"
+    END
+
+    SYMBOL
+        NAME "pom_edit_danger_autre"
+        TYPE PIXMAP
+        IMAGE "symbols/pom_edit_danger_autre.png"
+    END
+
+    SYMBOL
+        NAME "pom_edit_danger_electrique"
+        TYPE PIXMAP
+        IMAGE "symbols/pom_edit_danger_electrique.png"
+    END
+
+    SYMBOL
+        NAME "pom_edit_danger_feu"
+        TYPE PIXMAP
+        IMAGE "symbols/pom_edit_danger_feu.png"
+    END
+
+    SYMBOL
+        NAME "pom_edit_danger_gaz"
+        TYPE PIXMAP
+        IMAGE "symbols/pom_edit_danger_gaz.png"
+    END
+
+    SYMBOL
+        NAME "pom_edit_danger_infectieux"
+        TYPE PIXMAP
+        IMAGE "symbols/pom_edit_danger_infectieux.png"
+    END
+
+    SYMBOL
+        NAME "pom_edit_danger_pollution"
+        TYPE PIXMAP
+        IMAGE "symbols/pom_edit_danger_pollution.png"
+    END
+
+    SYMBOL
+        NAME "pom_edit_danger_radioactif"
+        TYPE PIXMAP
+        IMAGE "symbols/pom_edit_danger_radioactif.png"
+    END
+
+    SYMBOL
+        NAME "pom_edit_danger_toxique"
+        TYPE PIXMAP
+        IMAGE "symbols/pom_edit_danger_toxique.png"
+    END
+
+    SYMBOL
         NAME "pom_detection"
         TYPE PIXMAP
         IMAGE "symbols/pom_detection.png"
@@ -110,6 +190,12 @@
         NAME "pom_emplacements_motopompe"
         TYPE PIXMAP
         IMAGE "symbols/pom_emplacements_motopompe.png"
+    END
+
+    SYMBOL
+        NAME "pom_emplacements_vehicule"
+        TYPE PIXMAP
+        IMAGE "symbols/pom_emplacements_vehicule.png"
     END
 
     SYMBOL
@@ -183,3 +269,11 @@
         TYPE PIXMAP
         IMAGE "symbols/pom_risque_hydraulique.png"
     END
+
+    SYMBOL
+        NAME "pom_edit_risque"
+        TYPE PIXMAP
+        IMAGE "symbols/pom_edit_risque.png"
+    END
+
+END

@@ -23,5 +23,12 @@ PostgreSQL/PostGIS
 MapServer
 ---------
 
-* [Mapfile](mapserver/mapfile.map.in)
-* [Symboles](mapserver/symbols.sym)
+### Pompiers
+
+* [Mapfile](mapserver/pompiers/mapfile.map.in)
+* [Symboles](mapserver/pompiers/symbols.sym)
+
+### Sécurité (Commmun police, pompiers, ambulance)
+
+* [Mapfile](mapserver/securite/mapfile.map.in)
+* [Symboles](mapserver/securite/symbols.sym)

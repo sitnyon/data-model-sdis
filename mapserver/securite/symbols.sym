@@ -1,0 +1,93 @@
+SYMBOLSET
+
+    SYMBOL
+        NAME "secu_acces_immeubles"
+        TYPE SVG
+        IMAGE "symbols/secu_acces_immeubles.svg"
+    END
+
+    SYMBOL
+        NAME "secu_points_acces_autre"
+        TYPE PIXMAP
+        IMAGE "symbols/secu_points_acces_autre.png"
+    END
+
+    SYMBOL
+        NAME "secu_points_acces_barriere"
+        TYPE PIXMAP
+        IMAGE "symbols/secu_points_acces_barriere.png"
+    END
+
+    SYMBOL
+        NAME "secu_points_acces_borne"
+        TYPE PIXMAP
+        IMAGE "symbols/secu_points_acces_borne.png"
+    END
+
+    SYMBOL
+        NAME "secu_points_acces_grille"
+        TYPE PIXMAP
+        IMAGE "symbols/secu_points_acces_grille.png"
+    END
+
+    SYMBOL
+        NAME "secu_points_acces_portail_autoroute"
+        TYPE PIXMAP
+        IMAGE "symbols/secu_points_acces_portail_autoroute.png"
+    END
+
+    SYMBOL
+        NAME "secu_signalisation_danger"
+        TYPE PIXMAP
+        IMAGE "symbols/secu_signalisation_danger.png"
+    END
+
+    SYMBOL
+        NAME "secu_signalisation_deviation"
+        TYPE PIXMAP
+        IMAGE "symbols/secu_signalisation_deviation.png"
+    END
+
+    SYMBOL
+        NAME "secu_signalisation_hauteur_limitee"
+        TYPE PIXMAP
+        IMAGE "symbols/secu_signalisation_hauteur_limitee.png"
+    END
+
+    SYMBOL
+        NAME "secu_signalisation_interdiction_camions"
+        TYPE PIXMAP
+        IMAGE "symbols/secu_signalisation_interdiction_camions.png"
+    END
+
+    SYMBOL
+        NAME "secu_signalisation_largeur_limitee"
+        TYPE PIXMAP
+        IMAGE "symbols/secu_signalisation_largeur_limitee.png"
+    END
+
+    SYMBOL
+        NAME "secu_signalisation_poids_limite"
+        TYPE PIXMAP
+        IMAGE "symbols/secu_signalisation_poids_limite.png"
+    END
+
+    SYMBOL
+        NAME "secu_signalisation_sens_interdit"
+        TYPE PIXMAP
+        IMAGE "symbols/secu_signalisation_sens_interdit.png"
+    END
+
+    SYMBOL
+        NAME "secu_signalisation_tout_droit"
+        TYPE PIXMAP
+        IMAGE "symbols/secu_signalisation_tout_droit.png"
+    END
+
+    SYMBOL
+        NAME "secu_signalisation_travaux"
+        TYPE PIXMAP
+        IMAGE "symbols/secu_signalisation_travaux.png"
+    END
+
+END

@@ -1,0 +1,1084 @@
+LAYER
+    NAME "secu_acces_immeubles"
+    TYPE POINT
+    STATUS ON
+    PROJECTION "init=epsg:${SRID}" END
+    EXTENT ${MAPFILE_EXTENT}
+    TEMPLATE fooOnlyForWMSGetFeatureInfo
+    CONNECTIONTYPE POSTGIS
+    PROCESSING "CLOSE_CONNECTION=DEFER"
+    CONNECTION "user=${PGUSER} password=${PGPASSWORD} dbname=${PGDATABASE} host=${PGHOST}"
+    DATA "geom FROM (SELECT geo.geom, geo.id,
+                            geo.code, geo.date_controle, geo.regie, geo.regie_telephone_bureau, geo.regie_telephone_urgence, geo.concierge, geo.concierge_adresse, geo.concierge_telephone, geo.service_intervention, geo.service_intervention_telephone, geo.remarque, geo.localisation, geo.adresse, geo.commune
+                     FROM securite.secu_vgeo_acces_immeubles AS geo
+                     WHERE ST_Intersects((${MAPSERVER_DATA_SUBSELECT} 'secu_acces_immeubles'), ST_SetSRID(geo.geom, ${SRID}))
+                    ) AS foo USING UNIQUE id USING srid=${SRID}"
+    TOLERANCE ${WMS_TOLERANCE}
+    DUMP TRUE
+    METADATA
+        "wms_title" "Accès immeubles"
+        "gml_featureid" "id"
+        "gml_types" "auto"
+        "gml_include_items" "code,date_controle,regie,regie_telephone_bureau,regie_telephone_urgence,concierge,concierge_adresse,concierge_telephone,service_intervention,service_intervention_telephone,remarque,localisation,adresse,commune"
+        "wms_srs" "${WMS_SRS}"
+        "wfs_enable_request" "*"
+        "ows_geometries" "geom"
+        "ows_geom_type" "point"
+    END
+    VALIDATION
+        "default_role_ids" "-1"
+        "role_ids" "^-?[0-9,]*$"
+    END
+    MINSCALEDENOM 1
+    MAXSCALEDENOM 901
+    LABELITEM "code"
+    CLASS
+        NAME "Accès immeubles"
+        STYLE
+            SYMBOL "secu_acces_immeubles"
+            SIZE 20
+        END
+        LABEL
+            TYPE TRUETYPE
+            FONT "OpenSans-Bold"
+            SIZE 8
+            ANTIALIAS TRUE
+            COLOR 0 0 0
+            OUTLINECOLOR 255 255 255
+            OUTLINEWIDTH 2
+            POSITION LC
+            ALIGN CENTER
+            OFFSET 0 5
+            FORCE TRUE
+        END
+    END
+END
+
+LAYER
+    NAME "secu_edit_acces_immeubles"
+    TYPE POINT
+    STATUS ON
+    PROJECTION "init=epsg:${SRID}" END
+    EXTENT ${MAPFILE_EXTENT}
+    TEMPLATE fooOnlyForWMSGetFeatureInfo
+    CONNECTIONTYPE POSTGIS
+    PROCESSING "CLOSE_CONNECTION=DEFER"
+    CONNECTION "user=${PGUSER} password=${PGPASSWORD} dbname=${PGDATABASE} host=${PGHOST}"
+    DATA "geom FROM (SELECT geo.*
+                     FROM securite.secu_vgeo_edit_acces_immeubles AS geo
+                     WHERE ST_Intersects((${MAPSERVER_DATA_SUBSELECT} 'secu_edit_acces_immeubles'), ST_SetSRID(geo.geom, ${SRID}))
+                    ) AS foo USING UNIQUE id USING srid=${SRID}"
+    TOLERANCE ${WMS_TOLERANCE}
+    DUMP TRUE
+    METADATA
+        "wms_title" "Accès immeubles (édition)"
+        "wms_srs" "${WMS_SRS}"
+        "wfs_enable_request" "*"
+        "gml_featureid" "id"
+        "gml_types" "auto"
+        "gml_include_items" "all"
+        "gml_exclude_items" "id"
+        "ows_geometries" "geom"
+        "ows_geom_type" "point"
+    END
+    VALIDATION
+        "default_role_ids" "-1"
+        "role_ids" "^-?[0-9,]*$"
+    END
+    MINSCALEDENOM 1
+    MAXSCALEDENOM 180001
+    LABELITEM "code"
+    LABELMINSCALEDENOM 1
+    LABELMAXSCALEDENOM 901
+    CLASS
+        NAME "Accès immeubles"
+        STYLE
+            SYMBOL "secu_acces_immeubles"
+            SIZE 20
+        END
+        LABEL
+            TYPE TRUETYPE
+            FONT "OpenSans-Bold"
+            SIZE 9
+            ANTIALIAS TRUE
+            COLOR 0 0 0
+            OUTLINECOLOR 255 255 255
+            OUTLINEWIDTH 2
+            POSITION LC
+            ALIGN CENTER
+            OFFSET 0 5
+            FORCE TRUE
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 3601
+    END
+    CLASS
+        STYLE
+            SYMBOL "circle"
+            SIZE 10
+            OUTLINECOLOR 255 255 255
+            COLOR 0 0 0
+        END
+        MINSCALEDENOM 3601
+        MAXSCALEDENOM 180001
+    END
+END
+
+LAYER
+    NAME "secu_edit_regies"
+    TYPE POINT
+    STATUS ON
+    PROJECTION "init=epsg:${SRID}" END
+    EXTENT ${MAPFILE_EXTENT}
+    TEMPLATE fooOnlyForWMSGetFeatureInfo
+    CONNECTIONTYPE POSTGIS
+    PROCESSING "CLOSE_CONNECTION=DEFER"
+    CONNECTION "user=${PGUSER} password=${PGPASSWORD} dbname=${PGDATABASE} host=${PGHOST}"
+    DATA "geom FROM (SELECT geo.*
+                     FROM securite.secu_edit_regies AS geo
+                     WHERE (ARRAY[%role_ids%] && ARRAY(${MAPSERVER_DATA_NOAREA_SUBSELECT} 'secu_edit_regies'))
+                    ) AS foo USING UNIQUE id USING srid=${SRID}"
+    TOLERANCE ${WMS_TOLERANCE}
+    DUMP TRUE
+    METADATA
+        "wms_title" "Régies  (édition)"
+        "wms_srs" "${WMS_SRS}"
+        "wfs_enable_request" "*"
+        "gml_featureid" "id"
+        "gml_types" "auto"
+        "gml_include_items" "all"
+        "gml_exclude_items" "id"
+        "ows_geometries" "geom"
+        "ows_geom_type" "point"
+    END
+    VALIDATION
+        "default_role_ids" "-1"
+        "role_ids" "^-?[0-9,]*$"
+    END
+    MINSCALEDENOM 1
+    MAXSCALEDENOM 180001
+    LABELITEM "name"
+    LABELMINSCALEDENOM 1
+    LABELMAXSCALEDENOM 7201
+    CLASS
+        NAME "Régies"
+        STYLE
+            SYMBOL "circle"
+            SIZE 10
+            OUTLINECOLOR 255 255 255
+            COLOR 112 157 80
+        END
+        LABEL
+            TYPE TRUETYPE
+            FONT "OpenSans-Bold"
+            SIZE 9
+            ANTIALIAS TRUE
+            COLOR 112 157 80
+            OUTLINECOLOR 255 255 255
+            OUTLINEWIDTH 2
+            POSITION LC
+            ALIGN CENTER
+            OFFSET 0 5
+            WRAP " "
+            MAXLENGTH 15
+        END
+    END
+END
+
+LAYER
+    NAME "secu_signalisation"
+    TYPE POINT
+    STATUS ON
+    PROJECTION "init=epsg:${SRID}" END
+    EXTENT ${MAPFILE_EXTENT}
+    TEMPLATE fooOnlyForWMSGetFeatureInfo
+    CONNECTIONTYPE POSTGIS
+    PROCESSING "CLOSE_CONNECTION=DEFER"
+    CONNECTION "user=${PGUSER} password=${PGPASSWORD} dbname=${PGDATABASE} host=${PGHOST}"
+    DATA "geom FROM (SELECT geo.*
+                     FROM securite.secu_vgeo_signalisation AS geo
+                     WHERE (ARRAY[%role_ids%] && ARRAY(${MAPSERVER_DATA_NOAREA_SUBSELECT} 'secu_signalisation'))
+                    ) AS foo USING UNIQUE id USING srid=${SRID}"
+    TOLERANCE ${WMS_TOLERANCE}
+    DUMP TRUE
+    METADATA
+        "wms_title" "Signalisation"
+        "gml_featureid" "id"
+        "gml_types" "auto"
+        "gml_include_items" "type,valeur,remarque"
+        "wms_srs" "${WMS_SRS}"
+        "wfs_enable_request" "*"
+        "ows_geometries" "geom"
+        "ows_geom_type" "point"
+    END
+    VALIDATION
+        "default_role_ids" "-1"
+        "role_ids" "^-?[0-9,]*$"
+    END
+    MINSCALEDENOM 1
+    MAXSCALEDENOM 1801
+    SYMBOLSCALEDENOM 800
+    CLASSITEM "type"
+    LABELITEM "valeur"
+    CLASS
+        NAME "Sens interdit"
+        EXPRESSION "Sens interdit"
+        STYLE
+            SYMBOL "secu_signalisation_sens_interdit"
+            SIZE 20
+            ANGLE [orientation]
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 361
+    END
+    CLASS
+        NAME "Sens interdit"
+        EXPRESSION "Sens interdit"
+        STYLE
+            SYMBOL "secu_signalisation_sens_interdit"
+            SIZE 45
+            ANGLE [orientation]
+        END
+        MINSCALEDENOM 361
+        MAXSCALEDENOM 1801
+    END
+    CLASS
+        NAME "Travaux"
+        EXPRESSION "Travaux"
+        STYLE
+            SYMBOL "secu_signalisation_travaux"
+            SIZE 20
+            ANGLE [orientation]
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 361
+    END
+    CLASS
+        NAME "Travaux"
+        EXPRESSION "Travaux"
+        STYLE
+            SYMBOL "secu_signalisation_travaux"
+            SIZE 45
+            ANGLE [orientation]
+        END
+        MINSCALEDENOM 361
+        MAXSCALEDENOM 1801
+    END
+    CLASS
+        NAME "Danger"
+        EXPRESSION "Danger"
+        STYLE
+            SYMBOL "secu_signalisation_danger"
+            SIZE 20
+            ANGLE [orientation]
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 361
+    END
+    CLASS
+        NAME "Danger"
+        EXPRESSION "Danger"
+        STYLE
+            SYMBOL "secu_signalisation_danger"
+            SIZE 45
+            ANGLE [orientation]
+        END
+        MINSCALEDENOM 361
+        MAXSCALEDENOM 1801
+    END
+    CLASS
+        NAME "Interdiction camions"
+        EXPRESSION "Interdiction camions"
+        STYLE
+            SYMBOL "secu_signalisation_interdiction_camions"
+            SIZE 20
+            ANGLE [orientation]
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 361
+    END
+    CLASS
+        NAME "Interdiction camions"
+        EXPRESSION "Interdiction camions"
+        STYLE
+            SYMBOL "secu_signalisation_interdiction_camions"
+            SIZE 45
+            ANGLE [orientation]
+        END
+        MINSCALEDENOM 361
+        MAXSCALEDENOM 1801
+    END
+    CLASS
+        NAME "Hauteur limitée"
+        EXPRESSION "Hauteur limitée"
+        STYLE
+            SYMBOL "secu_signalisation_hauteur_limitee"
+            SIZE 20
+            ANGLE [orientation]
+        END
+        LABEL
+            TYPE TRUETYPE
+            FONT "OpenSans-Regular"
+            SIZE 3
+            ANTIALIAS TRUE
+            COLOR 0 0 0
+            OUTLINECOLOR 255 255 255
+            OUTLINEWIDTH 1
+            POSITION CC
+            ALIGN CENTER
+            FORCE TRUE
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 361
+    END
+    CLASS
+        NAME "Hauteur limitée"
+        EXPRESSION "Hauteur limitée"
+        STYLE
+            SYMBOL "secu_signalisation_hauteur_limitee"
+            SIZE 45
+            ANGLE [orientation]
+        END
+        LABEL
+            TYPE TRUETYPE
+            FONT "OpenSans-Regular"
+            SIZE 7
+            ANTIALIAS TRUE
+            COLOR 0 0 0
+            OUTLINECOLOR 255 255 255
+            OUTLINEWIDTH 1
+            POSITION CC
+            ALIGN CENTER
+            FORCE TRUE
+        END
+        MINSCALEDENOM 361
+        MAXSCALEDENOM 1801
+    END
+    CLASS
+        NAME "Largeur limitée"
+        EXPRESSION "Largeur limitée"
+        STYLE
+            SYMBOL "secu_signalisation_largeur_limitee"
+            SIZE 20
+            ANGLE [orientation]
+        END
+        LABEL
+            TYPE TRUETYPE
+            FONT "OpenSans-Regular"
+            SIZE 3
+            ANTIALIAS TRUE
+            COLOR 0 0 0
+            OUTLINECOLOR 255 255 255
+            OUTLINEWIDTH 1
+            POSITION CC
+            ALIGN CENTER
+            FORCE TRUE
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 361
+    END
+    CLASS
+        NAME "Largeur limitée"
+        EXPRESSION "Largeur limitée"
+        STYLE
+            SYMBOL "secu_signalisation_largeur_limitee"
+            SIZE 45
+            ANGLE [orientation]
+        END
+        LABEL
+            TYPE TRUETYPE
+            FONT "OpenSans-Regular"
+            SIZE 7
+            ANTIALIAS TRUE
+            COLOR 0 0 0
+            OUTLINECOLOR 255 255 255
+            OUTLINEWIDTH 1
+            POSITION CC
+            ALIGN CENTER
+            FORCE TRUE
+        END
+        MINSCALEDENOM 361
+        MAXSCALEDENOM 1801
+    END
+    CLASS
+        NAME "Poids limité"
+        EXPRESSION "Poids limité"
+        STYLE
+            SYMBOL "secu_signalisation_poids_limite"
+            SIZE 20
+            ANGLE [orientation]
+        END
+        LABEL
+            TYPE TRUETYPE
+            FONT "OpenSans-Regular"
+            SIZE 3
+            ANTIALIAS TRUE
+            COLOR 0 0 0
+            OUTLINECOLOR 255 255 255
+            OUTLINEWIDTH 1
+            POSITION CC
+            ALIGN CENTER
+            FORCE TRUE
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 361
+    END
+    CLASS
+        NAME "Poids limité"
+        EXPRESSION "Poids limité"
+        STYLE
+            SYMBOL "secu_signalisation_poids_limite"
+            SIZE 45
+            ANGLE [orientation]
+        END
+        LABEL
+            TYPE TRUETYPE
+            FONT "OpenSans-Regular"
+            SIZE 7
+            ANTIALIAS TRUE
+            COLOR 0 0 0
+            OUTLINECOLOR 255 255 255
+            OUTLINEWIDTH 1
+            POSITION CC
+            ALIGN CENTER
+            FORCE TRUE
+        END
+        MINSCALEDENOM 361
+        MAXSCALEDENOM 1801
+    END
+    CLASS
+        NAME "Tout droit"
+        EXPRESSION "Tout droit"
+        STYLE
+            SYMBOL "secu_signalisation_tout_droit"
+            SIZE 20
+            ANGLE [orientation]
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 361
+    END
+    CLASS
+        NAME "Tout droit"
+        EXPRESSION "Tout droit"
+        STYLE
+            SYMBOL "secu_signalisation_tout_droit"
+            SIZE 45
+            ANGLE [orientation]
+        END
+        MINSCALEDENOM 361
+        MAXSCALEDENOM 1801
+    END
+    CLASS
+        NAME "Déviation"
+        EXPRESSION "Déviation"
+        STYLE
+            SYMBOL "secu_signalisation_deviation"
+            SIZE 7
+            ANGLE [orientation]
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 361
+    END
+    CLASS
+        NAME "Déviation"
+        EXPRESSION "Déviation"
+        STYLE
+            SYMBOL "secu_signalisation_deviation"
+            SIZE 15
+            ANGLE [orientation]
+        END
+        MINSCALEDENOM 361
+        MAXSCALEDENOM 1801
+    END
+END
+
+LAYER
+    NAME "secu_edit_signalisation"
+    TYPE POINT
+    STATUS ON
+    PROJECTION "init=epsg:${SRID}" END
+    EXTENT ${MAPFILE_EXTENT}
+    TEMPLATE fooOnlyForWMSGetFeatureInfo
+    CONNECTIONTYPE POSTGIS
+    PROCESSING "CLOSE_CONNECTION=DEFER"
+    CONNECTION "user=${PGUSER} password=${PGPASSWORD} dbname=${PGDATABASE} host=${PGHOST}"
+    DATA "geom FROM (SELECT geo.*
+                     FROM securite.secu_vgeo_edit_signalisation AS geo
+                     WHERE (ARRAY[%role_ids%] && ARRAY(${MAPSERVER_DATA_NOAREA_SUBSELECT} 'secu_edit_signalisation'))
+                    ) AS foo USING UNIQUE id USING srid=${SRID}"
+    TOLERANCE ${WMS_TOLERANCE}
+    DUMP TRUE
+    METADATA
+        "wms_title" "Signalisation (édition)"
+        "gml_featureid" "id"
+        "gml_types" "auto"
+        "gml_include_items" "type,valeur,remarque"
+        "wms_srs" "${WMS_SRS}"
+        "wfs_enable_request" "*"
+        "ows_geometries" "geom"
+        "ows_geom_type" "point"
+    END
+    VALIDATION
+        "default_role_ids" "-1"
+        "role_ids" "^-?[0-9,]*$"
+    END
+    CLASSITEM "type"
+    LABELITEM "valeur_limitation"
+    MINSCALEDENOM 1
+    MAXSCALEDENOM 180001
+    CLASS
+        NAME "Sens interdit"
+        EXPRESSION "Sens interdit"
+        STYLE
+            SYMBOL "secu_signalisation_sens_interdit"
+            SIZE 20
+            ANGLE [orientation]
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 1801
+    END
+    CLASS
+        NAME "Sens interdit"
+        EXPRESSION "Sens interdit"
+        STYLE
+            SYMBOL "circle"
+            COLOR 255 255 255
+            OUTLINECOLOR 255 0 0
+            SIZE 9
+            WIDTH 2
+        END
+        MINSCALEDENOM 1801
+        MAXSCALEDENOM 180001
+    END
+    CLASS
+        NAME "Travaux"
+        EXPRESSION "Travaux"
+        STYLE
+            SYMBOL "secu_signalisation_travaux"
+            SIZE 20
+            ANGLE [orientation]
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 1801
+    END
+    CLASS
+        NAME "Travaux"
+        EXPRESSION "Travaux"
+        STYLE
+            SYMBOL "triangle"
+            COLOR 255 255 255
+            OUTLINECOLOR 255 0 0
+            SIZE 10
+            WIDTH 1
+        END
+        MINSCALEDENOM 1801
+        MAXSCALEDENOM 180001
+    END
+    CLASS
+        NAME "Danger"
+        EXPRESSION "Danger"
+        STYLE
+            SYMBOL "secu_signalisation_danger"
+            SIZE 20
+            ANGLE [orientation]
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 1801
+    END
+    CLASS
+        NAME "Danger"
+        EXPRESSION "Danger"
+        STYLE
+            SYMBOL "triangle"
+            COLOR 255 255 255
+            OUTLINECOLOR 255 0 0
+            SIZE 10
+            WIDTH 1
+        END
+        MINSCALEDENOM 1801
+        MAXSCALEDENOM 180001
+    END
+    CLASS
+        NAME "Interdiction camions"
+        EXPRESSION "Interdiction camions"
+        STYLE
+            SYMBOL "secu_signalisation_interdiction_camions"
+            SIZE 20
+            ANGLE [orientation]
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 1801
+    END
+    CLASS
+        NAME "Interdiction camions"
+        EXPRESSION "Interdiction camions"
+        STYLE
+            SYMBOL "circle"
+            COLOR 255 255 255
+            OUTLINECOLOR 255 0 0
+            SIZE 9
+            WIDTH 2
+        END
+        MINSCALEDENOM 1801
+        MAXSCALEDENOM 180001
+    END
+    CLASS
+        NAME "Hauteur limitée"
+        EXPRESSION "Hauteur limitée"
+        STYLE
+            SYMBOL "secu_signalisation_hauteur_limitee"
+            SIZE 20
+            ANGLE [orientation]
+        END
+        LABEL
+            TYPE TRUETYPE
+            FONT "OpenSans-Regular"
+            SIZE 3
+            ANTIALIAS TRUE
+            COLOR 0 0 0
+            OUTLINECOLOR 255 255 255
+            OUTLINEWIDTH 1
+            POSITION CC
+            ALIGN CENTER
+            FORCE TRUE
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 1801
+    END
+    CLASS
+        NAME "Hauteur limitée"
+        EXPRESSION "Hauteur limitée"
+        STYLE
+            SYMBOL "circle"
+            COLOR 255 255 255
+            OUTLINECOLOR 255 0 0
+            WIDTH 2
+            SIZE 9
+        END
+        MINSCALEDENOM 1801
+        MAXSCALEDENOM 180001
+    END
+    CLASS
+        NAME "Largeur limitée"
+        EXPRESSION "Largeur limitée"
+        STYLE
+            SYMBOL "secu_signalisation_largeur_limitee"
+            SIZE 20
+            ANGLE [orientation]
+        END
+        LABEL
+            TYPE TRUETYPE
+            FONT "OpenSans-Regular"
+            SIZE 3
+            ANTIALIAS TRUE
+            COLOR 0 0 0
+            OUTLINECOLOR 255 255 255
+            OUTLINEWIDTH 1
+            POSITION CC
+            ALIGN CENTER
+            FORCE TRUE
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 1801
+    END
+    CLASS
+        NAME "Largeur limitée"
+        EXPRESSION "Largeur limitée"
+        STYLE
+            SYMBOL "circle"
+            COLOR 255 255 255
+            OUTLINECOLOR 255 0 0
+            SIZE 9
+            WIDTH 2
+        END
+        MINSCALEDENOM 1801
+        MAXSCALEDENOM 180001
+    END
+    CLASS
+        NAME "Poids limité"
+        EXPRESSION "Poids limité"
+        STYLE
+            SYMBOL "secu_signalisation_poids_limite"
+            SIZE 20
+            ANGLE [orientation]
+        END
+        LABEL
+            TYPE TRUETYPE
+            FONT "OpenSans-Regular"
+            SIZE 3
+            ANTIALIAS TRUE
+            COLOR 0 0 0
+            OUTLINECOLOR 255 255 255
+            OUTLINEWIDTH 1
+            POSITION CC
+            ALIGN CENTER
+            FORCE TRUE
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 1801
+    END
+    CLASS
+        NAME "Poids limité"
+        EXPRESSION "Poids limité"
+        STYLE
+            SYMBOL "circle"
+            COLOR 255 255 255
+            OUTLINECOLOR 255 0 0
+            SIZE 9
+            WIDTH 2
+        END
+        MINSCALEDENOM 1801
+        MAXSCALEDENOM 180001
+    END
+    CLASS
+        NAME "Tout droit"
+        EXPRESSION "Tout droit"
+        STYLE
+            SYMBOL "secu_signalisation_tout_droit"
+            SIZE 20
+            ANGLE [orientation]
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 1801
+    END
+    CLASS
+        NAME "Tout droit"
+        EXPRESSION "Tout droit"
+        STYLE
+            SYMBOL "circle"
+            COLOR 0 112 255
+            OUTLINECOLOR 255 255 255
+            SIZE 9
+            WIDTH 2
+        END
+        MINSCALEDENOM 1801
+        MAXSCALEDENOM 180001
+    END
+    CLASS
+        NAME "Déviation"
+        EXPRESSION "Déviation"
+        STYLE
+            SYMBOL "secu_signalisation_deviation"
+            SIZE 7
+            ANGLE [orientation]
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 1801
+    END
+    CLASS
+        NAME "Déviation"
+        EXPRESSION "Déviation"
+        STYLE
+            SYMBOL "rectangle"
+            COLOR 246 145 30
+            OUTLINECOLOR 0 0 0
+            SIZE 9
+            ANGLE [orientation]
+        END
+        MINSCALEDENOM 1801
+        MAXSCALEDENOM 180001
+    END
+END
+
+LAYER
+    NAME "secu_points_acces"
+    TYPE POINT
+    STATUS ON
+    PROJECTION "init=epsg:${SRID}" END
+    EXTENT ${MAPFILE_EXTENT}
+    TEMPLATE fooOnlyForWMSGetFeatureInfo
+    CONNECTIONTYPE POSTGIS
+    PROCESSING "CLOSE_CONNECTION=DEFER"
+    CONNECTION "user=${PGUSER} password=${PGPASSWORD} dbname=${PGDATABASE} host=${PGHOST}"
+    DATA "geom FROM (SELECT geo.*
+                     FROM securite.secu_vgeo_edit_points_acces AS geo
+                     WHERE (ARRAY[%role_ids%] && ARRAY(${MAPSERVER_DATA_NOAREA_SUBSELECT} 'secu_points_acces'))
+                    ) AS foo USING UNIQUE id USING srid=${SRID}"
+    TOLERANCE ${WMS_TOLERANCE}
+    DUMP TRUE
+    METADATA
+        "wms_title" "Points d'accès"
+        "wms_srs" "${WMS_SRS}"
+        "wfs_enable_request" "*"
+        "gml_featureid" "id"
+        "gml_types" "auto"
+        "gml_include_items" "all"
+        "gml_exclude_items" "id"
+        "ows_geometries" "geom"
+        "ows_geom_type" "point"
+    END
+    VALIDATION
+        "default_role_ids" "-1"
+        "role_ids" "^-?[0-9,]*$"
+    END
+    MINSCALEDENOM 1
+    MAXSCALEDENOM 1801
+    LABELITEM "cle_numero"
+    CLASSITEM "categorie"
+    CLASS
+        NAME "Barrière"
+        EXPRESSION "Barrière"
+        STYLE
+            SYMBOL "secu_points_acces_barriere"
+            SIZE 20
+        END
+        LABEL
+            TYPE TRUETYPE
+            FONT "OpenSans-Bold"
+            SIZE 10
+            ANTIALIAS TRUE
+            COLOR 26 103 187
+            OUTLINECOLOR 255 255 255
+            POSITION UC
+            ALIGN CENTER
+            OFFSET 0 5
+            FORCE TRUE
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 9001
+    END
+    CLASS
+        NAME "Borne"
+        EXPRESSION "Borne"
+        STYLE
+            SYMBOL "secu_points_acces_borne"
+            SIZE 20
+        END
+        LABEL
+            TYPE TRUETYPE
+            FONT "OpenSans-Bold"
+            SIZE 10
+            ANTIALIAS TRUE
+            COLOR 26 103 187
+            OUTLINECOLOR 255 255 255
+            POSITION UC
+            ALIGN CENTER
+            OFFSET 0 5
+            FORCE TRUE
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 9001
+    END
+    CLASS
+        NAME "Grille"
+        EXPRESSION "Grille"
+        STYLE
+            SYMBOL "secu_points_acces_grille"
+            SIZE 20
+        END
+        LABEL
+            TYPE TRUETYPE
+            FONT "OpenSans-Bold"
+            SIZE 10
+            ANTIALIAS TRUE
+            COLOR 26 103 187
+            OUTLINECOLOR 255 255 255
+            POSITION UC
+            ALIGN CENTER
+            OFFSET 0 5
+            FORCE TRUE
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 9001
+    END
+    CLASS
+        NAME "Portail autoroute"
+        EXPRESSION "Portail autoroute"
+        STYLE
+            SYMBOL "secu_points_acces_portail_autoroute"
+            SIZE 20
+        END
+        LABEL
+            TYPE TRUETYPE
+            FONT "OpenSans-Bold"
+            SIZE 10
+            ANTIALIAS TRUE
+            COLOR 0 127 70
+            OUTLINECOLOR 255 255 255
+            POSITION UC
+            ALIGN CENTER
+            OFFSET 0 5
+            FORCE TRUE
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 9001
+    END
+    CLASS
+        NAME "Autres"
+        EXPRESSION "Autres"
+        STYLE
+            SYMBOL "secu_points_acces_autre"
+            SIZE 20
+        END
+        LABEL
+            TYPE TRUETYPE
+            FONT "OpenSans-Bold"
+            SIZE 10
+            ANTIALIAS TRUE
+            COLOR 26 103 187
+            OUTLINECOLOR 255 255 255
+            POSITION UC
+            ALIGN CENTER
+            OFFSET 0 5
+            FORCE TRUE
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 9001
+    END
+END
+
+LAYER
+    NAME "secu_edit_points_acces"
+    TYPE POINT
+    STATUS ON
+    PROJECTION "init=epsg:${SRID}" END
+    EXTENT ${MAPFILE_EXTENT}
+    TEMPLATE fooOnlyForWMSGetFeatureInfo
+    CONNECTIONTYPE POSTGIS
+    PROCESSING "CLOSE_CONNECTION=DEFER"
+    CONNECTION "user=${PGUSER} password=${PGPASSWORD} dbname=${PGDATABASE} host=${PGHOST}"
+    DATA "geom FROM (SELECT geo.*
+                     FROM securite.secu_vgeo_edit_points_acces AS geo
+                     WHERE (ARRAY[%role_ids%] && ARRAY(${MAPSERVER_DATA_NOAREA_SUBSELECT} 'secu_edit_points_acces'))
+                    ) AS foo USING UNIQUE id USING srid=${SRID}"
+    TOLERANCE ${WMS_TOLERANCE}
+    DUMP TRUE
+    METADATA
+        "wms_title" "Points d'accès"
+        "wms_srs" "${WMS_SRS}"
+        "wfs_enable_request" "*"
+        "gml_featureid" "id"
+        "gml_types" "auto"
+        "gml_include_items" "all"
+        "gml_exclude_items" "id"
+        "ows_geometries" "geom"
+        "ows_geom_type" "point"
+    END
+    VALIDATION
+        "default_role_ids" "-1"
+        "role_ids" "^-?[0-9,]*$"
+    END
+    LABELITEM "cle_numero"
+    CLASSITEM "categorie"
+    CLASS
+        NAME "Barrière"
+        EXPRESSION "Barrière"
+        STYLE
+            SYMBOL "secu_points_acces_barriere"
+            SIZE 20
+        END
+        LABEL
+            TYPE TRUETYPE
+            FONT "OpenSans-Bold"
+            SIZE 10
+            ANTIALIAS TRUE
+            COLOR 26 103 187
+            OUTLINECOLOR 255 255 255
+            POSITION UC
+            ALIGN CENTER
+            OFFSET 0 5
+            FORCE TRUE
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 1801
+    END
+    CLASS
+        NAME "Borne"
+        EXPRESSION "Borne"
+        STYLE
+            SYMBOL "secu_points_acces_borne"
+            SIZE 20
+        END
+        LABEL
+            TYPE TRUETYPE
+            FONT "OpenSans-Bold"
+            SIZE 10
+            ANTIALIAS TRUE
+            COLOR 26 103 187
+            OUTLINECOLOR 255 255 255
+            POSITION UC
+            ALIGN CENTER
+            OFFSET 0 5
+            FORCE TRUE
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 1801
+    END
+    CLASS
+        NAME "Grille"
+        EXPRESSION "Grille"
+        STYLE
+            SYMBOL "secu_points_acces_grille"
+            SIZE 20
+        END
+        LABEL
+            TYPE TRUETYPE
+            FONT "OpenSans-Bold"
+            SIZE 10
+            ANTIALIAS TRUE
+            COLOR 26 103 187
+            OUTLINECOLOR 255 255 255
+            POSITION UC
+            ALIGN CENTER
+            OFFSET 0 5
+            FORCE TRUE
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 1801
+    END
+    CLASS
+        NAME "Portail autoroute"
+        EXPRESSION "Portail autoroute"
+        STYLE
+            SYMBOL "secu_points_acces_portail_autoroute"
+            SIZE 20
+        END
+        LABEL
+            TYPE TRUETYPE
+            FONT "OpenSans-Bold"
+            SIZE 10
+            ANTIALIAS TRUE
+            COLOR 0 127 70
+            OUTLINECOLOR 255 255 255
+            POSITION UC
+            ALIGN CENTER
+            OFFSET 0 5
+            FORCE TRUE
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 1801
+    END
+    CLASS
+        NAME "Autres"
+        EXPRESSION "Autres"
+        STYLE
+            SYMBOL "secu_points_acces_autre"
+            SIZE 20
+        END
+        LABEL
+            TYPE TRUETYPE
+            FONT "OpenSans-Bold"
+            SIZE 10
+            ANTIALIAS TRUE
+            COLOR 26 103 187
+            OUTLINECOLOR 255 255 255
+            POSITION UC
+            ALIGN CENTER
+            OFFSET 0 5
+            FORCE TRUE
+        END
+        MINSCALEDENOM 1
+        MAXSCALEDENOM 1801
+    END
+    CLASS
+        NAME "Points d'accès"
+        STYLE
+            SYMBOL "square"
+            COLOR 26 103 187
+            OUTLINECOLOR 255 255 255
+            SIZE 9
+        END
+        MINSCALEDENOM 1801
+        MAXSCALEDENOM 180001
+    END
+END
