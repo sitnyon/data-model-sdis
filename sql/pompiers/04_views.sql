@@ -128,44 +128,20 @@ ALTER TABLE pompiers.pom_vgeo_edit_cles OWNER TO "<user>";
 --
 
 CREATE VIEW pompiers.pom_vgeo_cles_sdis AS
- SELECT row_number() OVER (ORDER BY a.numero) AS id,
-    a.type,
-    a.numero,
-    a.localisation,
-    a.commune,
-    a.adresse,
-    a.remarque,
-    a.date_controle,
-    a.inactif,
-    a.photo,
-    a.document,
-    a.geom
-   FROM ( SELECT gs.type,
-            gs.numero,
-            gs.localisation,
-            gs.commune,
-            gs.adresse,
-            gs.remarque,
-            (gs.date_controle)::text AS date_controle,
-            'Non'::character varying AS inactif,
-            ''::character varying(255) AS photo,
-            gs.document,
-            gs.geom
-           FROM pompiers.pom_gland_serine_cles gs
-        UNION
-         SELECT g.type,
-            g.numero,
-            g.localisation,
-            g.commune,
-            g.adresse,
-            g.remarque,
-            g.date_controle,
-            g.inactif,
-            g.photo,
-            g.document,
-            g.geom
-           FROM pompiers.pom_vgeo_edit_cles g
-          WHERE (((g.inactif)::text <> 'Oui'::text) OR (g.inactif IS NULL))) a;
+ SELECT g.id,
+    g.type,
+    g.numero,
+    g.localisation,
+    g.commune,
+    g.adresse,
+    g.remarque,
+    g.date_controle,
+    g.inactif,
+    g.photo,
+    g.document,
+    g.geom
+   FROM pompiers.pom_vgeo_edit_cles g
+  WHERE g.inactif::text <> 'Oui'::text OR g.inactif IS NULL;
 
 
 ALTER TABLE pompiers.pom_vgeo_cles_sdis OWNER TO "<user>";
@@ -202,31 +178,16 @@ ALTER TABLE pompiers.pom_vgeo_edit_dossiers_intervention OWNER TO "<user>";
 --
 
 CREATE VIEW pompiers.pom_vgeo_dossiers_intervention_sdis AS
- SELECT row_number() OVER (ORDER BY a.adresse) AS id,
-    a.statut,
-    a.document,
-    a.remarque,
-    a.localisation,
-    a.adresse,
-    a.commune,
-    a.geom
-   FROM ( SELECT gs.statut,
-            gs.document,
-            gs.remarque,
-            gs.localisation,
-            gs.adresse,
-            gs.commune,
-            gs.geom
-           FROM pompiers.pom_gland_serine_dossiers_intervention gs
-        UNION
-         SELECT g.statut,
-            g.document,
-            g.remarque,
-            g.localisation,
-            g.adresse,
-            g.commune,
-            g.geom
-           FROM pompiers.pom_vgeo_edit_dossiers_intervention g) a;
+ SELECT g.id,
+    g.statut,
+    g.document,
+    g.remarque,
+    g.localisation,
+    g.affichage_localisation,
+    g.adresse,
+    g.commune,
+    g.geom
+   FROM pompiers.pom_vgeo_edit_dossiers_intervention g;
 
 
 ALTER TABLE pompiers.pom_vgeo_dossiers_intervention_sdis OWNER TO "<user>";
