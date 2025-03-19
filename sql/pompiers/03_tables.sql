@@ -301,6 +301,7 @@ CREATE TABLE pompiers.pom_edit_dossiers_intervention (
     id integer NOT NULL,
     fk_statut_id integer NOT NULL,
     localisation character varying(255),
+    affichage_localisation bool DEFAULT false NULL,
     adresse character varying(255),
     commune character varying(255),
     remarque character varying(255),

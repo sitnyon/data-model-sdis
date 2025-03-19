@@ -179,6 +179,7 @@ CREATE VIEW pompiers.pom_vgeo_edit_dossiers_intervention AS
     s.name AS statut,
     t.name AS gestionnaire,
     a.localisation,
+    a.affichage_localisation,
     a.adresse,
     a.commune,
     a.remarque,
