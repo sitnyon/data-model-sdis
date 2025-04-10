@@ -9,7 +9,7 @@ LAYER
     PROCESSING "CLOSE_CONNECTION=DEFER"
     CONNECTION "user=${PGUSER} password=${PGPASSWORD} dbname=${PGDATABASE} host=${PGHOST}"
     DATA "geom FROM (SELECT geo.geom, geo.id,
-                            geo.code, geo.date_controle, geo.regie, geo.regie_telephone_bureau, geo.regie_telephone_urgence, geo.concierge, geo.concierge_adresse, geo.concierge_telephone, geo.service_intervention, geo.service_intervention_telephone, geo.remarque, geo.localisation, geo.adresse, geo.commune
+                            geo.code, geo.date_controle, geo.regie, geo.regie_telephone_bureau, geo.regie_telephone_urgence, geo.proprietaire, geo.proprietaire_adresse, geo.proprietaire_telephone, geo.concierge, geo.concierge_adresse, geo.concierge_telephone, geo.service_intervention, geo.service_intervention_telephone, geo.remarque, geo.localisation, geo.adresse, geo.commune
                      FROM securite.secu_vgeo_acces_immeubles AS geo
                      WHERE ST_Intersects((${MAPSERVER_DATA_SUBSELECT} 'secu_acces_immeubles'), ST_SetSRID(geo.geom, ${SRID}))
                     ) AS foo USING UNIQUE id USING srid=${SRID}"
@@ -19,7 +19,7 @@ LAYER
         "wms_title" "Accès immeubles"
         "gml_featureid" "id"
         "gml_types" "auto"
-        "gml_include_items" "code,date_controle,regie,regie_telephone_bureau,regie_telephone_urgence,concierge,concierge_adresse,concierge_telephone,service_intervention,service_intervention_telephone,remarque,localisation,adresse,commune"
+        "gml_include_items" "code,date_controle,regie,regie_telephone_bureau,regie_telephone_urgence,proprietaire,proprietaire_adresse,proprietaire_telephone,concierge,concierge_adresse,concierge_telephone,service_intervention,service_intervention_telephone,remarque,localisation,adresse,commune"
         "wms_srs" "${WMS_SRS}"
         "wfs_enable_request" "*"
         "ows_geometries" "geom"
